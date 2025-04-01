@@ -3,7 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
 define r = Character("Rose")
 define j = Character("Jade")
 
@@ -18,9 +17,8 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    #Ok, so I will add bg kiosk.png here when ready
 
-    scene bg room
+    scene bg park
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -32,6 +30,7 @@ label start:
     # These display lines of dialogue.
 
     r "Excuse us?"
+    r "P-pardon?"
 
 
     # This ends the game.

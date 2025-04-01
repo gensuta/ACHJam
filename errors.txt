@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 27: end of line expected.
-    You've created a new Ren'Py game.
-                             ^
+File "game/script.rpy", line 14: Line is indented, but the preceding default statement statement does not expect a block. Please check this line's indentation.
+    transform shaking_text:
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Mar 16 19:05:18 2025
+Mon Mar 31 18:38:00 2025

@@ -4,9 +4,13 @@
 # name of the character.
 
 define e = Character("Eileen")
+define r = Character("Rose")
+define j = Character("Jade")
 
 
 # The game starts here.
+
+#I'm using the ice-cream scene as a trial
 
 label start:
 
@@ -14,19 +18,21 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    #Ok, so I will add bg kiosk.png here when ready
+
     scene bg room
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+
+    show rose blank
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    r "Excuse us?"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 

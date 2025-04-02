@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define r = Character("Rose")
+define j = Character("Jade")
 
 
 # The variables below are for minigames! Please ignore and do not touch!! -Geneva
@@ -29,27 +30,29 @@ transform shaking_text:
 
 # The game starts here.
 
+#I'm using the ice-cream scene as a trial
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg black
+
+    scene bg park
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy at left
+
+    show rose blank
 
     # These display lines of dialogue.
 
-    show screen stressed_breathing
+    r "Excuse us?"
+    r "P-pardon?"
 
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 

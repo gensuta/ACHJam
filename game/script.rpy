@@ -145,7 +145,7 @@ label start:
 
     r "Well… It's addressed to here. They can sort it out."
 
-    show jade blank
+    show jade blank at right
 
     j "Miss? Excuse me, Miss?"
 
@@ -153,9 +153,142 @@ label start:
     #JADE'S HOUSE SCENE 2 (OUTSIDE) 
     #Following both choices
 
+    scene bg mistery
+    show rose blank at left
+    show jade blank at center
+
     j "Hello, forgive my lateness, I had headphones on."
 
     r "Only been a few seconds. Anyway, I have a letter-"
+
+    j "Oh, wow. It's all gilded and yellow. It would be a crime to tear it open."
+
+    r "Please, hold on a second-"
+
+    j "Still, there's stuff unopened, maybe mum put my letter opener in there…"
+
+    r "No, no. It's not your letter- I mean, this letter is addressed to the previous occupant, one “Pearl” at this address."
+
+    j "Hm? Oh… Oh my goodness, I am so sorry! Almost committed a crime. I could go to jail!"
+
+    r "It's fine…"
+
+    j "Fine? I can pay for that. How much, ten? Twenty?"
+
+    r "It is fine. Synonymous with “alright”. No crime committed. Now, by chance, do you know their current location?"
+
+    j "Uhm…"
+
+    r "No, then?"
+
+    j "Yes to the no."
+
+    r "Very well. Undelivered it is."
+
+    j "What now? You've got computers for this?"
+
+    r "Only cabinets. Full of paperwork."
+
+    j "Wait-wait. I can help, I can help!"
+
+    r "...?"
+
+    j "Ah. Uh… Ah! It's only been a month since I got here. Nooks and crannies yet to clean - especially the cupboards -,  maybe a clue might be lying about in the apartment."
+
+    r "Clue?"
+
+    j "You know, old pamphlets to locales or-or childhood photos of happy places… oooooh I can smell the adventure. Let's have a look around!"
+
+    r "I might just ask neighbours…"
+
+    j "That too! I can take notes. I've a pen and paper on my desk. Oh, and I'm Jade, BTW, but you probably already know, with the name at the door."
+
+    r "Rose… good to meet you."
+
+
+    #CHOICE: Ask the neihgbour / Look inside Jade's apartment for clues 
+
+
+    #ASK THE NEIGHBOUR AS FIRST CHOICE 
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank l at center
+
+    j "Excuse me. Hello? Anyone there?"
+
+    v "Don't you dare knock again. I just got the little blighter down for his nap."
+
+    r "Noted. And it’s me-"
+
+    v "Oh, it’s you. You're a day early, this time. Did Lily have something going on?"
+
+    r "No care package today, I don’t know what Lily is up to. Can we ask some questions?"
+
+    j "Forgive her rudeness, we’re just here to sort something out. Something to do with your old neighbour - I’m your new neighbour by the way, Jade, but yeah."
+
+    v "Alright, alright, very pleased to meet you. Now, you were saying…"
+
+    r "Sorry, no care package delivery today. Your calorie count remains true. As she has said, we need a word about your old neighbour."
+
+    v "Old neighbour… ah, who was it? Darned if I can remember their name."
+
+    r "Anything you can tell us…"
+
+    v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone… What was it? Found at the sea - Opal, that was her name."
+
+    r "It says “Pearl” on the letter."
+
+    j "Maybe it’s like my mum and my big bro’s letters. He’s in Korea, South Korea, and his letters still arrive at mum’s house. Right? So maybe this Opal could be a clue to reaching Pearl?"
+
+    r "Any idea where Opal could be?"
+
+    v "Last I saw, she was down by the cafè. If that's all you need of me, then good luck with you. I think I hear him start to stir."
+
+    j "Artist... hmm."
+
+    r "Another lead?"
+
+    j "I believe so, leading right back home…"
+
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank at right
+
+    j "The moment I heard “artist”, it hit me, just like that! Right against the back of the cupboard…"
+
+    r "Lots of other stuff from the old tenant."
+
+    j "No… that’s me."
+
+    r "A lot of worn down baseballs. Were you an athlete?"
+
+    j "No, just holding onto them for a friend. Ah, here we are."
+
+    r "It’s nice. Such a cute cat."
+
+    j "Indeed, indeed, but look at the signature in the corner."
+
+    r "Opal… But I thought Pearl lived here?"
+
+    j "Maybe it was a gift, or a personal commission. But the bottom line is clear: we find Opal, we find Pearl."
+
+    r "How certain are you?"
+
+    j "Roughly ninety-percent, as sure as the shape of my eyes."
+
+    r "If you say so. We could take this, in case anyone has seen this work."
+
+    j "And click. Onto the phone, and the weight of a canvas off our shoulders."
+
+
+
+
+    #JADE'S APARTMENT AS FIRST CHOICE
+
+    
+    
 
 
 

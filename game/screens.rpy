@@ -82,6 +82,132 @@ style frame:
 ################################################################################
 
 
+screen stressed_breathing:
+
+   
+
+    grid 3 3:
+        xalign 0.5
+        yalign 0.5
+        spacing 2
+        frame:
+            background None
+            xpadding 10
+            ypadding 10
+            xalign 0.5
+            yalign 0.5
+
+            if isDistracted == False:
+                textbutton "1" action SetVariable("currentCount",1) at shaking_text
+            else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "1" action NullAction() at shaking_text
+        frame:
+            background None
+            xpadding 10
+            ypadding 10
+            xalign 0.5
+            yalign 0.5
+
+            textbutton "And SHE said..." action NullAction() at shaking_text
+        frame:
+            background None
+            xpadding 20
+            ypadding 20
+            xalign 0.5
+            yalign 0.5
+
+            if currentCount == 1 and isDistracted == False:
+                textbutton "2" action SetVariable("currentCount",2) at shaking_text
+            else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "2" action NullAction() at shaking_text
+        frame:
+            background None
+            xpadding 5
+            ypadding 5
+            xalign 0.5
+            yalign 0.5
+
+            textbutton "-and there's this cute guy that's kind of short-" action NullAction() at shaking_text
+        frame:
+            background None
+            xpadding 10
+            ypadding 15
+            xalign 0.5
+            yalign 0.5
+
+            if currentCount == 2 and isDistracted == False:
+                textbutton "3" action SetVariable("currentCount",3) at shaking_text
+            else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "3" action NullAction() at shaking_text
+
+        frame:
+            background None
+            xpadding 8
+            ypadding 10
+            xalign 0.5
+            yalign 0.5
+
+            textbutton "Ah! I forgot my keys!" action NullAction() at shaking_text
+
+        frame:
+            background None
+            xpadding 20
+            ypadding 20
+            xalign 0.5
+            yalign 0.5
+
+            textbutton "*baby crying*" action NullAction() at shaking_text
+        frame:
+            background None
+            xpadding 10
+            ypadding 10
+            xalign 0.5
+            yalign 0.5
+
+            textbutton "HAHAHA" action [SetVariable("isDistracted", not isDistracted),  Jump("gwee")] at shaking_text
+        frame:
+            background None
+            xpadding 10
+            ypadding 12
+            xalign 0.5
+            yalign 0.5
+
+            if currentCount == 3 and isDistracted == False:
+                textbutton "4" action [SetVariable("currentCount",0),Hide("stressed_breathing") ,Show("calm_breathing")] at shaking_text
+            else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "4" action NullAction() at shaking_text
+
+
+screen calm_breathing:
+    grid 2 2:
+        xalign 0.5
+        yalign 0.5
+        spacing 10
+        if currentCount == 0:
+                textbutton "1" action SetVariable("currentCount",1)
+        else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "1" action NullAction()
+        if currentCount == 1:
+                textbutton "2" action SetVariable("currentCount",2)
+        else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "2" action NullAction()
+        if currentCount == 2:
+                textbutton "3" action SetVariable("currentCount",3)
+        else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "3" action NullAction()
+        if currentCount == 3:
+                textbutton "4" action SetVariable("currentCount",0)
+        else:
+                #TODO: Make a noise to indicate it's incorrect to click this yet
+                textbutton "4" action NullAction()
+
 ## Say screen ##################################################################
 ##
 ## The say screen is used to display dialogue to the player. It takes two

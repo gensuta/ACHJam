@@ -329,6 +329,145 @@ label start:
     scene bg mistery
     show rose blank at left
     show jade blank l at center
+
+    r "Best you let me sort this one out. They prefer a certain way of alerting them."
+
+    r "*whistles like a bird*"
+
+    v "Ah, you’re early this week. Any news of Lily’s care package?"
+
+    r "No care package, only a question. If you could look through the peep-hole…"
+
+    v "My eye is up here. Ha ha. Oh, you’ve got a partner in crime I see."
+
+    r "No, still working solo."
+
+    j "Oh, hello, I’m Jade - your new neighbour - and uhm, tell us, do you know anything about who painted - hold on just, got to unlock my phone - who painted this?"
+
+    v "Hmmm, I think I recognise the style - wait, Opal? I hadn’t realised she actually left."
+
+    j "I just told you I’m your new neighbour."
+
+    r "But the letter said “Pearl”, not “Opal”."
+
+    j "Maybe it’s like my mum and my big bro’s letters. He’s in South Korea, and his letters still arrive at mum’s house. Right? So Opal could still be a clue in reaching Pearl?"
+
+    r "I suppose… any idea where Opal could be?"
+
+    v "Last I saw, she was down by the cafè. Well, either way, best of luck to you two."
+
+    r "Thank you."
+
+    j "So what do ya’ think?"
+
+    r "Of what?"
+
+    j "Opal giving the painting to Pearl."
+
+    r "Was the painting a gift?"
+
+    j "I like to think so. A parting present, of memories shared, a moment crystallised into an immortal image."
+
+    r "Of a cat?"
+
+    j "For that was the shape of Pearl’s soul to Opal."
+
+    r "You’re just making this up, aren’t you?"
+
+    j "Well, we need some dramatics in this quest."
+
+
+
+    #CAFE SCENE 
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank at center
+
+
+    j "What a cosy little place."
+
+    r "It is."
+
+    j "You come here often?"
+
+    r "Yes."
+
+    j "Well then, mind me seeing what the town has to offer?"
+
+    r "No, thank you, we’ve got the painting to find-"
+
+    r "*stomach growls*"
+
+    j "We can talk about that over lunch, on me!"
+
+    r "They work by table numbers. Remember the number, walk up to the counter, and place your order."
+
+    j "I appreciate the clarity."
+
+    r "They have pictures on the menus too."
+
+    j "“I meant… actually, oh, this is actually a good spread: jewelled salad, chicken noodle soup with croutons - steak and kidney pie with fries and gravy!? I’ve not had that in ages. We’ve got to have some."
+
+    r "No thank you? Not my favourite dish."
+
+    j "Hmmm, alright then, what’s your favourite?"
+
+    r "Homemade burger with coleslaw."
+
+    j "And it’s got a special side of onion rings and curly fries. That is awesome!"
+
+    r "Is it?"
+
+    j "...is everything okay? Oh heck, is this about something I did?"
+
+    r "Not your fault."
+
+    j "Then what?"
+
+    r "Nothing, really. I’m just not a talkative person."
+
+    j "...okay. Looks like a pretty big line. I ain’t standing for minutes on end just fidgeting, so..."
+
+    j "... seen any good shows? Blergh, so cliche a starter…"
+
+    r "I recently watched “Tower of Phantometer” cutscenes online, if that counts."
+
+    j "Phantometer? Oh, yeah, the videogame? With the cute critter in the armour?"
+
+    r "Action-Platformer where you played as Luna. Ascending up the Tower of Phantometer to reach the stars, in the hope that one of them is the spirit of her loved one, whose identity depended upon the questions you answered at the start."
+
+    j "Yeah… that one."
+
+    r "Watched playthroughs of it when I was younger. The music helped me sleep. Story was well-written. Still holds up. Still wish I could play it. Too expensive then, too rare now."
+
+    j "“I’ve got a copy!"
+
+    r "Hmm?"
+
+    j "Yeah, original manual and everything. If ever you have a day off..."
+
+    r "Thank you."
+
+    j "Huh, with all those details, I’d figured you’d be more… ecstatic."
+
+    r "Ecstatic?"
+
+    j "A chance at playing that game that eluded your grasp, isn’t that exciting?"
+
+    r "I’m not sure…"
+
+    j "When I’m excited about something, I can’t stop talking about it. I can’t even sit still, it’s like-too much for my body to hold, if that makes sense?"
+
+    r "I guess-I guess I did feel something, when we were talking about Phantometer. A weird sensation in my chest. My heart beating faster? I’m just never sure if it means I’m excited or nervous… and I’d rather not think about it right now."
+
+    j "Well, to be fair, we got other fish to fry, so no need to dwell. And speaking of food, looks like the line’s shortened. Figured out your order?"
+
+
+
+
+
+
     
 
 

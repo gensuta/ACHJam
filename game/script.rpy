@@ -80,7 +80,7 @@ label start:
     m "Recognizing emotions will also help you flexibly respond to your own emotional states and will improve your interactions with others."
 
     #GENEVA 
-    #Here should be the first fading 
+    #Here the game should fade to black 
 
    
     scene bg mistery
@@ -94,6 +94,9 @@ label start:
     m "Well, that’s never happened before… these glasses are the gold standard for emotional blindness."
 
     m "In any case, keep them on at all times, I’m sure you just need to get used to them and they’ll start working soon."
+
+
+    #Here the game should fade to black 
 
 
     # TOWN SCENE 
@@ -113,6 +116,8 @@ label start:
     r "But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me."
 
 
+    #Here the game should fade to black 
+
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
@@ -122,11 +127,15 @@ label start:
     r "Strange… it looks like the name doesn’t match the resident."
 
 
-    #GENEVA 
     #CHOICE: Sound the doorbell / Leave the letter in the mailbox anyway
+
+    #Here the game should fade to black 
 
 
     #SOUND THE DOORBELL 
+
+    "Choose to sound the doorbell"
+
 
     scene bg mistery
     show rose blank at left
@@ -138,7 +147,12 @@ label start:
     v "Okay, I’m nearly at the door-"
 
 
+    #Here the game should fade to black 
+
+
     #LEAVE THE LETTER IN THE MAILBOX
+
+    "Choose to leave the letter in the mailbox"
 
     scene bg mistery
     show rose blank at left
@@ -148,6 +162,9 @@ label start:
     show jade blank at right
 
     j "Miss? Excuse me, Miss?"
+
+
+    #Here the game should fade to black 
 
 
     #JADE'S HOUSE SCENE 2 (OUTSIDE) 
@@ -208,8 +225,12 @@ label start:
 
     #CHOICE: Ask the neihgbour / Look inside Jade's apartment for clues 
 
+    #Here the game should fade to black 
+
 
     #ASK THE NEIGHBOUR AS FIRST CHOICE 
+
+    "Choose to ask the neighbour"
 
     scene bg mistery
     show rose blank at left
@@ -251,6 +272,7 @@ label start:
 
     j "I believe so, leading right back home…"
 
+    #Here the game should fade to black 
 
     scene bg mistery
     show rose blank at left
@@ -282,12 +304,16 @@ label start:
 
     j "And click. Onto the phone, and the weight of a canvas off our shoulders."
 
+    #Here the game should fade to black 
 
 
 
     #JADE'S APARTMENT AS FIRST CHOICE
 
-     scene bg mistery
+    "Choose to look inside Jade's apartment for clues"
+
+
+    scene bg mistery
     show rose blank at left
     show jade blank at right
 
@@ -324,6 +350,8 @@ label start:
     r "Clever."
 
     j "Ah, thank you. Now, onwards!"
+
+    #Here the game should fade to black 
 
 
     scene bg mistery
@@ -375,6 +403,8 @@ label start:
     r "You’re just making this up, aren’t you?"
 
     j "Well, we need some dramatics in this quest."
+
+    #Here the game should fade to black 
 
 
 
@@ -462,6 +492,110 @@ label start:
     r "I guess-I guess I did feel something, when we were talking about Phantometer. A weird sensation in my chest. My heart beating faster? I’m just never sure if it means I’m excited or nervous… and I’d rather not think about it right now."
 
     j "Well, to be fair, we got other fish to fry, so no need to dwell. And speaking of food, looks like the line’s shortened. Figured out your order?"
+
+
+    #Here the game should fade to black 
+
+    
+    #CHOICE: Safe food/New food
+
+    "Choose the safe food"
+
+
+    #SAFE FOOD
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank at center
+
+    r "Double burger with coleslaw, please."
+
+    j "Stick to what you know, fair enough."
+
+    #Here the game should fade to black 
+
+    j "He he he. Now look at the golden flakiness of that pastry. It feels like a crime to tear it open. How about your burger?"
+
+    r "It’s well put together."
+
+    j "Well put together?!. That wooden stake is keeping that monster in check. You got to slay it before it falls apart!"
+
+    r "Not until the fries are eaten with the coleslaw."
+
+    j "Okay, but you’ll be way behind once I’ve cleaned the gravy from the plate."
+
+    j "Oh, blimey, need a breather. But I ain’t getting defeated by beef. You with me?"
+
+    r "Beef defeated."
+
+    j "Holy! That was fast. Are you sure you had time to chew?"
+
+    r "You sound like my granddad. He said he’d always buy me a burger."
+
+    j "Sounds like a good grandpa."
+
+    r "Joked he only did so to see if I unhinged my jaw before I ate. I’d hiss every time I saw him. People stared. But granddad always smiled. Wasn’t sure if he actually found it funny."
+
+    j "Aww, it feels good to revive some old memories…"
+    
+    j "Mine always bought lunch, even if I had the cash. He and I would buy the cheapest thing the cafe had *chuckles* I’ll give you three guesses."
+
+    r "Hm…"
+
+    j "It’s literally served on a platter for you."
+
+    r "No, not the pie and fries?"
+
+    r "Wait-Look behind you. Actually, could you get your phone out?"
+
+    #Here the game should fade to black 
+
+
+    #NEW FOOD
+
+    "Choose to try a new food"
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank at center
+
+    r "I’ll have what you’re having."
+
+    j "Prepare for a wonderful food sensation!"
+
+    #Here the game should fade to black 
+
+    j "So… how is it?"
+
+    r "It’s nice."
+
+    j "That’s all?"
+
+    r "Is that not all there is to it?"
+
+    j "But what about- what about the smell? The sound? Heck, have you even smelt it?"
+
+    r "It smells… warm."
+
+    j "“Warm”? Nothing more? Fine. Let's start with the finer points of pie enjoyment. Take your fries - or chips, as they’re known in some places - onto your fork."
+
+    r "Okay…"
+
+    j "Now, with the knife in hand, get all that beautiful gravy onto the fork. Yep, good, good. And finally, top with a piece of the pastry."
+
+    r "M-okay"
+
+    j "Now let it settle on the palate. The golden flakes drawing in the other flavours like a sponge. How easily it binds together with the carrots and peas, further sweetened by the jamminess of the onions."
+
+    r "..."
+
+    j "And what of the chips? Can you feel the texture, the once salt-crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and - eh he he, got carried away there, didn’t I?"
+
+    r "A bit."
+
+    j "I just think some experiences need to be savored, right? You never know how happy you are until you truly pay attention to it."
+
+
 
 
 

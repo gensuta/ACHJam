@@ -287,7 +287,48 @@ label start:
 
     #JADE'S APARTMENT AS FIRST CHOICE
 
+     scene bg mistery
+    show rose blank at left
+    show jade blank at right
+
+    j "Come on, where are you? I know you’re stocked up somewhere…"
+
+    r "Very… organised."
+
+    j "Hardly, most of it is taking refuge in my bedroom. Open the door and we’d be buried in a landslide of books and - ah ha! Got you, and... behold."
+
+    r "A painting. Of a cat."
+
+    j "Indeed, and what can you see on it?"
+
+    r "... brush strokes?"
+
+    j "Uhm, yes. But, beyond the brush, we may find - pause for effect - a name!"
+
+    r "It says “Opal” not “Pearl”."
+
+    j "True, but it was found INSIDE of Pearl’s old home. Which means, a connection."
+
+    r "What kind, though?"
+
+    j "Hm. That, we need to find out. Any ideas, partner?"
+
+    r "Partner?"
+
+    j "Yeah, partners, solving a mystery!"
     
+    r "We could try the neighbour next door?"
+
+    j "Excellent. Click! And a photo of the portrait for the road. Can’t have us lugging that precious article around town with a risk of rain or breaking."
+
+    r "Clever."
+
+    j "Ah, thank you. Now, onwards!"
+
+
+    scene bg mistery
+    show rose blank at left
+    show jade blank l at center
     
 
 

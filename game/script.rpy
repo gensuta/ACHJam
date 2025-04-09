@@ -47,7 +47,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg mistery
+    scene bg optometry
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -83,7 +83,7 @@ label start:
     #Here the game should fade to black 
 
    
-    scene bg mistery
+    scene bg optometry
     show rose blank at left 
     show mistery man at right 
 
@@ -536,9 +536,11 @@ label start:
 
     r "Joked he only did so to see if I unhinged my jaw before I ate. I’d hiss every time I saw him. People stared. But granddad always smiled. Wasn’t sure if he actually found it funny."
 
-    j "Aww, it feels good to revive some old memories…"
+    j "You must hold those memories very dear."
+
+    r "It does feel good to revive them. I feel… calmer, somehow."
     
-    j "Mine always bought lunch, even if I had the cash. He and I would buy the cheapest thing the cafe had *chuckles* I’ll give you three guesses."
+    j "I get it. And my grandpa always bought me lunch too, even if I had the cash. He and I would buy the cheapest thing the cafe had *chuckles* I’ll give you three guesses."
 
     r "Hm…"
 
@@ -595,22 +597,51 @@ label start:
 
     j "I just think some experiences need to be savored, right? You never know how happy you are until you truly pay attention to it."
 
+    j "Plus focusing on what I enjoy helps me block out the stuff that annoys me. Like this godawful smell, for example! What do you think it is?"
+
+    r "Hmm, maybe… vinegar?"
+
+    j "Ugh. Anyway, I used to take cooking classes with my friends... The chef was always like that. The “poet” sort of cook, but their enthusiasm was so contagious I-"
+
+    r "I’m sorry to interrupt, but does that look familiar to you?"
 
 
 
+    #THE PAINTING 
 
+    scene bg mistery
+    show rose blank at left
+    show jade blank l at center
 
+    j "Is that…?"
 
+    r "Opal’s cat."
 
-    
+    j "Only now it’s staring lovingly at a sunset."
 
+    r "It looks familiar."
 
+    j "Certainly evokes post-impressionism, especially the focus on light."
 
+    r "The way the sunlight goes through it."
 
+    j "Definitely an early attempt at the style. Sorry, I took some classes, and it’s so rare I get to talk shop on art history, especially around-"
 
+    r "The bench!"
 
+    j "What bench!?"
 
+    r "In the park."
 
+    j "The park in town?"
+
+    r "The park in town."
+
+    j "How far is it?"
+
+    r "Just across the road."
+
+    j "Ready to go?"
 
 
 
@@ -618,18 +649,79 @@ label start:
     #PARK SCENE 
 
     scene bg park
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show rose blank at left
+    show jade blank at right
 
 
-    show rose blank
+    j "Should we ask somebody if they remember seeing our mystery lady around here?"
+   
+    r "Hmm, I know that dog…"
 
-    # These display lines of dialogue.
+    j "Uh, right,  well… the ice-cream man looks like a more promising lead to me. Being at the park all the time and all."
+
+
+    #CHOICE: Ask the ice-cream man / Ask the man on the bench
+
+
+    "You choose to ask the ice-cream man"
+
+
+    scene bg icecream
+    show rose blank at left
+    show jade blank l at center
+    show icecream man at right
 
     r "Excuse us?"
+
+    i "Oh, it's you, we finally meet."
+
     r "P-pardon?"
+
+    i "Haven’t seen you in a while, I was beginning to worry about you."
+
+    j "Hang on, hang on. Rosie, you know this person?"
+
+    i "Hm? Ah, my mistake, but the way you were standing there… no… you’re definitely much younger and taller than her… must be the clothes. I’m sorry, just a bit of rambling on my part. Hope you have a good day."
+
+    j "We haven’t even asked yet."
+
+    i "Oh right, one scoop or two?"
+
+    j "We mean… uhm, Rosie, you want anything?"
+
+    r "*nods and holds up two fingers*"
+
+    j "Very well. Good sir, we shall take two of the finest scoops of your ice cream. In exchange, mind telling us of “Opal” and her bench-sitting ways?"
+
+    i "Opal? So that was her name. Truth be told, we never actually talked. She’d be sitting right there on the bench. But on the dot, every day before the walkers came round. I could time my work hours just by her presence alone. My human timepiece, ha. At least, that was how it was until a few weeks ago. Then she was gone, and her little cat, too."
+
+    r "Cat?"
+
+    j "Just like in the picture. Any other notable features? Hair colour, hair style, facial features, maybe a cool iconic item?"
+
+    i "Mmm, unfortunately none spring to mind. She was well covered for winter, no matter the season. Honestly I’m surprised she didn’t melt."
+
+    j "Dang. Guess we’re back to square one, then."
+
+    r "Not yet. Did Opal always leave the park the same way?"
+
+    i "Off towards that direction, right to the –"
+
+    j "The bench!"
+
+    i "Yes, in that general direction…"
+
+
+    #Here the game fades to black
+
+    scene bg bench
+    show rose blank at left
+    show jade blank l at center
+    show mystery man at right
+
+    r "Uhm, excuse me, I-"
+
+
 
 
     # This ends the game.

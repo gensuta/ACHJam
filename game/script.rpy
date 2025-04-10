@@ -5,13 +5,21 @@
 
 define r = Character("Rose")
 define j = Character("Jade")
-define i = Character("Ice-cream man")
+define p = Character("Pearl")
+define ol = Character("Old Lady")
+define o = Character("Opal")
 
 define v = Character("Voice")
 
+define i = Character("Ice-cream man")
 
-define m = Character("Mistery man")
-# To be deleted when actual character sprites are ready
+define oo = Character("Optometrist")
+define n = Character("Neighbour")
+define d = Character("Ron the Dog")
+define js = Character("Jasper")
+define l = Character("Library patron")
+define e = Character("Employee")
+
 
 
 # The variables below are for minigames! Please ignore and do not touch!! -Geneva
@@ -55,29 +63,29 @@ label start:
 
 
     show rose ng at left
-    show mistery man at right
+    show optometrist at right
 
     # These display lines of dialogue.
 
-    m "Okay, we’re almost done with the optometric evaluation. Now look at me. What do you see?"
+    oo "Okay, we’re almost done with the optometric evaluation. Now look at me. What do you see?"
 
     r "Everything’s still in black and white, as it’s always been."
 
-    m "Well, this confirms it then, emotional blindness."
+    oo "Well, this confirms it then, emotional blindness."
 
     r "What does it mean?"
 
-    m "As you know… although not from experience, given your condition… human beings express their emotions through coloration changes." 
+    oo "As you know… although not from experience, given your condition… human beings express their emotions through coloration changes." 
     
-    m "So, if you see a person coloring yellow you know they’re… well, I guess you wouldn’t know, would you?"
+    oo "So, if you see a person coloring yellow you know they’re… well, I guess you wouldn’t know, would you?"
 
     r "..."
 
-    m "Challenges in recognizing, expressing, feeling and describing emotions are all symptoms of emotional blindness."
+    oo "Challenges in recognizing, expressing, feeling and describing emotions are all symptoms of emotional blindness."
 
-    m "That’s where the glasses come in, they’re designed to help people with your condition see colors, your own as well as other people’s."
+    oo "That’s where the glasses come in, they’re designed to help people with your condition see colors, your own as well as other people’s."
 
-    m "Recognizing emotions will also help you flexibly respond to your own emotional states and will improve your interactions with others."
+    oo "Recognizing emotions will also help you flexibly respond to your own emotional states and will improve your interactions with others."
 
     #GENEVA 
     #Here the game should fade to black 
@@ -85,15 +93,15 @@ label start:
    
     scene bg optometry
     show rose blank at left 
-    show mistery man at right 
+    show optometrist at right 
 
-    m "How are the glasses? Anything?"
+    oo "How are the glasses? Anything?"
 
     r "...nothing different."
 
-    m "Well, that’s never happened before… these glasses are the gold standard for emotional blindness."
+    oo "Well, that’s never happened before… these glasses are the gold standard for emotional blindness."
 
-    m "In any case, keep them on at all times, I’m sure you just need to get used to them and they’ll start working soon."
+    oo "In any case, keep them on at all times, I’m sure you just need to get used to them and they’ll start working soon."
 
 
     #Here the game should fade to black 
@@ -104,7 +112,7 @@ label start:
     #GENEVA
     #Is it possible to somehow show that she's thinking and not talking? Having the text in italic for example?
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at center 
 
     r "It’s been three months, but my world hasn’t changed."
@@ -121,7 +129,7 @@ label start:
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at left
 
     r "Strange… it looks like the name doesn’t match the resident."
@@ -137,7 +145,7 @@ label start:
     "Choose to sound the doorbell"
 
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at left
 
     v "Hello? Ah, hold on, don't leave just yet!"
@@ -154,7 +162,7 @@ label start:
 
     "Choose to leave the letter in the mailbox"
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at left
 
     r "Well… It's addressed to here. They can sort it out."
@@ -170,7 +178,7 @@ label start:
     #JADE'S HOUSE SCENE 2 (OUTSIDE) 
     #Following both choices
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at left
     show jade blank at center
 
@@ -232,7 +240,7 @@ label start:
 
     "Choose to ask the neighbour"
 
-    scene bg mistery
+    scene bg Jade home outside
     show rose blank at left
     show jade blank l at center
 
@@ -256,7 +264,9 @@ label start:
 
     r "Anything you can tell us…"
 
-    v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone… What was it? Found at the sea - Opal, that was her name."
+    v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone… What was it?"
+    
+    v "Found at the sea - Opal, that was her name."
 
     r "It says “Pearl” on the letter."
 
@@ -274,7 +284,7 @@ label start:
 
     #Here the game should fade to black 
 
-    scene bg mistery
+    scene bg Jade home inside
     show rose blank at left
     show jade blank at right
 
@@ -313,7 +323,7 @@ label start:
     "Choose to look inside Jade's apartment for clues"
 
 
-    scene bg mistery
+    scene bg Jade home inside
     show rose blank at left
     show jade blank at right
 
@@ -354,7 +364,7 @@ label start:
     #Here the game should fade to black 
 
 
-    scene bg mistery
+    scene Jade home outside
     show rose blank at left
     show jade blank l at center
 
@@ -410,7 +420,7 @@ label start:
 
     #CAFE SCENE 
 
-    scene bg mistery
+    scene bg cafe
     show rose blank at left
     show jade blank at center
 
@@ -437,7 +447,7 @@ label start:
 
     r "They have pictures on the menus too."
 
-    j "“I meant… actually, oh, this is actually a good spread: jewelled salad, chicken noodle soup with croutons - steak and kidney pie with fries and gravy!? I’ve not had that in ages. We’ve got to have some."
+    j "I meant… actually, oh, this is actually a good spread: jewelled salad, chicken noodle soup with croutons - steak and kidney pie with fries and gravy!? I’ve not had that in ages. We’ve got to have some."
 
     r "No thank you? Not my favourite dish."
 
@@ -471,7 +481,7 @@ label start:
 
     r "Watched playthroughs of it when I was younger. The music helped me sleep. Story was well-written. Still holds up. Still wish I could play it. Too expensive then, too rare now."
 
-    j "“I’ve got a copy!"
+    j "I’ve got a copy!"
 
     r "Hmm?"
 
@@ -504,7 +514,7 @@ label start:
 
     #SAFE FOOD
 
-    scene bg mistery
+    scene bg cafe
     show rose blank at left
     show jade blank at center
 
@@ -518,7 +528,7 @@ label start:
 
     r "It’s well put together."
 
-    j "Well put together?!. That wooden stake is keeping that monster in check. You got to slay it before it falls apart!"
+    j "Well put together?! That wooden stake is keeping that monster in check. You got to slay it before it falls apart!"
 
     r "Not until the fries are eaten with the coleslaw."
 
@@ -557,7 +567,7 @@ label start:
 
     "Choose to try a new food"
 
-    scene bg mistery
+    scene bg cafe
     show rose blank at left
     show jade blank at center
 
@@ -591,7 +601,9 @@ label start:
 
     r "..."
 
-    j "And what of the chips? Can you feel the texture, the once salt-crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and - eh he he, got carried away there, didn’t I?"
+    j "And what of the chips? Can you feel the texture, the once salt-crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and-" 
+    
+    j "Eh he he, got carried away there, didn’t I?"
 
     r "A bit."
 
@@ -605,11 +617,13 @@ label start:
 
     r "I’m sorry to interrupt, but does that look familiar to you?"
 
+    #Here the game should fade to black
+
 
 
     #THE PAINTING 
 
-    scene bg mistery
+    scene bg cafe
     show rose blank at left
     show jade blank l at center
 
@@ -643,13 +657,15 @@ label start:
 
     j "Ready to go?"
 
+    #Here the game should fade to black
+
 
 
 
     #PARK SCENE 
 
     scene bg park
-    show rose blank at left
+    show rose blank at center
     show jade blank at right
 
 
@@ -693,7 +709,9 @@ label start:
 
     j "Very well. Good sir, we shall take two of the finest scoops of your ice cream. In exchange, mind telling us of “Opal” and her bench-sitting ways?"
 
-    i "Opal? So that was her name. Truth be told, we never actually talked. She’d be sitting right there on the bench. But on the dot, every day before the walkers came round. I could time my work hours just by her presence alone. My human timepiece, ha. At least, that was how it was until a few weeks ago. Then she was gone, and her little cat, too."
+    i "Opal? So that was her name. Truth be told, we never actually talked. She’d be sitting right there on the bench. But on the dot, every day before the walkers came round. I could time my work hours just by her presence alone. My human timepiece, ha."
+    
+    i "At least, that was how it was until a few weeks ago. Then she was gone, and her little cat, too."
 
     r "Cat?"
 
@@ -712,14 +730,240 @@ label start:
     i "Yes, in that general direction…"
 
 
-    #Here the game fades to black
+    #Here the game should fade to black
 
     scene bg bench
     show rose blank at left
     show jade blank l at center
-    show mystery man at right
+    show jasper at right
 
     r "Uhm, excuse me, I-"
+
+    d "Bark-bark-bark-bork!"
+
+    j "Ah... good dog, nice dog…"
+
+    js "Now look what you bloody done, Ron, hush up. Hang on a second."
+
+    r "Sorry for disturbing your peace, we just needed to-"
+
+    js "Rose! I thought I recognised that voice. Well, no wonder Ron got all excited. Never thought I’d see you out of the routes, unless this is some premium service I don’t know a thing ‘bout."
+
+    r "Good day Jasper. Enjoying the scenery?"
+
+    d "*whines*"
+
+    j "Actually, we’re looking for someone. You wouldn’t have happened to have seen anyone on this bench before you-"
+
+    js "Still haven’t found that Opal yet, then?"
+
+    j "How do you know…?"
+
+    js "Forgetful aren’t we, do I need to remind you you’re my new neighbour?"
+
+    j "Oh, I didn’t recognize your voice!"
+
+    js "The fine scenery is why I’m here, Rose, just look at that sunshine through the leaves!"
+
+    r "It is nice. Anything you can tell us about Opal?"
+
+    js "Sorry, lass, haven’t seen anyone else here for the past month. Especially with Ron, here, barking at his own shadow."
+
+    scene bg bench
+    show rose blank at left
+    show jasper at right
+    show jade sad l at center
+
+    j "Hmm… sorry, I-I need a moment."
+
+    r "I’ll join you in a minute...I wish to talk more to Jasper."
+
+    j "Wha’? Oh yeah, yeah."
+
+    scene bg bench
+    show rose blank at left
+    show jasper at right
+  
+    r "Please excuse my … friend, she seems quite shy around... I’m not sure what she’s feeling, as usual."
+
+    js "Indeed, a funny friend you’ve found, how long you’ve known ‘em?"
+
+    r "Just today…. Are she and I friends?"
+
+    js "Looks like it to me. But what do I know? If not, then let the pieces play out."
+
+    r "Hm?"
+
+    js "Fine though I be in that house, solitude can bite away at even the greatest hermits."
+
+    r "..."
+
+    js "No shade upon your stoicisms and the like. But hear me out, for all the moments you’ve planned, a funny friend colours the emptiness between them all the brighter."
+
+    d "*whines*"
+
+    js "Not sure how I’d spend my days without this wee bounder and his chatterings. Probably just waiting every day for the next care package from Lily. Sometimes one just isn’t enough."
+
+    r "Still not sure about that."
+
+    js "Well, whatever, it’s down to you and that lass, not I, or anyone else. All I can do is provide a bit of wisdom. First step, catching up with her."
+
+    r "Oh, right. See you next round of post, with Lily’s care package."
+
+    js "Until then. Take care, Rose, and if you see that cat-walker, Opal, give ‘em my regards."
+
+    r "Cat?"
+
+    js "Aye, the shiest little thing, moment Ron so much as jostled, it would be tugging at the leash to go."
+
+    d "*whines*"
+
+    js "Oh, here come the dog walkers…"
+
+    #Here the game should fade to black
+
+
+
+    "You choose to ask the man on the bench"
+
+    scene bg bench
+    show rose blank at left
+    show jade blank l at center
+    show jasper at right
+
+    #TO BE WRITTEN
+
+
+    #Here the game should fade to black
+
+
+
+    #POND SCENE 
+    
+    scene bg park
+    show rose blank at left
+    show jade sad at center
+    
+
+    r "Hello dog, hello dog, hello dog…"
+
+    j "..."
+
+    r "The dogs have passed. Everything’s okay."
+
+    j "..."
+
+    r "Right?"
+
+    j "Yeah… Well, actually *inhales* Can I… have a minute?"
+
+    r "S-sure."
+    
+    j "Over there? By the ducks?"
+
+    r "If that is what helps."
+
+    j "It will."
+
+    #Here the game should fade to black
+
+
+
+    scene bg pond
+    show rose blank at center
+    show jade sad at right
+
+    j "She would have loved to live here. If she were here, geese would be flying…"
+
+    r "Your dog?"
+
+    j "Yeah… Me and my pooch… Libby."
+
+    r "Nice?"
+
+    j "The best. Considered herself more person than dog."
+
+    r "Any tricks?"
+
+    j "Like I said, thought herself more a person than a dog."
+
+    r "Oh… How long ago?"
+
+    j "...not sure anymore. A couple months. She was fifteen years old… I hope she’s somewhere nice now."
+
+    r "She must have been well cared for. Isn’t that how it goes?"
+
+    j "….like she was just falling asleep, ready to dream some good dreams."
+
+    r "Then she must have had a great day."
+
+    j "The best. Even with her aching joints, I moved her along like a wheel-barrow. In spite of the pains, her tail still wagged, I had bruises on my arms, but I didn't hold it against her, even as I held in the waters…"
+    
+    j "I could see the sky in her eyes… her own little vision of heaven."
+
+    #JADE COLORS BLUE
+    show jade sad blue at right
+
+    r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
+
+    #EMOTIONS MINIGAME - SADNESS
+
+    j "Oh, I noticed your glasses, but I thought it might be a sensitive topic *sniffs*."
+
+    r "Do you need a tissue?"
+
+    j "Nah *sniffs* I’m alright. Moment’s passed. Words were said, the pages turn *inhales*, our quest continues."
+
+    r "Right. In that direction."
+
+    show jade blank at right
+
+    j "And by the way, thanks for listening. More and more, you’re proving yourself to be friend material."
+
+    r "Hm?" #SURPRISED
+
+    show rose surprised at center
+
+    j "What is it? Did the big dogs scratch anything? Infection? Bleeding?"
+
+    r "My pulse went up. So odd. Then again, we have been running a lot…"
+
+    j "Me especially, sorry about that."
+
+    show rose blank at center
+
+    r "No worries. Our quest goes on, at a reasonable pace…"
+
+    j "Onwards, ever onwards towards… what's over there?"
+
+    r "Train station."
+
+    #JADE COLORS YELLOW
+
+    show jade happy yellow at right
+
+    j "*gasps* Trains? Trains? An adventure to span the lands!"
+
+    #EMOTIONS MINIGAME - JOY
+
+    r "We’ll see."
+
+
+    #Here the game should fade to black 
+
+
+    #TRAIN STATION SCENE 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

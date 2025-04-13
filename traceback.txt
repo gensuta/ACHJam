@@ -1,80 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 33, in script
-    e "You've created a new Ren'Py game."
-  File "game/screens.rpy", line 85, in execute
-    screen stressed_breathing:
-  File "game/screens.rpy", line 85, in execute
-    screen stressed_breathing:
-  File "game/screens.rpy", line 86, in execute
-    grid 3 3:
-  File "game/screens.rpy", line 168, in execute
-    frame:
-  File "game/screens.rpy", line 175, in execute
-    if currentCount == 3 and isDistracted == False:
-  File "game/screens.rpy", line 176, in execute
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-  File "game/screens.rpy", line 176, in keywords
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-  File "game/screens.rpy", line 176, in <module>
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-NameError: name 'calm_breathing' is not defined
+  File "game/script.rpy", line 1741, in script
+    
+Exception: Sayer 'J' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 33, in script
-    e "You've created a new Ren'Py game."
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "D:\Game Dev\Game Engines\renpy-7.4.11-sdk.7z\renpy-7.4.11-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 85, in execute
-    screen stressed_breathing:
-  File "game/screens.rpy", line 85, in execute
-    screen stressed_breathing:
-  File "game/screens.rpy", line 86, in execute
-    grid 3 3:
-  File "game/screens.rpy", line 168, in execute
-    frame:
-  File "game/screens.rpy", line 175, in execute
-    if currentCount == 3 and isDistracted == False:
-  File "game/screens.rpy", line 176, in execute
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-  File "game/screens.rpy", line 176, in keywords
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-  File "game/screens.rpy", line 176, in <module>
-    textbutton "4" action [SetVariable("currentCount",4),Show(calm_breathing)]
-NameError: name 'calm_breathing' is not defined
+  File "game/script.rpy", line 1741, in script
+    
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
+    Say.execute(self)
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 583, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 472, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'J' is not defined.
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.0.3.22090809
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.7.25031702
 ACHJam 1.0
-Mon Mar 31 17:53:47 2025
+Sun Apr 13 18:40:43 2025

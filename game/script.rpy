@@ -3,9 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define r = Character("Rose", color="F785B1")
-define j = Character("Jade", color="#FF5733")
-define p = Character("Pearl", color="FFF9EB")
+define r = Character("Rose", color="#F785B1")
+define j = Character("Jade", color ="#31c493")
+define p = Character("Pearl", color="#FFF9EB")
 define ol = Character("Old Lady")
 define c = Character("Cat")
 
@@ -130,7 +130,7 @@ label start:
     scene bg jade home outside
     show rose blank at left
 
-    scene bg letter 
+    scene bg letter #Why doesn't it show up?
 
     scene bg jade home outside
     show rose blank at left
@@ -190,11 +190,11 @@ label start:
 
     r "Only been a few seconds. Anyway, I have a letter-"
 
-    j "Oh, wow. It's all gilded and yellow. It would be a crime to tear it open."
+    j "Oh, wow, it's all engraved and pretty. It would be a crime to tear it open."
 
     r "Please, hold on a second-"
 
-    j "Still, there's stuff unopened, maybe mum put my letter opener in there…"
+    j "Still, there's boxes unopened, maybe mum put my letter opener in there…"
 
     r "No, no. It's not your letter- I mean, this letter is addressed to the previous occupant, one “Pearl” at this address."
 
@@ -381,7 +381,7 @@ label start:
     #Here the game should fade to black 
 
 
-    scene jade home outside
+    scene bg jade home outside
     show rose blank at left
     show jade blank l at center
 
@@ -397,7 +397,7 @@ label start:
 
     r "No, still working solo."
 
-    j "Oh, hello, I’m Jade - your new neighbour - and uhm, tell us, do you know anything about who painted - hold on just, got to unlock my phone - who painted this?"
+    j "Oh, hello, I’m Jade - your new neighbour - and uhm, tell us, do you know anything about who painted - hold on, just got to unlock my phone - who painted this?"
 
     v "Hmmm, I think I recognise the style - wait, Opal? I hadn’t realised she actually left."
 
@@ -541,7 +541,7 @@ label start:
 
     #Here the game should fade to black 
 
-    j "He he he. Now look at the golden flakiness of that pastry. It feels like a crime to tear it open. How about your burger?"
+    j "He he he. Now look at the crispy flakiness of that pastry. It feels like a crime to tear it open. How about your burger?"
 
     r "It’s well put together."
 
@@ -565,9 +565,9 @@ label start:
 
     j "You must hold those memories very dear."
 
-    r "It does feel good to revive them. I feel… calmer, somehow."
+    r "It does feel good to relive them. I feel… calmer, somehow."
     
-    j "I get it. And my grandpa always bought me lunch too, even if I had the cash. He and I would buy the cheapest thing the cafe had *chuckles* I’ll give you three guesses."
+    j "I get it. And my grandpa always bought me lunch too, even if I had the cash. He and I would buy the cheapest thing the cafe had {i}*chuckles*{/i} I’ll give you three guesses."
 
     r "Hm…"
 
@@ -614,11 +614,11 @@ label start:
 
     r "M-okay"
 
-    j "Now let it settle on the palate. The golden flakes drawing in the other flavours like a sponge. How easily it binds together with the carrots and peas, further sweetened by the jamminess of the onions."
+    j "Now let it settle on the palate. The crispy flakes drawing in the other flavours like a sponge. How easily it binds together with the carrots and peas, further sweetened by the jamminess of the onions."
 
     r "..."
 
-    j "And what of the chips? Can you feel the texture, the once salt-crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and-" 
+    j "And what of the chips? Can you feel the texture, the salty crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and-" 
     
     j "Eh he he, got carried away there, didn’t I?"
 
@@ -809,7 +809,7 @@ label start:
 
     js "Indeed, a funny friend you’ve found, how long you’ve known ‘em?"
 
-    r "Just today…. Are she and I friends?"
+    r "Just today… not sure we're friends yet."
 
     js "Looks like it to me. But what do I know? If not, then let the pieces play out."
 
@@ -952,7 +952,7 @@ label start:
 
     r "If that is what helps."
 
-    j "It will."
+    j "I think so."
 
     #Here the game should fade to black
 
@@ -982,7 +982,7 @@ label start:
 
     r "She must have been well cared for. Isn’t that how it goes?"
 
-    j "….like she was just falling asleep, ready to dream some good dreams."
+    j "…like she was just falling asleep, ready to dream some good dreams."
 
     r "Then she must have had a great day."
 
@@ -997,7 +997,7 @@ label start:
 
     #EMOTIONS MINIGAME - SADNESS
 
-    j "Oh, I noticed your glasses, but I thought it might be a sensitive topic *sniffs*."
+    j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
     r "Do you need a tissue?"
 
@@ -1050,7 +1050,7 @@ label start:
     show rose angry at left
     show jade scared purple at right
 
-    j "Oh my God. Oh my god…. I almost… Oh my God…"
+    j "Oh my God. Oh my god… I almost… Oh my God…"
 
     #EMOTIONS MINIGAME - FEAR
 
@@ -1100,6 +1100,8 @@ label start:
 
     j "Way ahead of you. Brought a spare pair of these bad boys. Headphones. Fully charged up. Just put those on and -"
 
+    show rose blank at left
+
     r "They work…"
 
     j "Like magic. Now, do you need a minute to yourself?"
@@ -1137,17 +1139,17 @@ label start:
 
     r "Hm…. Thank you again."
 
+    show jade blank at center
+
     j "Again, no worries. Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
-    scene bg train station
-    show rose blank at left
     show jade sad dark green at center
 
     j "The track is well and truly cold as steel now."
 
     #EMOTIONS MINIGAME - Disappointment
 
-    j "Well, at least we’ve the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
+    j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
     scene bg train station
     show rose blank at left
@@ -1167,7 +1169,7 @@ label start:
 
     j "A clue?"
 
-    r "No, but potentially so."
+    r "Not per se, but potentially..."
 
     j "Exactly how so - oooooh. Our Opal’s been here a long time, hasn’t she?"
 
@@ -1226,7 +1228,7 @@ label start:
 
     j "Why should I? What’s rampant flailing going to get me aside from a bad rep round town?"
 
-    v "You ain’t better than the rest of us, you know. Everybody knocks on my door, but are too intimidated to stay, only tribute. I’m respected, dammit!"
+    v "You ain’t better than the rest of us, you know. Everybody knocks on my door, but are too intimidated to stay. I’m respected, dammit!"
 
     r "But how do you stop the weight from crushing you?"
 
@@ -1346,9 +1348,14 @@ label start:
 
     j "What for? You didn’t know the following pages couldn’t beat the binturong factoid. I’ll see if there are any other zoological wonders about…"
 
-    r "Don’t go too far. {i}*looks at binturong*{/i} is kind of cute."
+    r "Don’t go too far."
     
-    r "And on the next page…. Canids…. oh."
+    scene bg library
+    show rose blank at left
+    
+    r "{i}*looks at binturong*{/i} It is kind of cute."
+    
+    r "And on the next page… Canids… oh."
 
     #Here the game should fade to black
 
@@ -1383,7 +1390,7 @@ label start:
 
     j "Don’t get me wrong, I enjoy jumpscares, but only if they build it up juuust right: as you read each line, word for word, you spy the mark. You know they're behind the next page, listening, hearing the crisp fluttering of your heart and the page."
 
-    j "You can’t stop yourself, as you turn it, and no matter how slowly, you’ll meet them on the other side… and then…. Boo!"
+    j "You can’t stop yourself, as you turn it, and no matter how slowly, you’ll meet them on the other side… and then… Boo!"
 
     r "OH! Please don’t do that again…"
     
@@ -1485,6 +1492,7 @@ label start:
     e "Last I checked, not too far. Down Little Lane, can't miss the thing. And with that, I'll leave you, I've got shelves to restock."
 
     show jade happy light orange l at center
+    show rose happy at left
 
     j "Rose!"
 
@@ -1538,25 +1546,30 @@ label start:
 
     v "O-Opal… I'm sorry but…"
 
-    j "....! No…"
+    j "...! No…"
 
     show jade disappointed dark green l at center 
 
     v "I'm sorry, I do not know how you know her, but Opal has been gone for-"
 
-    j "No…. No, no, no, no…"
+    j "No… No, no, no, no…"
 
     #EMOTIONS MINIGAME - Disappointment (check if it's already been done)
 
     v "I'm coming out. No! Don't go!"
 
-    show jade angry disappointed dark green at left 
+    scene bg pearl home outside
+    show rose sad at left
 
     r "Jade!"
     
     r "Im sorry, ma'am, I'll be right back to explain."
 
     v "I didn't mean, oh, where are you running off to?"
+
+    scene bg pearl home outside
+    show rose sad at center
+    show jade angry disappointed dark green at left
 
     r "Jade, please wait. This isn’t the end of the world."
 
@@ -1572,11 +1585,10 @@ label start:
 
     r "{i}*sighs*{/i}"
 
-    J "Oh my goodness - what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
+    j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
     #EMOTIONS MINIGAME - REMORSE
  
-
     r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
 
     j "But… why?"
@@ -1587,9 +1599,9 @@ label start:
 
     #EMOTIONS MINIGAME - SHAME
 
-    j "No, not that {i}*sniffs*{/i} I’m someone you just met."
+    j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
 
-    r "You stayed with me at the train station. You helped me through the overload, you sacrificed your headphone’s full charge. Heck, you’re the one who got us on this adventure"
+    r "You stayed with me at the train station. You helped me through the overload, you sacrificed your headphone’s full charge. Heck, you’re the one who got us on this adventure."
 
     r "Why would I leave this quest after such a small outburst?"
 
@@ -1599,12 +1611,12 @@ label start:
 
     #EMOTIONS MINIGAME - Gratefulness
 
-    r "It’s okay, let it out… is that you purring?"
+    r "It’s okay, let it out… is that you purring?!"
 
-    j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and…. um, Rose, look at your legs."
+    j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and… uhm, Rose, look at your legs."
 
-    show opal 
-    show jade blank at left 
+    show opal at center
+    show jade blank at center
 
     r "Hello cat. I think I know you from further up the road. So this is where you wandered off to."
 
@@ -1624,7 +1636,7 @@ label start:
 
     r "Oh, my apologies, we were just admiring your kitty-cat."
 
-    ol "She’s not mine, just an old acquaintance, so to speak. She just showed up the other day, little yellow fog with ragged claws, scuttling about for a morsel of something."
+    ol "She’s not mine, just an old acquaintance, so to speak. She just showed up the other day, scuttling about for a morsel of something."
 
     ol "I gave her a piece of steak and kidney pie and, next day, there she was, asking if she could have some more."
 
@@ -1650,7 +1662,7 @@ label start:
 
     ol "One day, I’m carrying this basket of cookies and biscuits and cakes, when I hear something. Meowing? I try to ignore it, thinking it a betrayal of the senses, a crumb of cheese and all that."
     
-    ol "But I hear it again, mewling. Finally, I get some of my co-workers. Nothing. Slowly, we look up, and there, where corners’ cross, shine a pair of multi-colored eyes."
+    ol "But I hear it again, mewling. Finally, I get some of my co-workers. Nothing. Slowly, we look up, and there, where corners’ cross, a pair of shiny eyes."
 
     ol "From the shelves, sacks of flour flew, sugar pelted like sand falls with waterfalls of milk and juice."
 
@@ -1660,15 +1672,15 @@ label start:
 
     r "What?"
 
-    ol "That spark in her eyes, like staring into the northern lights. So much colour, in so frail a little creature."
+    ol "That spark in her eyes, like staring into the northern lights. So much soul, in so frail a little creature."
 
-    ol "In that light, they struck me: that courage for freedom, and yet, at the same time, if I didn’t take care of her, who would? And so, well, I don’t know how, but the next minute, I quit the shop, marching out with cat in arms."
+    ol "In that light, they struck me: that courage for freedom, and yet, at the same time, if I didn’t take care of her, who would? And so, well, I don’t know how, but the next minute, I quit the shop, marching out with a cat in arms."
 
-    ol "Oh the ribbing I got afterwards, “Trading a good job for a little bit of fur, you must be mad”, well, cut off my ears and call me Van Gogh, cause I was unstoppable: hours without slumber, every days, painting, all thanks to my muse.Then... She was gone."
+    ol "Oh the ribbing I got afterwards, “Trading a good job for a little bit of fur, you must be mad”, well, cut off my ears and call me Van Gogh, cause I was unstoppable: hours without slumber, days painting, all thanks to my muse. Then... She was gone."
 
     j "I’m sorry. We didn’t mean to open up old wounds, there."
 
-    ol "Quite alright… Just… if only I hadn’t lost her painting…my cat with her dazzling coat…"
+    ol "Quite alright… Just… if only I hadn’t lost her painting… my cat with her dazzling coat…"
 
     j "Wait… are you the Opal on this canvas? {i}*shows phone*{/i}"
 
@@ -1678,7 +1690,7 @@ label start:
 
     ol "My goodness, no, Opal was my inspiration. I’m-"
 
-    show jade surprised dark orange at left 
+    show jade surprised dark orange at center
 
     j "PEARL!?"
 
@@ -1690,11 +1702,11 @@ label start:
 
     #To modify if the inside bg gets done 
 
-    show jade blank at left
+    show jade blank at center
 
     p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
 
-    r "There was also your painting in the café."
+    r "There was also your painting in the cafè."
 
     j "And I nearly got hit by a train."
 
@@ -1704,7 +1716,7 @@ label start:
 
     p "Ah yes, the macguffin which started your little quest."
 
-    j "Can we watch?"
+    j "Can we watch you open it?"
 
     r "...?"
 
@@ -1720,7 +1732,7 @@ label start:
 
     j "Of what?"
 
-    p "Of art school."
+    p "Art school."
 
     j "Oh!"
 
@@ -1728,7 +1740,7 @@ label start:
 
     p "All this time… I-I… everything - The hours… the first piece Opal inspired… Oh, if she were here now!"
 
-    r "Mam, are you alright?"
+    r "Ma'm, are you alright?"
 
     p "And what if it's too late? What if I fail? Oh, I've been dreaming about this for so long, I can't believe it!"
 
@@ -1738,9 +1750,9 @@ label start:
 
     r "Hm? So they are. May I trouble you for a tissue?"
 
-    J "Got you covered."
+    j "Got you covered."
 
-    p "{i}*chuckles*{/i} she’d be mewling for dinner. That's what she'd do."
+    p "{i}*chuckles*{/i} She’d be mewling for dinner. That's what she'd do."
 
     c "{i}*meow*{/i}"
 

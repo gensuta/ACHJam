@@ -3,9 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define r = Character("Rose")
-define j = Character("Jade")
-define p = Character("Pearl")
+define r = Character("Rose", color="F785B1")
+define j = Character("Jade", color="#FF5733")
+define p = Character("Pearl", color="FFF9EB")
 define ol = Character("Old Lady")
 define o = Character("Opal")
 
@@ -109,19 +109,17 @@ label start:
 
     # TOWN SCENE 
 
-    #GENEVA
-    #Is it possible to somehow show that she's thinking and not talking? Having the text in italic for example?
 
-    scene bg Jade home outside
+    scene bg jade home outside
     show rose blank at center 
 
-    r "It’s been three months, but my world hasn’t changed."
+    r "{i}It’s been three months, but my world hasn’t changed.{/i}"
 
-    r "I still don’t know what it means to see a color…"
+    r "{i}I still don’t know what it means to see a color…{/i}"
 
-    r "… and I have no idea how I’m feeling most of the time."
+    r "{i}… and I have no idea how I’m feeling most of the time.{/i}"
 
-    r "But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me."
+    r "{i}But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me.{/i}"
 
 
     #Here the game should fade to black 
@@ -129,7 +127,12 @@ label start:
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
-    scene bg Jade home outside
+    scene bg jade home outside
+    show rose blank at left
+
+    scene bg letter 
+
+    scene bg jade home outside
     show rose blank at left
 
     r "Strange… it looks like the name doesn’t match the resident."
@@ -142,10 +145,10 @@ label start:
 
     #SOUND THE DOORBELL 
 
-    "Choose to sound the doorbell"
+    "{b}Choose to sound the doorbell{/b}"
 
 
-    scene bg Jade home outside
+    scene bg jade home outside
     show rose blank at left
 
     v "Hello? Ah, hold on, don't leave just yet!"
@@ -160,9 +163,9 @@ label start:
 
     #LEAVE THE LETTER IN THE MAILBOX
 
-    "Choose to leave the letter in the mailbox"
+    "{b}Choose to leave the letter in the mailbox{/b}"
 
-    scene bg Jade home outside
+    scene bg jade home outside
     show rose blank at left
 
     r "Well… It's addressed to here. They can sort it out."
@@ -176,9 +179,10 @@ label start:
 
 
     #JADE'S HOUSE SCENE 2 (OUTSIDE) 
+    
     #Following both choices
 
-    scene bg Jade home outside
+    scene bg jade home outside
     show rose blank at left
     show jade blank at center
 
@@ -238,9 +242,9 @@ label start:
 
     #ASK THE NEIGHBOUR AS FIRST CHOICE 
 
-    "Choose to ask the neighbour"
+    "{b}Choose to ask the neighbour{/b}"
 
-    scene bg Jade home outside
+    scene bg jade home outside
     show rose blank at left
     show jade blank l at center
 
@@ -284,7 +288,7 @@ label start:
 
     #Here the game should fade to black 
 
-    scene bg Jade home inside
+    scene bg jade home inside
     show rose blank at left
     show jade blank at right
 
@@ -297,6 +301,13 @@ label start:
     r "A lot of worn down baseballs. Were you an athlete?"
 
     j "No, just holding onto them for a friend. Ah, here we are."
+
+    scene bg cat portrait 1
+
+    scene bg jade home inside
+    show rose blank at left
+    show jade blank at right
+
 
     r "It’s nice. Such a cute cat."
 
@@ -320,10 +331,10 @@ label start:
 
     #JADE'S APARTMENT AS FIRST CHOICE
 
-    "Choose to look inside Jade's apartment for clues"
+    "{b}Choose to look inside Jade's apartment for clues{/b}"
 
 
-    scene bg Jade home inside
+    scene bg jade home inside
     show rose blank at left
     show jade blank at right
 
@@ -332,6 +343,12 @@ label start:
     r "Very… organised."
 
     j "Hardly, most of it is taking refuge in my bedroom. Open the door and we’d be buried in a landslide of books and - ah ha! Got you, and... behold."
+
+    scene cat portrait 1
+
+    scene bg jade home inside
+    show rose blank at left
+    show jade blank at right
 
     r "A painting. Of a cat."
 
@@ -343,7 +360,7 @@ label start:
 
     r "It says “Opal” not “Pearl”."
 
-    j "True, but it was found INSIDE of Pearl’s old home. Which means, a connection."
+    j "True, but it was found {i}inside{/i} of Pearl’s old home. Which means, a connection."
 
     r "What kind, though?"
 
@@ -364,13 +381,13 @@ label start:
     #Here the game should fade to black 
 
 
-    scene Jade home outside
+    scene jade home outside
     show rose blank at left
     show jade blank l at center
 
     r "Best you let me sort this one out. They prefer a certain way of alerting them."
 
-    r "*whistles like a bird*"
+    r "{i}*whistles like a bird*{/i}"
 
     v "Ah, you’re early this week. Any news of Lily’s care package?"
 
@@ -437,7 +454,7 @@ label start:
 
     r "No, thank you, we’ve got the painting to find-"
 
-    r "*stomach growls*"
+    r "{i}*stomach growls*{/i}"
 
     j "We can talk about that over lunch, on me!"
 
@@ -509,7 +526,7 @@ label start:
     
     #CHOICE: Safe food/New food
 
-    "Choose the safe food"
+    "{b}Choose the safe food{/b}"
 
 
     #SAFE FOOD
@@ -565,7 +582,7 @@ label start:
 
     #NEW FOOD
 
-    "Choose to try a new food"
+    "{b}Choose to try a new food{/b}"
 
     scene bg cafe
     show rose blank at left
@@ -623,6 +640,10 @@ label start:
 
     #THE PAINTING 
 
+    #Following both choices
+
+    scene bg cat portrait 2
+
     scene bg cafe
     show rose blank at left
     show jade blank l at center
@@ -679,7 +700,7 @@ label start:
     #CHOICE: Ask the ice-cream man / Ask the man on the bench
 
 
-    "You choose to ask the ice-cream man"
+    "{b}You choose to ask the ice-cream man{/b}"
 
 
     scene bg icecream
@@ -705,7 +726,7 @@ label start:
 
     j "We mean… uhm, Rosie, you want anything?"
 
-    r "*nods and holds up two fingers*"
+    r "{i}*nods and holds up two fingers*{/i}"
 
     j "Very well. Good sir, we shall take two of the finest scoops of your ice cream. In exchange, mind telling us of “Opal” and her bench-sitting ways?"
 
@@ -751,7 +772,7 @@ label start:
 
     r "Good day Jasper. Enjoying the scenery?"
 
-    d "*whines*"
+    d "{i}*whines*{/i}"
 
     j "Actually, we’re looking for someone. You wouldn’t have happened to have seen anyone on this bench before you-"
 
@@ -800,7 +821,7 @@ label start:
 
     js "No shade upon your stoicisms and the like. But hear me out, for all the moments you’ve planned, a funny friend colours the emptiness between them all the brighter."
 
-    d "*whines*"
+    d "{i}*whines*{/i}"
 
     js "Not sure how I’d spend my days without this wee bounder and his chatterings. Probably just waiting every day for the next care package from Lily. Sometimes one just isn’t enough."
 
@@ -816,7 +837,7 @@ label start:
 
     js "Aye, the shiest little thing, moment Ron so much as jostled, it would be tugging at the leash to go."
 
-    d "*whines*"
+    d "{i}*whines*{/i}"
 
     js "Oh, here come the dog walkers…"
 
@@ -824,21 +845,89 @@ label start:
 
 
 
-    "You choose to ask the man on the bench"
+    "{b}You choose to ask the man on the bench{/b}"
 
     scene bg bench
     show rose blank at left
     show jade blank l at center
     show jasper at right
 
-    #TO BE WRITTEN
+    r "Uhm, excuse me, I-"
 
+    d "Bark-bark-bark-bork!"
+
+    j "Ah... good dog, nice dog…"
+
+    js "Now look what you bloody done, Ron, hush up. Hang on a second."
+
+    r "Sorry for disturbing your peace, we just needed to-"
+
+    js "Rose! I thought I recognised that voice. Well, no wonder Ron got all excited. Never thought I’d see you out of the routes, unless this is some premium service I don’t know a thing ‘bout."
+
+    r "Sorry, no package today, just enjoying the scenery."
+
+    d "{i}*whines*{/i}"
+
+    j "Actually, we’re looking for someone. You wouldn’t have happened to have seen anyone on this bench before you-"
+
+    js "Don’t apologise for enjoying the fine scenery. Heck, the scenery’s why I’m here, just look at this view!"
+
+    r "It is nice. Anything you can tell us?"
+
+    j "An old lady?Possibly carrying some art supplies?"
+
+    js "Sorry, lass, haven’t seen anyone else here for the past month. Especially with Ron, here, barking at his own shadow."
+     
+
+    scene bg bench
+    show rose blank at left
+    show jasper at right
+    show jade sad l at center
+
+    j "Hmm… sorry, I-I need a moment."
+
+    r "Jade, can you get to the kiosk? I’ll join you in a minute."
+
+    j "Wha’? Oh yeah, yeah. How could I forget? I’ll see to the ice cream, you take the big guy."
+
+    r "I’ll keep a brave face."
+
+    j "Sweet scoops will be our rewards."
+
+    scene bg bench
+    show rose blank at left
+    show jasper at right
+  
+    r "Please excuse my … friend, she seems quite shy around... I’m not sure what she’s feeling, as usual."
+
+    js "Indeed, a funny friend you’ve found, how long you’ve known ‘em?"
+
+    r "Just today. I’ll catch up with her. See you next round of post."
+
+    js "Until then. Take care, Rose, and if you see that cat-walker, give ‘em my regards."
+
+    r "Cat?"
+
+    js "Aye, the shiest little thing, moment Ron so much as jostled, it would be tugging at the leash to go."
+
+    scene bg bench
+    show rose blank at left
+    show jasper at right
+    show jade blank l at center 
+
+    j "I got the ice creams! And a lead. The ice-cream man remembered where Opal used to walk to."
+
+    d "{i}*whines*{/i}"
+
+    js "Ron, now, that’s not for you or me. Wait until we get back, there’s delicious beef back at - Oh, aye, here come the dog walkers…"
 
     #Here the game should fade to black
 
 
 
     #POND SCENE 
+
+    #Following both choices
     
     scene bg park
     show rose blank at left
@@ -855,7 +944,7 @@ label start:
 
     r "Right?"
 
-    j "Yeah… Well, actually *inhales* Can I… have a minute?"
+    j "Yeah… Well, actually {i}*inhales*{/i} Can I… have a minute?"
 
     r "S-sure."
     
@@ -912,7 +1001,7 @@ label start:
 
     r "Do you need a tissue?"
 
-    j "Nah *sniffs* I’m alright. Moment’s passed. Words were said, the pages turn *inhales*, our quest continues."
+    j "Nah {i}*sniffs*{/i} I’m alright. Moment’s passed. Words were said, the pages turn {i}*inhales*{/i}, our quest continues."
 
     r "Right. In that direction."
 
@@ -920,7 +1009,7 @@ label start:
 
     j "And by the way, thanks for listening. More and more, you’re proving yourself to be friend material."
 
-    r "Hm?" #SURPRISED
+    r "Hm?" 
 
     show rose surprised at center
 
@@ -942,7 +1031,7 @@ label start:
 
     show jade happy yellow at right
 
-    j "*gasps* Trains? Trains? An adventure to span the lands!"
+    j "{i}*gasps*{/i} Trains? Trains? An adventure to span the lands!"
 
     #EMOTIONS MINIGAME - JOY
 
@@ -952,8 +1041,44 @@ label start:
     #Here the game should fade to black 
 
 
+
+
     #TRAIN STATION SCENE 
 
+
+    scene bg train station
+    show rose angry at left
+    show jade scared purple at right
+
+    j "Oh my God. Oh my god…. I almost… Oh my God…"
+
+    #EMOTIONS MINIGAME - FEAR
+
+    j "Oh my God."
+
+    scene bg train station
+    show rose angry at left
+    show jade relieved light green at right
+
+    j "Oh ground, I could kiss you if you weren't covered in feet!"
+
+    #EMOTIONS MINIGAME - RELIEF
+
+    r "{i}*gasping*{/i} What is - What is happening?"
+
+    scene bg train station
+    show rose angry at left
+    show jade worried violet at center
+
+    j "Rose? Something up?"
+
+    #EMOTIONS MINIGAME - WORRY
+
+    r "{i}Everything’s getting louder. Pulse is - Why am I… Why am I shaking so much?{/i}"
+
+    j "Rose?"
+
+    
 
 
 

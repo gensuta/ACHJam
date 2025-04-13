@@ -1046,7 +1046,7 @@ label start:
     #TRAIN STATION SCENE 
 
 
-    scene bg train station
+    scene bg train station 
     show rose angry at left
     show jade scared purple at right
 
@@ -1078,7 +1078,309 @@ label start:
 
     j "Rose?"
 
+    r "{i}Like ants are crawling up and down my sleeves. So much sweat…{/i}"
+
+    j "Rosie, are you okay?"
+
+    r "{i}Please stop talking-{/i}"
+
+    j "Rose, please, just answer me!"
+
+    r "NO!"
+
+    j "Okay, okay…"
+
+    r "I’m - I’m sorry. My head, my chest - it feels like dough is on my ribcage and lungs. There’s no other trains coming, why is it getting so noisy?"
+
+    j "It’s just a bit of an overload. Nothing to fear. There’s a bench not too far away, let’s get you there, can you still walk?"
+
+    j "Now I see, that was a stupid question. One step at a time. There we go."
+
+    r "Th-thank you, but still too loud."
+
+    j "Way ahead of you. Brought a spare pair of these bad boys. Headphones. Fully charged up. Just put those on and -"
+
+    r "They work…"
+
+    j "Like magic. Now, do you need a minute to yourself?"
+
+    r "Only if you’re still here?"
+
+    j "{i}*nods*{/i}"
+
+    #Here the game should fade to black 
+
+
+    #TRAIN STATION CLUES SCENE
+
+    scene bg train station
+    show rose blank at left
+    show jade blank at center
+
+    j "Well, aside from a couple of antique cars, naught else for hints. The tracks run cold, least in the open. Appears we must bite the bullet, and see to the… ticket office."
+
+    r "Okay…"
+
+    j "Onwards!"
+
+    r "And… thank you for your headphones. I never really tried headphones like these before."
+
+    scene bg train station
+    show rose blank at left
+    show jade happy yellow at center
+
+    j "They are wonderful, and think nothing of it."
+
+    r "Despite my… stress."
+
+    j "Believe me, I’ve been there, and I’ll gladly stay here with you."
+
+    r "Hm…. Thank you again."
+
+    j "Again, no worries. Now then, here stands the ticket office, aaaand, it’s closed. Drag."
+
+    scene bg train station
+    show rose blank at left
+    show jade sad dark green at center
+
+    j "The track is well and truly cold as steel now."
+
+    #EMOTIONS MINIGAME - Disappointment
+
+    j "Well, at least we’ve the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
+
+    scene bg train station
+    show rose blank at left
+    show jade blank at center
+
+    j "Guess we won’t know until we hit the information highway."
+
+    r "Jade."
+
+    j "Onwards towards a wifi hotspot!"
+
+    r "Jade, hold on. Look through the glass…"
+
+    j "Knick-knacks and assorted time-wasting tools? Oooooh, a newton’s cradle. And it’s still clacking!"
+
+    r "And behind that, a newspaper clipping, an old one…"
+
+    j "A clue?"
+
+    r "No, but potentially so."
+
+    j "Exactly how so - oooooh. Our Opal’s been here a long time, hasn’t she?"
+
+    r "And this town is small."
+
+    j "So it’d stand to reason, she could’ve ended up on a newspaper, say, as a renowned artist respected amongst the towns?"
+
+    r "Exactly. Onward to the library!"
+
+    j "Onwards!"
+
+    #Here the game should fade to black
+
+
+    #LIBRARY SCENE 
+
+    scene bg library
+    show rose blank at left
+    show jade blank at right
+
+    r "Okay, the screen is on, and now, we just have to search by the-"
+
+    v "{i}*cough*{/i}"
+
+    r "By a few years, maybe a decade given her possible age-"
+
+    v "Excuse me, whoever’s supposed to be at the desk, can you pleeeaaase get over here! {i}*burp*{/i}. I pay my taxes, I deserve some service here."
+
+    scene bg library
+    show rose blank at left
+    show jade angry red at right
+
+    r "Everything okay?"
+
+    #EMOTIONS MINIGAME - Annoyance
+
+    j "Yeah, yeah."
+
+    r "You want me to tell them to be quiet?"
+
+    j "No, no. I won’t sacrifice your nerves to that human migraine."
+
+    r "We can come back later…"
+
+    j "No times three to that. I can power through. {i}*fidgets*{/i}"
+
+    r "Are you certain? You appear upset."
+
+    v "Don’t pretend I’m not here. I can see you in the back rooms. I can wait."
+
+    r "Doesn’t it hurt?"
+
+    j "Like there’s a heated weight in my chest, working its way up to my shoulders, then my neck, until it’s like my brain’s replaced by a heavy rock, and I wanna throw it right at ‘em."
+
+    r "Then what’s stopping you?"
+
+    j "Why should I? What’s rampant flailing going to get me aside from a bad rep round town?"
+
+    v "You ain’t better than the rest of us, you know. Everybody knocks on my door, but are too intimidated to stay, only tribute. I’m respected, dammit!"
+
+    r "But how do you stop the weight from crushing you?"
+
+    j "Breathe, just breathe… let’s do it together."
+
+    #BREATHING MINIGAME 
+
+    scene bg library
+    show rose blank at left
+    show jade blank at center
+
+    j "Feel better?"
+
+    r "I think."
+
+    v "Don’t you close the door on me, I have a reputation to uphold. Know what, fine, I’m not coming here again. You lost a most valuable customer."
+
+    j "And the lughead leaves."
+
+    #Here the game should fade to black 
+
+    scene bg library
+    show rose blank at left
+    show jade blank at center
+
+    r "Two decades back in time, naught."
+
+    j "{i}*sigh*{/i}"
+
+    scene bg library
+    show rose blank at left
+    show jade bored beige at center
+
+    r "Something wrong?"
+
+    j "I’m no good with the waiting game."
+
+    r "Just be patient. The reward becomes sweeter with each passing day."
+
+    j "Please let it not take days! I mean… You’re doing the heavy lifting at this stage, whilst I’m just here. I need to do something to fill in the spaces."
+
+    r "Hmmm. I’ll be right back."
+
+    j "Not too long, I hope."
+
+    r "Okay, let me see…"
+
+
+    #CHOICE: Fantasy novel / Zoology book / Horror novel
+
+    #FANTASY NOVEL
+
+    "{b}Choose the fantasy novel{/b}"
+
+    scene bg library
+    show rose blank at left
+    show jade blank at center
+
+    r "Found this, not sure if it’s any good, it’s called-"
+
+    j "I know that cover. The elvish brooding, the silver hair lost in the roaring winds of limbo..."
+
+    show jade surprised orange at center
     
+    j "“Champions of the Infinite”!"
+
+    #EMOTIONS MINIGAME - surprise 
+
+    r "Oh, you’ve read it, I’ll try another…"
+
+    j "Don’t you dare. May I take a closer look? Just as I thought, an omnibus edition. Does it include? “Sails Across Destiny’s Seas”?"
+
+    show jade happy yellow at center 
+
+    j "Yeeees!"
+
+    r "Is that the one you’ve not read?"
+
+    j "Read nine times, soon to be ten!"
+
+    r "But if you’ve read it already, then why?"
+
+    j "Because it’s great. The kind where you realise something new each time you look at it."
+
+    j "Did Aelfreida truly know her nature as a Champion of Infinite? What if it’s all just one grand play by the Bolted Duchess to cope with the loss of her old life in the simulated providence?"
+
+    j "I remember this one time, I was chatting with a friend of mine online about… about how, about how Libby was just like Eraint, the silver wolf."
+
+    r "We can talk more about it once we’re done here."
+
+    j "Deal. Expect plenty of lore on Ereint and their silver paw!"
+
+    #Here the game should fade to black
+
+
+    #ZOOLOGY BOOK 
+
+    "{b}Choose the zoology book{/b}"
+
+    scene bg library
+    show rose blank at left
+    show jade blank at center
+
+    j "Rose, get a load of this critter, the “binturong”, it’s supposed to smell like popcorn, and it’s an ugly sort of cute."
+
+    r "Remember the page for me as you move on-"
+
+    show jade sad blue at center
+
+    j "{i}*slams book shut*{/i}"
+
+    r "...!"
+
+    j "... sorry, just got bored…"
+
+    r "I’m sorry."
+
+    j "What for? You didn’t know the following pages couldn’t beat the binturong factoid. I’ll see if there are any other zoological wonders about…"
+
+    r "Don’t go too far. {i}*looks at binturong*{/i} is kind of cute."
+    
+    r "And on the next page…. Canids…. oh."
+
+    #Here the game should fade to black
+
+
+
+    #HORROR NOVEL 
+
+    "{b}Choose the horror novel{/b}"
+
+    scene bg library
+    show rose blank at left
+    show jade blank at center
+
+
+    r "I found this, not sure if it’s your thing…"
+
+    j "“The Midnight Lands”, oh, I heard great stuff about this one!"
+
+    show jade happy light orange at center 
+
+    j "A friend of mine online said it had them leave the lights on for three nights straight!"
+
+    #EMOTIONS MINIGAME - Anticipation (Check if already done before)
+
+
+
+    
+
+
+
+
+
 
 
 

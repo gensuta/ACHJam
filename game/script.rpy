@@ -619,7 +619,7 @@ label new_food:
     scene bg cafe with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
-    
+
     j "So… how is it?"
 
     r "It’s nice."
@@ -1306,10 +1306,16 @@ label pond:
 
 
     #CHOICE: Fantasy novel / Zoology book / Horror novel
+    menu:
+        "Fantasy novel":
+            jump fantasynovel
+        "Zoology book":
+            jump zoologybook
+        "Horror novel":
+            jump horrornovel
 
+label fantasynovel:
     #FANTASY NOVEL
-
-    "{b}Choose the fantasy novel{/b}"
 
     scene bg library
     show rose blank at left
@@ -1319,17 +1325,18 @@ label pond:
 
     j "I know that cover. The elvish brooding, the silver hair lost in the roaring winds of limbo..."
 
-    show jade surprised orange at center
+    show jade surprised at center, orange
     
     j "“Champions of the Infinite”!"
 
     #EMOTIONS MINIGAME - surprise 
+    #TODO - Geneva
 
     r "Oh, you’ve read it, I’ll try another…"
 
     j "Don’t you dare. May I take a closer look? Just as I thought, an omnibus edition. Does it include? “Sails Across Destiny’s Seas”?"
 
-    show jade happy yellow at center 
+    show jade happy at center, yellow
 
     j "Yeeees!"
 
@@ -1349,12 +1356,10 @@ label pond:
 
     j "Deal. Expect plenty of lore on Ereint and their silver paw!"
 
-    #Here the game should fade to black
+    jump libraryclue
 
-
+label zoologybook:
     #ZOOLOGY BOOK 
-
-    "{b}Choose the zoology book{/b}"
 
     scene bg library
     show rose blank at left
@@ -1364,7 +1369,7 @@ label pond:
 
     r "Remember the page for me as you move on-"
 
-    show jade sad blue at center
+    show jade sad at center, blue
 
     j "{i}*slams book shut*{/i}"
 
@@ -1385,13 +1390,11 @@ label pond:
     
     r "And on the next page… Canids… oh."
 
-    #Here the game should fade to black
+    jump libraryclue
 
-
+label horrornovel:
 
     #HORROR NOVEL 
-
-    "{b}Choose the horror novel{/b}"
 
     scene bg library
     show rose blank at left
@@ -1402,7 +1405,7 @@ label pond:
 
     j "“The Midnight Lands”, oh, I heard great stuff about this one!"
 
-    show jade happy at center, light_orange
+    show jade happy at center, lightorange
 
     j "A friend of mine online said it had them leave the lights on for three nights straight!"
 
@@ -1423,7 +1426,7 @@ label pond:
 
     r "OH! Please don’t do that again…"
     
-    show rose happy at left
+    show rose happy at left, yellow
     
     r "{i}*ahem*{/i} We’re still in the library."
 
@@ -1435,9 +1438,9 @@ label pond:
 
     j "The relief that it’s over, goodness how I love it."
 
+    jump libraryclue
 
-
-
+label libraryclue
     #LIBRARY CLUE SCENE 
     #Following all three choices
 
@@ -1521,7 +1524,7 @@ label pond:
 
     e "Last I checked, not too far. Down Little Lane, can't miss the thing. And with that, I'll leave you, I've got shelves to restock."
 
-    show jade happy light orange l at center
+    show jade happy l at center, lightorange
     show rose happy at left
 
     j "Rose!"
@@ -1532,7 +1535,7 @@ label pond:
 
     r "ONWARDS!"
 
-    show jade surprised dark orange l at center
+    show jade surprised l at center, darkorange
 
     j "Rose?!"
 
@@ -1543,8 +1546,6 @@ label pond:
     r "Onwards!"
 
     #Here the game should fade to black (done)
-
-
 
     #OUTSIDE OF PEARL'S HOME SCENE 
 
@@ -1578,13 +1579,14 @@ label pond:
 
     j "...! No…"
 
-    show jade disappointed dark green l at center 
+    show jade disappointed l at center, darkgreen
 
     v "I'm sorry, I do not know how you know her, but Opal has been gone for-"
 
     j "No… No, no, no, no…"
 
     #EMOTIONS MINIGAME - Disappointment (check if it's already been done)
+    #TODO - Geneva
 
     v "I'm coming out. No! Don't go!"
 
@@ -1599,7 +1601,7 @@ label pond:
 
     scene bg pearl home outside
     show rose sad at center
-    show jade angry disappointed dark green at left
+    show jade angry disappointed at left, darkgreen
 
     r "Jade, please wait. This isn’t the end of the world."
 
@@ -1611,23 +1613,25 @@ label pond:
 
     r "This is not stupid, not the letter, not my job, not our choice to see this through. I have not regretted a single thing today. Even now, I can’t find a single feeling of regret. So please, don’t call it all stupid!"
 
-    show jade sad light blue at left 
+    show jade sad at left, lightblue
 
     r "{i}*sighs*{/i}"
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
     #EMOTIONS MINIGAME - REMORSE
- 
+    #TODO - Geneva
+
     r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
 
     j "But… why?"
 
     r "People pass away. People move on. Some things are just out of our control."
 
-    show jade ashamed pink at left
+    show jade ashamed at left, pink
 
     #EMOTIONS MINIGAME - SHAME
+    #TODO - Geneva
 
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
 
@@ -1635,11 +1639,12 @@ label pond:
 
     r "Why would I leave this quest after such a small outburst?"
 
-    show jade grateful gold at left 
+    show jade grateful at left, gold
 
     j "Rose… I… You’re too good for me."
 
     #EMOTIONS MINIGAME - Gratefulness
+    #TODO - Geneva
 
     r "It’s okay, let it out… is that you purring?!"
 
@@ -1720,7 +1725,7 @@ label pond:
 
     ol "My goodness, no, Opal was my inspiration. I’m-"
 
-    show jade surprised dark orange at center
+    show jade surprised at center, darkorange
 
     j "PEARL!?"
 
@@ -1788,11 +1793,11 @@ label pond:
     p "And you, Amber, all the work you'll be subject to in the coming days. And you two, thank you, bless you. Thank you and bless you for reigniting that spark!"
 
 
-    #Here the game should fade to black 
+    #Here the game should fade to black  (done)
 
-    scene bg jade home outside
-    show rose blank at left
-    show jade happy yellow at center
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
+    show jade happy at center, yellow with dissolve
 
     r "Well… I guess that’s our quest done." 
     
@@ -1818,13 +1823,9 @@ label pond:
 
     j "And I’m paying. Well, I’ll be seeing you tomorrow then, on the dot, and that’s a promise, cause that’s what friends do."
 
-    show rose happy yellow at left 
+    show rose happy at left, yellow
 
     r "...that's what friends do..."
-
-
-
-
 
 
 

@@ -7,7 +7,7 @@ define r = Character("Rose", color="F785B1")
 define j = Character("Jade", color="#FF5733")
 define p = Character("Pearl", color="FFF9EB")
 define ol = Character("Old Lady")
-define o = Character("Opal")
+define c = Character("Cat")
 
 define v = Character("Voice")
 
@@ -1373,9 +1373,419 @@ label start:
 
     #EMOTIONS MINIGAME - Anticipation (Check if already done before)
 
+    r "Are you sure? I can find something else…"
 
+    j "Not in your life, this is my jam!"
 
+    r "What about your friend?"
+
+    j "To be fair, they’ll jump at anything spooky; they had a similar reaction to “Bear in the Machinery” and “The Poppy Bites”, which were nothing but a string of jumpscares, for me at least."
+
+    j "Don’t get me wrong, I enjoy jumpscares, but only if they build it up juuust right: as you read each line, word for word, you spy the mark. You know they're behind the next page, listening, hearing the crisp fluttering of your heart and the page."
+
+    j "You can’t stop yourself, as you turn it, and no matter how slowly, you’ll meet them on the other side… and then…. Boo!"
+
+    r "OH! Please don’t do that again…"
     
+    show rose happy at left
+    
+    r "{i}*ahem*{/i} We’re still in the library."
+
+    j "Sorry… got a bit ahead of myself… but, you are smiling?"
+
+    show jade happy yellow at center
+
+    r "I am? Oh, I am… why?"
+
+    j "The relief that it’s over, goodness how I love it."
+
+    #Here the game should fade to black 
+
+
+    #LIBRARY CLUE SCENE 
+    #Following all three choices
+
+    scene bg library
+    show rose blank at left
+    show jade blank at right
+
+
+    j "Looks to have been a slow news day. That's pretty much everyday where I last lived, but with squirrels instead."
+
+    r "It’s a small town. Been two years and people still talk about how the train broke down. Many theories. Anyway, look at the picture-"
+
+    scene bg newspaper 
+
+    scene bg library
+    show rose blank at left
+    show jade blank at right
+
+    j "Aww, they’re covered in cheese and ham. Toasty."
+
+    r "Beside the feline in cheeses and deli meats, does that look familiar to you?"
+
+    show jade surprised orange at right
+
+    j "Opal’s Painting!"
+
+    r "And that grocery store, I know where it’s located."
+
+    j "And I’ve got the article on my phone camera. To the places where money can be exchanged for goods and services!"
+
+
+    #Here the game should fade to black 
+
+
+    #GROCERY STORE SCENE
+
+    scene bg grocery store
+    show rose blank at left
+    show jade blank at center
+
+    j "Alright, possibly second to last leg of the journey. One small step through these gates, and we are potentially golden."
+
+    r "Stay focused. Look for old employees."
+
+    j "Gotcha! My eyes will be coasting along every aisle for - look, they're selling mini cheesecakes!"
+
+    r "..."
+
+    j "I know, I know. Refocused, starting… NOW!"
+
+    r "Appreciated."
+
+    show employee at right
+
+    e "Pardon me."
+
+    show rose blank at left
+    show jade blank l at center
+    show employee at right
+
+    j "Oh, goodness. Sorry, didn't mean to cause an uproar."
+
+    e "Oh no, I was just going to say: there's whole cheesecakes on offer if you're interested."
+
+    j "{i}*shakes*{/i} ooooh, thankyouthankyou!"
+
+    e "Don't thank me, thank the blighter that mucked up storage. Several years, they're still finding ways in. Blast the nine lives of that blooming cat!"
+
+    r  "...!"
+
+    j "What is it? Oh… Ooooh. A cat. Any chance you’ve seen a cat like- like this one on my phone?"
+
+    e "Well, I'll be battered. Spitting image and everything!"
+
+    j "You must know Opal, then?"
+
+    e "Opal? Oh ho ho, haven't heard that name in a dog’s age. Yes, yes, I know of Opal. Last one of the old guard, her and I. Surprised she's still kicking."
+
+    j "Where exactly do her soles be flying?"
+
+    e "Last I checked, not too far. Down Little Lane, can't miss the thing. And with that, I'll leave you, I've got shelves to restock."
+
+    show jade happy light orange l at center
+
+    j "Rose!"
+
+    r "Jade!"
+
+    j "This Is It!"
+
+    r "ONWARDS!"
+
+    show jade surprised dark orange l at center
+
+    j "Rose?!"
+
+    r "Ah - Sorry, I'm sorry."
+
+    j "Don’t be. Let's turn that power to propulsion. Onwards!"
+
+    r "Onwards!"
+
+    #Here the game should fade to black 
+
+
+
+    #OUTSIDE OF PEARL'S HOME SCENE 
+
+    scene bg pearl home outside
+    show rose blank at left
+    show jade blank at center
+
+    j "This is it, the final dungeon - I mean, final boss?"
+
+    r "Final leg?"
+
+    j "That’s it. The journey has been long and arduous, paved with conquered food, battlefield of escaped canines, the forest of books, and the ancient sage."
+
+    j "Now, all that stands between us, is a door, thus our quest is complete."
+
+    r "Would you care to knock?"
+
+    j "Me? No, no, it must be you, it’s your call, your undelivered letter."
+
+    r "A letter I would not have delivered without you. So please, give it a knock."
+
+    show jade blank l at center
+
+    j "Aye-aye. {i}*knock knock*{/i}"
+
+    v "Hello?"
+
+    r "Hello, we have something for Opal."
+
+    v "O-Opal… I'm sorry but…"
+
+    j "....! No…"
+
+    show jade disappointed dark green l at center 
+
+    v "I'm sorry, I do not know how you know her, but Opal has been gone for-"
+
+    j "No…. No, no, no, no…"
+
+    #EMOTIONS MINIGAME - Disappointment (check if it's already been done)
+
+    v "I'm coming out. No! Don't go!"
+
+    show jade angry disappointed dark green at left 
+
+    r "Jade!"
+    
+    r "Im sorry, ma'am, I'll be right back to explain."
+
+    v "I didn't mean, oh, where are you running off to?"
+
+    r "Jade, please wait. This isn’t the end of the world."
+
+    j "Nothing! It was all for nothing. Don’t you get it? We lost. Everything - meaningless. I-I almost died… I almost got run down by a train!"
+
+    j "I nearly bit it on this stupid choice! All for your stupid letter of your stupid job!"
+
+    r "Please, it isn’t over. It’s just- it’s just. {i}Heartbeat at my neck. Heat rising to my head. Remember, breathe.{/i} Just stupid… that, after everything, you’d call it that."
+
+    r "This is not stupid, not the letter, not my job, not our choice to see this through. I have not regretted a single thing today. Even now, I can’t find a single feeling of regret. So please, don’t call it all stupid!"
+
+    show jade sad light blue at left 
+
+    r "{i}*sighs*{/i}"
+
+    J "Oh my goodness - what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
+
+    #EMOTIONS MINIGAME - REMORSE
+ 
+
+    r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
+
+    j "But… why?"
+
+    r "People pass away. People move on. Some things are just out of our control."
+
+    show jade ashamed pink at left
+
+    #EMOTIONS MINIGAME - SHAME
+
+    j "No, not that {i}*sniffs*{/i} I’m someone you just met."
+
+    r "You stayed with me at the train station. You helped me through the overload, you sacrificed your headphone’s full charge. Heck, you’re the one who got us on this adventure"
+
+    r "Why would I leave this quest after such a small outburst?"
+
+    show jade grateful gold at left 
+
+    j "Rose… I… You’re too good for me."
+
+    #EMOTIONS MINIGAME - Gratefulness
+
+    r "It’s okay, let it out… is that you purring?"
+
+    j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and…. um, Rose, look at your legs."
+
+    show opal 
+    show jade blank at left 
+
+    r "Hello cat. I think I know you from further up the road. So this is where you wandered off to."
+
+    j "This is your kitty-cat?"
+
+    r "No, no, but I used to see them from time to time, round your neighbourhood…"
+
+    r "Hold on- come here, pspspsps, there we go. Little tufts at the side, strong headbutt to my palm. This is the one. Go on, try."
+
+    j "You sure? They look fierce."
+
+    r "Just don’t force the pet, let them do the work."
+
+    show pearl blank at right 
+
+    ol "So this is where you wandered off to."
+
+    r "Oh, my apologies, we were just admiring your kitty-cat."
+
+    ol "She’s not mine, just an old acquaintance, so to speak. She just showed up the other day, little yellow fog with ragged claws, scuttling about for a morsel of something."
+
+    ol "I gave her a piece of steak and kidney pie and, next day, there she was, asking if she could have some more."
+
+    j "Sounds like a handful."
+
+    ol "Hardly! When you’ve dealt with a hellraiser like mine, even the toughest tabby is a catwalk on a cakewalk. Dear, I hope I’m not taking time away from your work."
+
+    r "Just finished today, actually."
+
+    j "And besides, we could do with a bit of a chuckle. What kind of Hell did they raise?"
+
+    ol "All sorts. She’d be darting across the room. Jumping onto my old projects, just as I’d finished stitching up the last time she wounded them in battle."
+
+    ol "She’d be my shadow, but the next moment I turned around, she’d practically leap so high in shock, we’d see eye to eye. At times, part of me wonders if she still thought we were at the shop."
+
+    r "Shop, like the grocery store?"
+
+    ol "That’s right. Oh I fought tooth and nail to get her down from the shelves. Now that I think about it… That’s how we first met."
+
+    ol "Needed the extra job to buy new supplies - I was close to painting on grease paper over a placemat."
+
+    ol "Honestly, I was raking in just enough for canvas. But alas, nothing to show for it… I had sent out dozens of submissions, but at that point, I couldn’t even muster a paintstroke."
+
+    ol "One day, I’m carrying this basket of cookies and biscuits and cakes, when I hear something. Meowing? I try to ignore it, thinking it a betrayal of the senses, a crumb of cheese and all that."
+    
+    ol "But I hear it again, mewling. Finally, I get some of my co-workers. Nothing. Slowly, we look up, and there, where corners’ cross, shine a pair of multi-colored eyes."
+
+    ol "From the shelves, sacks of flour flew, sugar pelted like sand falls with waterfalls of milk and juice."
+
+    r "Woah..."
+    
+    ol "As everything calmed down, and everyone had quieted down after the chase, we all looked at the culprit. We were ready to swing them out the window, glass be darned. I myself volunteered to do the deed. At least, until I saw it."
+
+    r "What?"
+
+    ol "That spark in her eyes, like staring into the northern lights. So much colour, in so frail a little creature."
+
+    ol "In that light, they struck me: that courage for freedom, and yet, at the same time, if I didn’t take care of her, who would? And so, well, I don’t know how, but the next minute, I quit the shop, marching out with cat in arms."
+
+    ol "Oh the ribbing I got afterwards, “Trading a good job for a little bit of fur, you must be mad”, well, cut off my ears and call me Van Gogh, cause I was unstoppable: hours without slumber, every days, painting, all thanks to my muse.Then... She was gone."
+
+    j "I’m sorry. We didn’t mean to open up old wounds, there."
+
+    ol "Quite alright… Just… if only I hadn’t lost her painting…my cat with her dazzling coat…"
+
+    j "Wait… are you the Opal on this canvas? {i}*shows phone*{/i}"
+
+    ol "Oh my, where was that?"
+
+    r "In your previous residence. Now, apologies for our bluntness, but are you indeed Opal?"
+
+    ol "My goodness, no, Opal was my inspiration. I’m-"
+
+    show jade surprised dark orange at left 
+
+    j "PEARL!?"
+
+    p "Goodness!"
+
+    r "I’m sorry, forgive our volume, but… I - we…"
+
+    j "It has been quite a day…"
+
+    #To modify if the inside bg gets done 
+
+    show jade blank at left
+
+    p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
+
+    r "There was also your painting in the café."
+
+    j "And I nearly got hit by a train."
+
+    p "My word, it sounds like it’s been quite a day, indeed."
+
+    r "So, your letter."
+
+    p "Ah yes, the macguffin which started your little quest."
+
+    j "Can we watch?"
+
+    r "...?"
+
+    j "We’ve spent so long with it. I can’t live my life not knowing."
+
+    p "It is only fair, then. Let me preface, however, it may well just be rubbish: a coupon for a car I don’t have, a subscription, or goodness forbid, a brochure for some cockamamy - !"
+
+    show pearl rainbow troubled at right 
+
+    r "Something wrong?"
+
+    p "Acceptance…"
+
+    j "Of what?"
+
+    p "Of art school."
+
+    j "Oh!"
+
+    r "That was what the submissions were for…"
+
+    p "All this time… I-I… everything - The hours… the first piece Opal inspired… Oh, if she were here now!"
+
+    r "Mam, are you alright?"
+
+    p "And what if it's too late? What if I fail? Oh, I've been dreaming about this for so long, I can't believe it!"
+
+    show rose sad at left
+
+    j "What about you, Rose? Your eyes are running a storm."
+
+    r "Hm? So they are. May I trouble you for a tissue?"
+
+    J "Got you covered."
+
+    p "{i}*chuckles*{/i} she’d be mewling for dinner. That's what she'd do."
+
+    c "{i}*meow*{/i}"
+
+    p "And you, Amber, all the work you'll be subject to in the coming days. And you two, thank you, bless you. Thank you and bless you for reigniting that spark!"
+
+
+    #Here the game should fade to black 
+
+    scene bg jade home outside
+    show rose blank at left
+    show jade happy yellow at center
+
+    r "Well… I guess that’s our quest done." 
+    
+    r "...see you on the next delivery route?"
+
+    j "Oh ho ho no, you’re not getting away that easily."
+
+    r "Hm?"
+
+    j "Today’s adventure may be over, but there’s no chance I’m letting that be the only one with you."
+
+    j "I’ve been here for only a couple months, but not once, not once, has someone really drawn me out to the sights."
+
+    j "I’m sorry, Rosie, but you're officially my muse."
+
+    r "I-I’ve been here my whole life, but-I’ve never had someone to show the sights to."
+
+    r "I have work in the morning, though."
+
+    j "Then we make it lunch. Like I said, Rosie, I’m all in for this. Deal?"
+
+    r "...deal."
+
+    j "And I’m paying. Well, I’ll be seeing you tomorrow then, on the dot, and that’s a promise, cause that’s what friends do."
+
+    show rose happy yellow at left 
+
+    r "...that's what friends do..."
+
+
+
+
+
+
 
 
 

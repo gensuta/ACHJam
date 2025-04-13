@@ -43,6 +43,38 @@ transform shaking_text:
             linear 1.0 alpha .2
             repeat
 
+#colors for transform below- geneva
+# figured out courtesy of this reddit thread (https://www.reddit.com/r/RenPy/comments/18nyqvu/how_do_i_add_colour_to_greyscale_images/)
+transform red:
+    matrixcolor TintMatrix("#ff0000") * SaturationMatrix(1.0)
+
+transform blue:
+    matrixcolor TintMatrix("#003cff") * SaturationMatrix(1.0)
+
+transform green:
+    matrixcolor TintMatrix("#21b114") * SaturationMatrix(1.0)
+
+transform yellow:
+    matrixcolor TintMatrix("#ffd500") * SaturationMatrix(1.0)
+    
+transform purple:
+    matrixcolor TintMatrix("#7700ff") * SaturationMatrix(1.0)
+transform violet:
+    matrixcolor TintMatrix("#bb00ff") * SaturationMatrix(1.0)
+transform darkgreen:
+    matrixcolor TintMatrix("#074027") * SaturationMatrix(1.0)
+transform lightorange:
+    matrixcolor TintMatrix("#ff6a00") * SaturationMatrix(1.0)
+transform orange:
+    matrixcolor TintMatrix("#7700ff") * SaturationMatrix(1.0)
+transform darkorange:
+    matrixcolor TintMatrix("#b84d00") * SaturationMatrix(1.0)
+transform pink:
+    matrixcolor TintMatrix("#ffa8ef") * SaturationMatrix(1.0)
+transform lightblue:
+    matrixcolor TintMatrix("#9cfcff") * SaturationMatrix(1.0)
+transform gold:
+    matrixcolor TintMatrix("#ffbb00") * SaturationMatrix(1.0)
 # The game starts here.
 
 
@@ -51,21 +83,10 @@ label start:
 
     #OPTOMETRY CLINIC SCENE
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg optometry
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-
-    show rose ng at left
-    show optometrist at right
-
-    # These display lines of dialogue.
+    show rose ng at left with dissolve
+    show optometrist at right with dissolve
 
     oo "Okay, we’re almost done with the optometric evaluation. Now look at me. What do you see?"
 
@@ -87,13 +108,11 @@ label start:
 
     oo "Recognizing emotions will also help you flexibly respond to your own emotional states and will improve your interactions with others."
 
-    #GENEVA 
-    #Here the game should fade to black 
-
+    #Here the game should fade to black (done!)
    
-    scene bg optometry
-    show rose blank at left 
-    show optometrist at right 
+    scene bg optometry with fade 
+    show rose blank at left with dissolve
+    show optometrist at right with dissolve
 
     oo "How are the glasses? Anything?"
 
@@ -104,14 +123,14 @@ label start:
     oo "In any case, keep them on at all times, I’m sure you just need to get used to them and they’ll start working soon."
 
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done!)
 
 
     # TOWN SCENE 
 
 
-    scene bg jade home outside
-    show rose blank at center 
+    scene bg jade home outside with fade
+    show rose blank at center with dissolve
 
     r "{i}It’s been three months, but my world hasn’t changed.{/i}"
 
@@ -122,34 +141,34 @@ label start:
     r "{i}But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me.{/i}"
 
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done!)
 
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
-    scene bg jade home outside
-    show rose blank at left
+    scene bg letter with Fade(0.5,0.0,0.5) #Why doesn't it show up? (It wasn't showing up because it was being quickly replaced by jade's home! Fixed it by adding a pause)
+    pause 2.5
 
-    scene bg letter #Why doesn't it show up?
-
-    scene bg jade home outside
-    show rose blank at left
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
 
     r "Strange… it looks like the name doesn’t match the resident."
+    #CHOICE: Sound the doorbell / Leave the letter in the mailbox anyway (done!)
+
+    menu:
+        "Sound the doorbell":
+            jump sound_doorbell #we're jumping to what happens after we ring the doorbell!
+        "Leave the letter in the mailbox anyway":
+            jump leave_letter #we're jumpint to what happens after we ring the doorbell
 
 
-    #CHOICE: Sound the doorbell / Leave the letter in the mailbox anyway
 
-    #Here the game should fade to black 
-
-
+label sound_doorbell:
     #SOUND THE DOORBELL 
 
-    "{b}Choose to sound the doorbell{/b}"
-
-
-    scene bg jade home outside
-    show rose blank at left
+    #Here the game should fade to black (done!)
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
 
     v "Hello? Ah, hold on, don't leave just yet!"
 
@@ -157,34 +176,35 @@ label start:
 
     v "Okay, I’m nearly at the door-"
 
+    jump jades_house
+   
 
-    #Here the game should fade to black 
-
-
+label leave_letter:
     #LEAVE THE LETTER IN THE MAILBOX
 
-    "{b}Choose to leave the letter in the mailbox{/b}"
+    #Here the game should fade to black (done!)
 
-    scene bg jade home outside
-    show rose blank at left
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
 
     r "Well… It's addressed to here. They can sort it out."
 
-    show jade blank at right
 
     j "Miss? Excuse me, Miss?"
+    jump jades_house
 
 
-    #Here the game should fade to black 
-
+label jades_house:
 
     #JADE'S HOUSE SCENE 2 (OUTSIDE) 
     
     #Following both choices
 
-    scene bg jade home outside
-    show rose blank at left
-    show jade blank at center
+    #Here the game should fade to black (done!)
+
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "Hello, forgive my lateness, I had headphones on."
 
@@ -234,19 +254,22 @@ label start:
 
     r "Rose… good to meet you."
 
-
     #CHOICE: Ask the neihgbour / Look inside Jade's apartment for clues 
+    menu:
+        "Ask the neighbor":
+            jump ask_neighbor_first
+        "Look inside Jade's apartment for clues":
+            jump check_apartment_first
+   
 
-    #Here the game should fade to black 
-
-
+   
+label ask_neighbor_first:
     #ASK THE NEIGHBOUR AS FIRST CHOICE 
+    #Here the game should fade to black (done)
 
-    "{b}Choose to ask the neighbour{/b}"
-
-    scene bg jade home outside
-    show rose blank at left
-    show jade blank l at center
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
 
     j "Excuse me. Hello? Anyone there?"
 
@@ -286,11 +309,11 @@ label start:
 
     j "I believe so, leading right back home…"
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
 
-    scene bg jade home inside
-    show rose blank at left
-    show jade blank at right
+    scene bg jade home inside with fade
+    show rose blank at left with dissolve
+    show jade blank at right with dissolve
 
     j "The moment I heard “artist”, it hit me, just like that! Right against the back of the cupboard…"
 
@@ -325,18 +348,16 @@ label start:
 
     j "And click. Onto the phone, and the weight of a canvas off our shoulders."
 
-    #Here the game should fade to black 
+    jump cafe
 
 
-
+label check_apartment_first:
     #JADE'S APARTMENT AS FIRST CHOICE
 
-    "{b}Choose to look inside Jade's apartment for clues{/b}"
-
-
-    scene bg jade home inside
-    show rose blank at left
-    show jade blank at right
+    #Here the game should fade to black (done)
+    scene bg jade home inside with fade
+    show rose blank at left with dissolve
+    show jade blank at right with dissolve
 
     j "Come on, where are you? I know you’re stocked up somewhere…"
 
@@ -378,12 +399,12 @@ label start:
 
     j "Ah, thank you. Now, onwards!"
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
 
 
-    scene bg jade home outside
-    show rose blank at left
-    show jade blank l at center
+    scene bg jade home outside with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
 
     r "Best you let me sort this one out. They prefer a certain way of alerting them."
 
@@ -431,15 +452,16 @@ label start:
 
     j "Well, we need some dramatics in this quest."
 
-    #Here the game should fade to black 
+    jump cafe
 
 
-
+label cafe:
+    #Here the game should fade to black (done)
     #CAFE SCENE 
 
-    scene bg cafe
-    show rose blank at left
-    show jade blank at center
+    scene bg cafe with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
 
     j "What a cosy little place."
@@ -520,26 +542,27 @@ label start:
 
     j "Well, to be fair, we got other fish to fry, so no need to dwell. And speaking of food, looks like the line’s shortened. Figured out your order?"
 
-
-    #Here the game should fade to black 
-
     
     #CHOICE: Safe food/New food
+    menu:
+        "Choose your safe food":
+            jump safe_food
+        "Choose something new":
+            jump new_food
 
-    "{b}Choose the safe food{/b}"
-
-
+label safe_food:
     #SAFE FOOD
-
-    scene bg cafe
-    show rose blank at left
-    show jade blank at center
+    #Here the game should fade to black (done)
+    scene bg cafe with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     r "Double burger with coleslaw, please."
 
     j "Stick to what you know, fair enough."
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
+    scene bg cafe with fade
 
     j "He he he. Now look at the crispy flakiness of that pastry. It feels like a crime to tear it open. How about your burger?"
 
@@ -577,22 +600,21 @@ label start:
 
     r "Wait-Look behind you. Actually, could you get your phone out?"
 
-    #Here the game should fade to black 
+    jump the_painting
 
-
+label new_food:
     #NEW FOOD
-
-    "{b}Choose to try a new food{/b}"
-
-    scene bg cafe
-    show rose blank at left
-    show jade blank at center
+    #Here the game should fade to black (done)
+    scene bg cafe with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     r "I’ll have what you’re having."
 
     j "Prepare for a wonderful food sensation!"
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
+    scene bg cafe with fade
 
     j "So… how is it?"
 
@@ -634,19 +656,20 @@ label start:
 
     r "I’m sorry to interrupt, but does that look familiar to you?"
 
-    #Here the game should fade to black
+    jump the_painting
 
-
-
+label the_painting:
     #THE PAINTING 
 
+    #Here the game should fade to black (done)
     #Following both choices
 
-    scene bg cat portrait 2
+    scene bg cat portrait 2 with fade
+    pause 2.0 #making sure it doesn't get skipped over like the letter! (Geneva)
 
-    scene bg cafe
-    show rose blank at left
-    show jade blank l at center
+    scene bg cafe with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
 
     j "Is that…?"
 
@@ -678,16 +701,13 @@ label start:
 
     j "Ready to go?"
 
-    #Here the game should fade to black
-
-
-
+    #Here the game should fade to black (done!)
 
     #PARK SCENE 
 
-    scene bg park
-    show rose blank at center
-    show jade blank at right
+    scene bg park with fade
+    show rose blank at center with dissolve
+    show jade blank at right with dissolve
 
 
     j "Should we ask somebody if they remember seeing our mystery lady around here?"
@@ -696,17 +716,20 @@ label start:
 
     j "Uh, right,  well… the ice-cream man looks like a more promising lead to me. Being at the park all the time and all."
 
-
     #CHOICE: Ask the ice-cream man / Ask the man on the bench
+    menu:
+        "Ask the ice-cream man":
+            jump ask_icecream_man
+        "Ask the man on the bench":
+            jump ask_bench_man
 
 
-    "{b}You choose to ask the ice-cream man{/b}"
-
-
-    scene bg icecream
-    show rose blank at left
-    show jade blank l at center
-    show icecream man at right
+label ask_icecream_man:
+    #Here the game should fade to black (done!)
+    scene bg icecream with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
+    show icecream man at right with dissolve
 
     r "Excuse us?"
 
@@ -751,12 +774,12 @@ label start:
     i "Yes, in that general direction…"
 
 
-    #Here the game should fade to black
+    #Here the game should fade to black (done)
 
-    scene bg bench
-    show rose blank at left
-    show jade blank l at center
-    show jasper at right
+    scene bg bench with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
+    show jasper at right with dissolve
 
     r "Uhm, excuse me, I-"
 
@@ -790,7 +813,7 @@ label start:
 
     js "Sorry, lass, haven’t seen anyone else here for the past month. Especially with Ron, here, barking at his own shadow."
 
-    scene bg bench
+    scene bg bench with dissolve
     show rose blank at left
     show jasper at right
     show jade sad l at center
@@ -804,6 +827,7 @@ label start:
     scene bg bench
     show rose blank at left
     show jasper at right
+    hide jade sad l with dissolve
   
     r "Please excuse my … friend, she seems quite shy around... I’m not sure what she’s feeling, as usual."
 
@@ -841,16 +865,16 @@ label start:
 
     js "Oh, here come the dog walkers…"
 
-    #Here the game should fade to black
+    jump pond
+
+label ask_bench_man:
 
 
-
-    "{b}You choose to ask the man on the bench{/b}"
-
-    scene bg bench
-    show rose blank at left
-    show jade blank l at center
-    show jasper at right
+    #Here the game should fade to black (done)
+    scene bg bench with fade
+    show rose blank at left with dissolve
+    show jade blank l at center with dissolve
+    show jasper at right with dissolve
 
     r "Uhm, excuse me, I-"
 
@@ -882,7 +906,7 @@ label start:
     scene bg bench
     show rose blank at left
     show jasper at right
-    show jade sad l at center
+    show jade sad l at center with dissolve
 
     j "Hmm… sorry, I-I need a moment."
 
@@ -897,7 +921,8 @@ label start:
     scene bg bench
     show rose blank at left
     show jasper at right
-  
+    hide jade sad l with dissolve
+
     r "Please excuse my … friend, she seems quite shy around... I’m not sure what she’s feeling, as usual."
 
     js "Indeed, a funny friend you’ve found, how long you’ve known ‘em?"
@@ -913,7 +938,7 @@ label start:
     scene bg bench
     show rose blank at left
     show jasper at right
-    show jade blank l at center 
+    show jade blank l at center  with dissolve
 
     j "I got the ice creams! And a lead. The ice-cream man remembered where Opal used to walk to."
 
@@ -921,17 +946,17 @@ label start:
 
     js "Ron, now, that’s not for you or me. Wait until we get back, there’s delicious beef back at - Oh, aye, here come the dog walkers…"
 
-    #Here the game should fade to black
+    jump pond
 
-
+label pond:
 
     #POND SCENE 
 
     #Following both choices
-    
-    scene bg park
-    show rose blank at left
-    show jade sad at center
+    #Here the game should fade to black (done)
+    scene bg park with fade
+    show rose blank at left with dissolve
+    show jade sad at center with dissolve
     
 
     r "Hello dog, hello dog, hello dog…"
@@ -954,13 +979,11 @@ label start:
 
     j "I think so."
 
-    #Here the game should fade to black
+    #Here the game should fade to black (done)
 
-
-
-    scene bg pond
-    show rose blank at center
-    show jade sad at right
+    scene bg pond with fade
+    show rose blank at center with dissolve
+    show jade sad at right with dissolve
 
     j "She would have loved to live here. If she were here, geese would be flying…"
 
@@ -990,12 +1013,13 @@ label start:
     
     j "I could see the sky in her eyes… her own little vision of heaven."
 
-    #JADE COLORS BLUE
-    show jade sad blue at right
+    #JADE COLORS BLUE (done)
+    show jade sad at right, blue # will be in the doc, but to adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
 
     r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
 
-    #EMOTIONS MINIGAME - SADNESS
+    #EMOTIONS MINIGAME - SADNESS 
+    #TODO - Geneva
 
     j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
@@ -1029,30 +1053,28 @@ label start:
 
     #JADE COLORS YELLOW
 
-    show jade happy yellow at right
+    show jade happy at right,yellow
 
     j "{i}*gasps*{/i} Trains? Trains? An adventure to span the lands!"
 
     #EMOTIONS MINIGAME - JOY
+    #TODO - Geneva
 
     r "We’ll see."
 
 
-    #Here the game should fade to black 
-
-
-
-
+    #Here the game should fade to black (done)
     #TRAIN STATION SCENE 
 
 
-    scene bg train station 
-    show rose angry at left
-    show jade scared purple at right
+    scene bg train station with fade
+    show rose angry at left with dissolve
+    show jade scared purple at right, purple with dissolve
 
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
     #EMOTIONS MINIGAME - FEAR
+    #TODO - Geneva
 
     j "Oh my God."
 
@@ -1063,16 +1085,18 @@ label start:
     j "Oh ground, I could kiss you if you weren't covered in feet!"
 
     #EMOTIONS MINIGAME - RELIEF
+    #TODO - Geneva
 
     r "{i}*gasping*{/i} What is - What is happening?"
 
     scene bg train station
     show rose angry at left
-    show jade worried violet at center
+    show jade worried at center, violet
 
     j "Rose? Something up?"
 
     #EMOTIONS MINIGAME - WORRY
+    #TODO - Geneva
 
     r "{i}Everything’s getting louder. Pulse is - Why am I… Why am I shaking so much?{/i}"
 
@@ -1110,14 +1134,12 @@ label start:
 
     j "{i}*nods*{/i}"
 
-    #Here the game should fade to black 
-
-
+    #Here the game should fade to black (done)
     #TRAIN STATION CLUES SCENE
 
-    scene bg train station
-    show rose blank at left
-    show jade blank at center
+    scene bg train station with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "Well, aside from a couple of antique cars, naught else for hints. The tracks run cold, least in the open. Appears we must bite the bullet, and see to the… ticket office."
 
@@ -1129,7 +1151,7 @@ label start:
 
     scene bg train station
     show rose blank at left
-    show jade happy yellow at center
+    show jade happy at center,yellow
 
     j "They are wonderful, and think nothing of it."
 
@@ -1143,11 +1165,12 @@ label start:
 
     j "Again, no worries. Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
-    show jade sad dark green at center
+    show jade sad at center, darkgreen
 
     j "The track is well and truly cold as steel now."
 
     #EMOTIONS MINIGAME - Disappointment
+    #TODO - Geneva
 
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
@@ -1181,14 +1204,13 @@ label start:
 
     j "Onwards!"
 
-    #Here the game should fade to black
-
+    #Here the game should fade to black (done)
 
     #LIBRARY SCENE 
 
-    scene bg library
-    show rose blank at left
-    show jade blank at right
+    scene bg library with fade
+    show rose blank at left with dissolve
+    show jade blank at right with dissolve
 
     r "Okay, the screen is on, and now, we just have to search by the-"
 
@@ -1200,11 +1222,12 @@ label start:
 
     scene bg library
     show rose blank at left
-    show jade angry red at right
+    show jade angry at right, red
 
     r "Everything okay?"
 
     #EMOTIONS MINIGAME - Annoyance
+    #TODO - Geneva
 
     j "Yeah, yeah."
 
@@ -1235,10 +1258,11 @@ label start:
     j "Breathe, just breathe… let’s do it together."
 
     #BREATHING MINIGAME 
+    #TODO - Geneva
 
-    scene bg library
-    show rose blank at left
-    show jade blank at center
+    scene bg library with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "Feel better?"
 
@@ -1248,11 +1272,11 @@ label start:
 
     j "And the lughead leaves."
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
 
-    scene bg library
-    show rose blank at left
-    show jade blank at center
+    scene bg library with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     r "Two decades back in time, naught."
 
@@ -1374,11 +1398,12 @@ label start:
 
     j "“The Midnight Lands”, oh, I heard great stuff about this one!"
 
-    show jade happy light orange at center 
+    show jade happy at center, light_orange
 
     j "A friend of mine online said it had them leave the lights on for three nights straight!"
 
     #EMOTIONS MINIGAME - Anticipation (Check if already done before)
+    #TODO - Geneva
 
     r "Are you sure? I can find something else…"
 
@@ -1400,21 +1425,22 @@ label start:
 
     j "Sorry… got a bit ahead of myself… but, you are smiling?"
 
-    show jade happy yellow at center
+    show jade happy at center, yellow
 
     r "I am? Oh, I am… why?"
 
     j "The relief that it’s over, goodness how I love it."
 
-    #Here the game should fade to black 
+
 
 
     #LIBRARY CLUE SCENE 
     #Following all three choices
 
-    scene bg library
-    show rose blank at left
-    show jade blank at right
+    #Here the game should fade to black (done)
+    scene bg library with fade
+    show rose blank at left with dissolve
+    show jade blank at right with dissolve
 
 
     j "Looks to have been a slow news day. That's pretty much everyday where I last lived, but with squirrels instead."
@@ -1431,7 +1457,7 @@ label start:
 
     r "Beside the feline in cheeses and deli meats, does that look familiar to you?"
 
-    show jade surprised orange at right
+    show jade surprised at right, orange
 
     j "Opal’s Painting!"
 
@@ -1440,14 +1466,14 @@ label start:
     j "And I’ve got the article on my phone camera. To the places where money can be exchanged for goods and services!"
 
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
 
 
     #GROCERY STORE SCENE
 
-    scene bg grocery store
-    show rose blank at left
-    show jade blank at center
+    scene bg grocery store with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "Alright, possibly second to last leg of the journey. One small step through these gates, and we are potentially golden."
 
@@ -1512,15 +1538,15 @@ label start:
 
     r "Onwards!"
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
 
 
 
     #OUTSIDE OF PEARL'S HOME SCENE 
 
-    scene bg pearl home outside
-    show rose blank at left
-    show jade blank at center
+    scene bg pearl home outside with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "This is it, the final dungeon - I mean, final boss?"
 
@@ -1799,29 +1825,11 @@ label start:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # This ends the game.
 
     return
 
-
+# silly test thing by geneva below
 label gwee:
     "gweeee"
     "My count is [currentCount]"

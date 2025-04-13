@@ -126,7 +126,7 @@ label start:
     #Here the game should fade to black (done!)
 
 
-    # TOWN SCENE 
+    #TOWN SCENE 
 
 
     scene bg jade home outside with fade
@@ -1726,7 +1726,6 @@ label pond:
 
     j "It has been quite a day…"
 
-    #To modify if the inside bg gets done 
 
     show jade blank at center
 

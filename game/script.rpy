@@ -563,6 +563,8 @@ label safe_food:
 
     #Here the game should fade to black (done)
     scene bg cafe with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "He he he. Now look at the crispy flakiness of that pastry. It feels like a crime to tear it open. How about your burger?"
 
@@ -615,7 +617,9 @@ label new_food:
 
     #Here the game should fade to black (done)
     scene bg cafe with fade
-
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
+    
     j "So… how is it?"
 
     r "It’s nice."

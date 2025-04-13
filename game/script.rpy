@@ -86,8 +86,7 @@ label start:
     oo "That’s where the glasses come in, they’re designed to help people with your condition see colors, your own as well as other people’s."
 
     oo "Recognizing emotions will also help you flexibly respond to your own emotional states and will improve your interactions with others."
-
-    #GENEVA 
+ 
     #Here the game should fade to black 
 
    
@@ -107,7 +106,7 @@ label start:
     #Here the game should fade to black 
 
 
-    # TOWN SCENE 
+    #TOWN SCENE 
 
 
     scene bg jade home outside
@@ -1700,7 +1699,6 @@ label start:
 
     j "It has been quite a day…"
 
-    #To modify if the inside bg gets done 
 
     show jade blank at center
 
@@ -1792,22 +1790,6 @@ label start:
     show rose happy yellow at left 
 
     r "...that's what friends do..."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

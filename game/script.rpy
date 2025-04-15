@@ -45,35 +45,42 @@ transform shaking_text:
 #colors for transform below- geneva
 # figured out courtesy of this reddit thread (https://www.reddit.com/r/RenPy/comments/18nyqvu/how_do_i_add_colour_to_greyscale_images/)
 transform red:
-    matrixcolor TintMatrix("#ff0000") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#c98484") * SaturationMatrix(1.0)
 
 transform blue:
-    matrixcolor TintMatrix("#003cff") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#4c68c2") * SaturationMatrix(1.0)
 
-transform green:
-    matrixcolor TintMatrix("#21b114") * SaturationMatrix(1.0)
+transform lightblue:
+    matrixcolor TintMatrix("#7ab9dd") * SaturationMatrix(1.0)
+
+transform darkgreen:
+    matrixcolor TintMatrix("#386134") * SaturationMatrix(1.0)
+
+transform lightgreen:
+    matrixcolor TintMatrix("#7db877") * SaturationMatrix(1.0)
 
 transform yellow:
-    matrixcolor TintMatrix("#ffd500") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#f5e9ae") * SaturationMatrix(1.0)
+
+transform gold:
+    matrixcolor TintMatrix("#ffce47") * SaturationMatrix(1.0)
     
 transform purple:
-    matrixcolor TintMatrix("#7700ff") * SaturationMatrix(1.0)
-transform violet:
-    matrixcolor TintMatrix("#bb00ff") * SaturationMatrix(1.0)
-transform darkgreen:
-    matrixcolor TintMatrix("#074027") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#a77bda") * SaturationMatrix(1.0)
+
 transform lightorange:
-    matrixcolor TintMatrix("#ff6a00") * SaturationMatrix(1.0)
-transform orange:
-    matrixcolor TintMatrix("#7700ff") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#ecaa7a") * SaturationMatrix(1.0)
+
 transform darkorange:
-    matrixcolor TintMatrix("#b84d00") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#eb985c") * SaturationMatrix(1.0)
+
 transform pink:
-    matrixcolor TintMatrix("#ffa8ef") * SaturationMatrix(1.0)
-transform lightblue:
-    matrixcolor TintMatrix("#9cfcff") * SaturationMatrix(1.0)
-transform gold:
-    matrixcolor TintMatrix("#ffbb00") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#f1b6de") * SaturationMatrix(1.0)
+
+transform beige:
+    matrixcolor TintMatrix("#e4c9a8") * SaturationMatrix(1.0)
+
+
 # The game starts here.
 
 

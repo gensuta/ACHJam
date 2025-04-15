@@ -141,7 +141,7 @@ label start:
     scene bg jade home outside with fade
     show rose blank at center with dissolve
 
-    play music "mail delivering.mp3"
+    play music "music/mail delivering.mp3"
 
     r "{i}It’s been three months, but my world hasn’t changed.{/i}"
 

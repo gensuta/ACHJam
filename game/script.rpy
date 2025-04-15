@@ -1211,7 +1211,7 @@ label pond:
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
     show rose blank at left
-    show jade blank at center
+    show jade blank at center   #I see her darkgreen here for some reason??
 
     j "Guess we won’t know until we hit the information highway."
 
@@ -1499,7 +1499,7 @@ label libraryclue:
 
     r "Beside the feline in cheeses and deli meats, does that look familiar to you?"
 
-    show jade surprised at right, orange
+    show jade surprised at right, darkorange
 
     j "Opal’s Painting!"
 
@@ -1651,6 +1651,8 @@ label libraryclue:
     show jade sad at left, lightblue
 
     r "{i}*sighs*{/i}"
+
+    show jade sad l at left, lightblue
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 

@@ -1693,8 +1693,7 @@ label libraryclue:
 
     r "Just don’t force the pet, let them do the work."
 
-   
-
+    scene bg pearl home outside
     show jade blank l at center
     show rose blank at left
     show pearl blank at right 
@@ -1768,7 +1767,7 @@ label libraryclue:
     j "It has been quite a day…"
 
 
-    show jade blank at center
+    show jade blank l at center
 
     p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
 

@@ -1319,7 +1319,7 @@ label pond:
 
     scene bg library
     show rose blank at left
-    show jade bored beige at center
+    show jade sad at center, beige
 
     r "Something wrong?"
 
@@ -1614,7 +1614,7 @@ label libraryclue:
 
     j "...! No…"
 
-    show jade disappointed l at center, darkgreen
+    show jade sad l at center, darkgreen
 
     v "I'm sorry, I do not know how you know her, but Opal has been gone for-"
 
@@ -1635,8 +1635,8 @@ label libraryclue:
     v "I didn't mean, oh, where are you running off to?"
 
     scene bg pearl home outside
-    show rose sad l at center   
-    show jade angry disappointed at left, darkgreen
+    show rose sad l at center  
+    show jade angry at left, darkgreen
 
     r "Jade, please wait. This isn’t the end of the world."
 
@@ -1665,7 +1665,7 @@ label libraryclue:
 
     r "People pass away. People move on. Some things are just out of our control."
 
-    show jade ashamed at left, pink
+    show jade sad at left, pink
 
     #EMOTIONS MINIGAME - SHAME
     #TODO - Geneva
@@ -1676,7 +1676,7 @@ label libraryclue:
 
     r "Why would I leave this quest after such a small outburst?"
 
-    show jade grateful at left, gold
+    show jade happy at left, gold
 
     j "Rose… I… You’re too good for me."
 

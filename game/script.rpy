@@ -1026,6 +1026,8 @@ label pond:
     #EMOTIONS MINIGAME - SADNESS 
     #TODO - Geneva
 
+    show rose blank at center
+
     j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
     r "Do you need a tissue?"
@@ -1069,6 +1071,10 @@ label pond:
 
 
     #Here the game should fade to black (done)
+
+
+    #ADD TRAIN SCENE 
+
     #TRAIN STATION SCENE 
 
 
@@ -1168,7 +1174,19 @@ label pond:
 
     show jade blank at center
 
-    j "Again, no worries. Now then, here stands the ticket office, aaaand, it’s closed. Drag."
+    j "Again, no worries."
+
+
+    #Here the game should fade to black 
+    
+
+    #TICKET OFFICE SCENE 
+
+    scene bg ticket office
+    show rose blank at left
+    show jade blank at center
+
+    j "Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
     show jade sad at center, darkgreen
 

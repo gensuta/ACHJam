@@ -84,11 +84,63 @@ style frame:
 
 screen stressed_breathing:
 
-   
+    if is_counting_up:
+        frame:
+            pos(960,100)
+            anchor (0.5, 0.5)
+            background "#000000"
+            text "Breathe in"
+                    
+        if currentCount == 0:
+            add "circle":
+                zoom 0.1
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 1:
+            add "circle":
+                zoom 0.3
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 2:
+            add "circle":
+                zoom 0.5
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 3:
+            add "circle":
+                zoom 0.7
+                pos(960,600)
+                anchor (0.5, 0.5)
+    else:
+        frame:
+            pos(960,100)
+            anchor (0.5, 0.5)
+            background "#000000"
+            text "Breathe out"
+        if currentCount == 0:
+            add "circle":
+                zoom 0.7
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 1:
+            add "circle":
+                zoom 0.5
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 2:
+            add "circle":
+                zoom 0.3
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 3:
+            add "circle":
+                zoom 0.1
+                pos(960,600)
+                anchor (0.5, 0.5)
 
     grid 3 3:
         xalign 0.5
-        yalign 0.5
+        yalign 0.2
         spacing 2
         frame:
             background None
@@ -97,19 +149,24 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            if isDistracted == False:
-                textbutton "1" action SetVariable("currentCount",1) at shaking_text
+            if clicked_one == False:
+                if isDistracted == False:
+                    textbutton "1" action [SetVariable("currentCount",1), SetVariable("clicked_one", True)] at shaking_text
+                else:
+                    #TODO: Make a noise to indicate it's incorrect to click this yet
+                    textbutton "{color=#f00}1{/color}" action NullAction() at shaking_text
             else:
-                #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "1" action NullAction() at shaking_text
+                textbutton "{color=#FFDE59}1{/color}" action NullAction()
         frame:
             background None
             xpadding 10
             ypadding 10
             xalign 0.5
             yalign 0.5
-
-            textbutton "And SHE said..." action NullAction() at shaking_text
+            if is_counting_up:
+                textbutton "And SHE said..." action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
+            else:
+                textbutton "*mumble mumble*" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
         frame:
             background None
             xpadding 20
@@ -117,11 +174,16 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            if currentCount == 1 and isDistracted == False:
-                textbutton "2" action SetVariable("currentCount",2) at shaking_text
+            if clicked_two == False:
+                #showing the image might break it but we shall see!
+                if currentCount == 1 and isDistracted == False:
+                    textbutton "2" action [SetVariable("currentCount",2), SetVariable("clicked_two", True)] at shaking_text
+                else:
+                    #TODO: Make a noise to indicate it's incorrect to click this yet
+                    textbutton "{color=#f00}2{/color}" action NullAction() at shaking_text
             else:
-                #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "2" action NullAction() at shaking_text
+                textbutton "{color=#FFDE59}2{/color}" action NullAction() 
+            
         frame:
             background None
             xpadding 5
@@ -129,7 +191,10 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            textbutton "-and there's this cute guy that's kind of short-" action NullAction() at shaking_text
+            if is_counting_up:
+                textbutton "-and there's this cute guy that's kind of short-" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
+            else:
+                textbutton "*birds chirping*" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
             xpadding 10
@@ -137,11 +202,14 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            if currentCount == 2 and isDistracted == False:
-                textbutton "3" action SetVariable("currentCount",3) at shaking_text
+            if clicked_three == False:
+                if currentCount == 2 and isDistracted == False:
+                    textbutton "3" action [SetVariable("currentCount",3), SetVariable("clicked_three", True)] at shaking_text
+                else:
+                    #TODO: Make a noise to indicate it's incorrect to click this yet
+                    textbutton "{color=#f00}3{/color}" action NullAction() at shaking_text
             else:
-                #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "3" action NullAction() at shaking_text
+                textbutton "{color=#FFDE59}3{/color}" action NullAction() 
 
         frame:
             background None
@@ -150,7 +218,10 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            textbutton "Ah! I forgot my keys!" action NullAction() at shaking_text
+            if is_counting_up:
+                textbutton "Ah! I forgot my keys!" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
+            else:
+                textbutton "*keys jingling*" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
 
         frame:
             background None
@@ -159,7 +230,10 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            textbutton "*baby crying*" action NullAction() at shaking_text
+            if is_counting_up:
+                textbutton "*baby crying*" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
+            else:
+                textbutton "Shhh it's okay... It's okay." action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
             xpadding 10
@@ -167,7 +241,10 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            textbutton "HAHAHA" action [SetVariable("isDistracted", not isDistracted),  Jump("gwee")] at shaking_text
+            if is_counting_up:
+                textbutton "HAHAHA" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
+            else:
+                textbutton "Huh?" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
             xpadding 10
@@ -175,38 +252,116 @@ screen stressed_breathing:
             xalign 0.5
             yalign 0.5
 
-            if currentCount == 3 and isDistracted == False:
-                textbutton "4" action [SetVariable("currentCount",0),Hide("stressed_breathing") ,Show("calm_breathing")] at shaking_text
+            if clicked_four == False:
+                if currentCount == 3 and isDistracted == False: #sorry the below is messy! - Geneva
+                    if is_counting_up == False:
+                        textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0),Hide("stressed_breathing") ,Show("calm_breathing",transition=dissolve), SetVariable("is_counting_up", True)] at shaking_text
+                    else:
+                        textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0), SetVariable("is_counting_up",False)] at shaking_text
+                else:
+                    #TODO: Make a noise to indicate it's incorrect to click this yet
+                    textbutton "{color=#f00}4{/color}" action NullAction() at shaking_text
             else:
-                #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "4" action NullAction() at shaking_text
+                textbutton "{color=#FFDE59}4{/color}" action NullAction() 
 
 
 screen calm_breathing:
+
+    if is_counting_up:
+        frame:
+            pos(960,100)
+            anchor (0.5, 0.5)
+            background "#000000"
+            text "Breathe in"
+        if currentCount == 0:
+            add "circle":
+                zoom 0.1
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 1:
+            add "circle":
+                zoom 0.3
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 2:
+            add "circle":
+                zoom 0.5
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 3:
+            add "circle":
+                zoom 0.7
+                pos(960,600)
+                anchor (0.5, 0.5)
+    else:
+        frame:
+            pos(960,100)
+            anchor (0.5, 0.5)
+            background "#000000"
+            text "Breathe out"
+        if currentCount == 0:
+            add "circle":
+                zoom 0.7
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 1:
+            add "circle":
+                zoom 0.5
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 2:
+            add "circle":
+                zoom 0.3
+                pos(960,600)
+                anchor (0.5, 0.5)
+        if currentCount == 3:
+            add "circle":
+                zoom 0.1
+                pos(960,600)
+                anchor (0.5, 0.5)
+
+
+
     grid 2 2:
         xalign 0.5
         yalign 0.5
-        spacing 10
+        spacing 500
         if currentCount == 0:
-                textbutton "1" action SetVariable("currentCount",1)
+            if clicked_one == False:
+                textbutton "1" action [SetVariable("currentCount",1), SetVariable("clicked_one",True)]
+            else:
+                textbutton "{color=#FFDE59}1{/color}" action NullAction()
+                
         else:
                 #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "1" action NullAction()
+                textbutton "{color=#f00}1{/color}" action NullAction()
         if currentCount == 1:
-                textbutton "2" action SetVariable("currentCount",2)
+            if clicked_two == False:
+                textbutton "2" action [SetVariable("currentCount",2), SetVariable("clicked_two",True)]
+            else:
+                textbutton "{color=#FFDE59}2{/color}" action NullAction()
         else:
                 #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "2" action NullAction()
+                textbutton "{color=#f00}2{/color}" action NullAction()
         if currentCount == 2:
-                textbutton "3" action SetVariable("currentCount",3)
+            if clicked_three == False:
+                textbutton "3" action [SetVariable("currentCount",3), SetVariable("clicked_three",True)]
+            else:
+                textbutton "{color=#FFDE59}3{/color}" action NullAction()
         else:
                 #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "3" action NullAction()
+                textbutton "{color=#f00}3{/color}" action NullAction()
         if currentCount == 3:
-                textbutton "4" action SetVariable("currentCount",0)
+                if calmCounts == 1:
+                    textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0), SetVariable("is_counting_up",True),SetVariable("calmCounts",2)]
+                elif calmCounts == 2:
+                    textbutton "4" action [Hide("calm_breathing"),Jump("post_breathing")]
+                else:
+                    textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0), SetVariable("is_counting_up",False),SetVariable("calmCounts",1)]
+
         else:
                 #TODO: Make a noise to indicate it's incorrect to click this yet
-                textbutton "4" action NullAction()
+                textbutton "{color=#f00}4{/color}" action NullAction()
 
 ## Say screen ##################################################################
 ##

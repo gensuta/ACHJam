@@ -22,8 +22,15 @@ define e = Character("Employee")
 
 
 # The variables below are for minigames! Please ignore and do not touch!! -Geneva
+default calmCounts = 0
 default currentCount = 0 
 default isDistracted = False
+default clicked_one = False
+default clicked_two = False
+default clicked_three = False
+default clicked_four = False #note to self, I don't think we need this? - gen
+default is_counting_up = True
+# End of minigame variables!
 
 #custom transforms! Please ignore -Geneva
 transform shaking_text:
@@ -41,6 +48,7 @@ transform shaking_text:
             linear 1.0 alpha .9
             linear 1.0 alpha .2
             repeat
+#End of custom transforms
 
 #colors for transform below- geneva
 # figured out courtesy of this reddit thread (https://www.reddit.com/r/RenPy/comments/18nyqvu/how_do_i_add_colour_to_greyscale_images/)
@@ -91,11 +99,13 @@ label start:
 
 
     #OPTOMETRY CLINIC SCENE
-
+ 
     scene bg optometry
 
     show rose ng at left with dissolve
     show optometrist at right with dissolve
+
+
 
     oo "Okay, we’re almost done with the optometric evaluation. Now look at me. What do you see?"
 
@@ -1294,7 +1304,13 @@ label pond:
 
     #BREATHING MINIGAME 
     #TODO - Geneva
+    jump stressed_breathing
+    
 
+label stressed_breathing:
+    call screen stressed_breathing
+
+label post_breathing:
     scene bg library with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve

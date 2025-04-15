@@ -1440,7 +1440,7 @@ label horrornovel:
 
     jump libraryclue
 
-label libraryclue
+label libraryclue:
     #LIBRARY CLUE SCENE 
     #Following all three choices
 

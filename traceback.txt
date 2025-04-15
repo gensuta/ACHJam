@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 272, in script
-    show jade blank l at center with dissolve
-Exception: Image 'jade blank' does not accept attributes 'l'.
+  File "game/script.rpy", line 836, in script
+    show jade sad l at center
+Exception: Image 'jade sad' does not accept attributes 'l'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 272, in script
-    show jade blank l at center with dissolve
+  File "game/script.rpy", line 836, in script
+    show jade sad l at center
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'jade blank' does not accept attributes 'l'.
+Exception: Image 'jade sad' does not accept attributes 'l'.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 ACHJam 1.0
-Tue Apr 15 12:54:35 2025
+Tue Apr 15 15:18:33 2025

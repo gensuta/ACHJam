@@ -66,7 +66,10 @@ transform gold:
     matrixcolor TintMatrix("#ffce47") * SaturationMatrix(1.0)
     
 transform purple:
-    matrixcolor TintMatrix("#a77bda") * SaturationMatrix(1.0)
+    matrixcolor TintMatrix("#bc7bda") * SaturationMatrix(1.0)
+
+transform violet:
+    matrixcolor TintMatrix("#9f7bda") * SaturationMatrix(1.0)
 
 transform lightorange:
     matrixcolor TintMatrix("#ecaa7a") * SaturationMatrix(1.0)
@@ -830,7 +833,7 @@ label ask_icecream_man:
     scene bg bench with dissolve
     show rose blank at left
     show jasper at right
-    show jade sad at center #Here Jade needs to face right
+    show jade sad l at center 
 
     j "Hmm… sorry, I-I need a moment."
 
@@ -1090,7 +1093,7 @@ label pond:
 
     scene bg train station with fade
     show rose angry at left with dissolve
-    show jade scared purple at right, purple with dissolve
+    show jade scared at right, violet with dissolve
 
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
@@ -1101,7 +1104,7 @@ label pond:
 
     scene bg train station
     show rose angry at left
-    show jade relieved light green at right
+    show jade blank at right, lightgreen
 
     j "Oh ground, I could kiss you if you weren't covered in feet!"
 
@@ -1112,7 +1115,7 @@ label pond:
 
     scene bg train station
     show rose angry at left
-    show jade worried at center, violet
+    show jade sad at center, purple
 
     j "Rose? Something up?"
 

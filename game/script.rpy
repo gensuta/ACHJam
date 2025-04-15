@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -135,7 +135,7 @@ label start:
 
     r "{i}I still don’t know what it means to see a color…{/i}"
 
-    r "{i}… and I have no idea how I’m feeling most of the time.{/i}"
+    r "{i}…and I have no idea how I’m feeling most of the time.{/i}"
 
     r "{i}But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me.{/i}"
 
@@ -190,7 +190,7 @@ label leave_letter:
     r "Well… It's addressed to here. They can sort it out."
 
 
-    j "Miss? Excuse me, Miss?"
+    v "Miss? Excuse me, Miss?"
     jump jades_house
 
 
@@ -242,7 +242,7 @@ label jades_house:
 
     r "...?"
 
-    j "Ah. Uh… Ah! It's only been a month since I got here. Nooks and crannies yet to clean - especially the cupboards -,  maybe a clue might be lying about in the apartment."
+    j "Ah. Uh… Ah! It's only been a month since I got here. Nooks and crannies yet to clean - especially the cupboards - maybe a clue might be lying about in the apartment."
 
     r "Clue?"
 
@@ -291,9 +291,9 @@ label ask_neighbor_first:
 
     r "Anything you can tell us…"
 
-    v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone… What was it?"
+    v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone…"
     
-    v "Found at the sea - Opal, that was her name."
+    v "What was it? Found at the sea - Opal, that was her name."
 
     r "It says “Pearl” on the letter."
 
@@ -1018,8 +1018,9 @@ label pond:
     j "I could see the sky in her eyes… her own little vision of heaven."
 
     #JADE COLORS BLUE (done)
-    show jade sad at right, blue # will be in the doc, but to adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
-
+    show jade sad at right, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
+    show rose surprised at center
+    
     r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
 
     #EMOTIONS MINIGAME - SADNESS 

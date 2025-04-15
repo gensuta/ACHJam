@@ -1,24 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1741, in script
-    
-Exception: Sayer 'J' is not defined.
+  File "game/script.rpy", line 272, in script
+    show jade blank l at center with dissolve
+Exception: Image 'jade blank' does not accept attributes 'l'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1741, in script
-    
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
-    Say.execute(self)
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 583, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 472, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'J' is not defined.
+  File "game/script.rpy", line 272, in script
+    show jade blank l at center with dissolve
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'jade blank' does not accept attributes 'l'.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 ACHJam 1.0
-Sun Apr 13 18:40:43 2025
+Tue Apr 15 12:54:35 2025

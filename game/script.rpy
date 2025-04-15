@@ -1322,6 +1322,9 @@ label pond:
 
     r "Okay, let me see…"
 
+    scene bg library
+    show rose blank at left
+
 
     #CHOICE: Fantasy novel / Zoology book / Horror novel
     menu:
@@ -1444,7 +1447,7 @@ label horrornovel:
 
     r "OH! Please don’t do that again…"
     
-    show rose happy at left, yellow
+    show rose happy at left
     
     r "{i}*ahem*{/i} We’re still in the library."
 
@@ -1472,7 +1475,8 @@ label libraryclue:
 
     r "It’s a small town. Been two years and people still talk about how the train broke down. Many theories. Anyway, look at the picture-"
 
-    scene bg newspaper 
+    scene bg newspaper with Fade(0.5,0.0,0.5)
+    pause 2.5
 
     scene bg library
     show rose blank at left
@@ -1618,7 +1622,7 @@ label libraryclue:
     v "I didn't mean, oh, where are you running off to?"
 
     scene bg pearl home outside
-    show rose sad at center
+    show rose sad l at center   
     show jade angry disappointed at left, darkgreen
 
     r "Jade, please wait. This isn’t the end of the world."
@@ -1641,6 +1645,8 @@ label libraryclue:
     #TODO - Geneva
 
     r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
+
+    show rose blank l at center
 
     j "But… why?"
 
@@ -1668,8 +1674,12 @@ label libraryclue:
 
     j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and… uhm, Rose, look at your legs."
 
-    show opal at center
-    show jade blank at center
+   
+   
+    scene bg pearl home outside
+    show cat at right
+    show jade blank l at center
+    show rose blank at left
 
     r "Hello cat. I think I know you from further up the road. So this is where you wandered off to."
 
@@ -1683,6 +1693,10 @@ label libraryclue:
 
     r "Just don’t force the pet, let them do the work."
 
+   
+
+    show jade blank l at center
+    show rose blank at left
     show pearl blank at right 
 
     ol "So this is where you wandered off to."

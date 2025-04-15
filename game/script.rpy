@@ -1782,7 +1782,7 @@ label libraryclue:
     j "It has been quite a day…"
 
 
-    show jade blank l at center
+    show jade blank l at center #Here I still see Jade orange for some reason??
 
     p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
 
@@ -1824,7 +1824,7 @@ label libraryclue:
 
     p "And what if it's too late? What if I fail? Oh, I've been dreaming about this for so long, I can't believe it!"
 
-    show rose sad l at left
+    show rose sad at left
 
     j "What about you, Rose? Your eyes are running a storm."
 

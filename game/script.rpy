@@ -1197,7 +1197,6 @@ label pond:
 
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
-    scene bg train station
     show rose blank at left
     show jade blank at center
 

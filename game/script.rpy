@@ -126,7 +126,8 @@ label start:
 
 
     #TOWN SCENE 
-
+     
+    play music "mail delivering.mp3"
 
     scene bg jade home outside with fade
     show rose blank at center with dissolve
@@ -139,6 +140,7 @@ label start:
 
     r "{i}But I know I’m good at my job and, although it might seem boring or lonely on the outside, I think it suits me.{/i}"
 
+    stop music fadeout 1.0
 
     #Here the game should fade to black (done!)
 

@@ -1,10 +1,10 @@
-2025-04-15 12:32:46 UTC
+2025-04-15 13:01:58 UTC
 Windows-10-10.0.26100
 Ren'Py 8.3.7.25031702
 
 Early init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.24s
+Loading script took 0.21s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.03s
@@ -20,15 +20,15 @@ Initial gc took 0.02s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b'DRS_SaveSettings() = -1.' (can be ignored)
-Creating interface object took 0.16s
+Creating interface object took 0.17s
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.19s
@@ -43,3 +43,10 @@ Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1454, 818) drawable=(1454, 818)
 Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s

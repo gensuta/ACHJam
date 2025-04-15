@@ -12,7 +12,6 @@ define c = Character("Cat")
 define v = Character("Voice")
 
 define i = Character("Ice-cream man")
-
 define oo = Character("Optometrist")
 define n = Character("Neighbour")
 define d = Character("Ron the Dog")
@@ -149,8 +148,9 @@ label start:
     scene bg letter with Fade(0.5,0.0,0.5) #Why doesn't it show up? (It wasn't showing up because it was being quickly replaced by jade's home! Fixed it by adding a pause)
     pause 2.5
 
-    scene bg jade home outside with fade
-    show rose blank at left with dissolve
+
+    scene bg jade home outside
+    show rose blank at left
 
     r "Strange… it looks like the name doesn’t match the resident."
     #CHOICE: Sound the doorbell / Leave the letter in the mailbox anyway (done!)
@@ -820,7 +820,7 @@ label ask_icecream_man:
     scene bg bench with dissolve
     show rose blank at left
     show jasper at right
-    show jade sad l at center
+    show jade sad at center #Here Jade needs to face right
 
     j "Hmm… sorry, I-I need a moment."
 

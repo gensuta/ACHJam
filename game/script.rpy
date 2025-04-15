@@ -1667,7 +1667,7 @@ label libraryclue:
 
     r "People pass away. People move on. Some things are just out of our control."
 
-    show jade sad at left, pink
+    show jade sad l at left, pink
 
     #EMOTIONS MINIGAME - SHAME
     #TODO - Geneva
@@ -1678,7 +1678,7 @@ label libraryclue:
 
     r "Why would I leave this quest after such a small outburst?"
 
-    show jade happy at left, gold
+    show jade happy l at left, gold
 
     j "Rose… I… You’re too good for me."
 
@@ -1771,7 +1771,7 @@ label libraryclue:
 
     ol "My goodness, no, Opal was my inspiration. I’m-"
 
-    show jade surprised at center, darkorange
+    show jade surprised l at center, darkorange
 
     j "PEARL!?"
 
@@ -1824,7 +1824,7 @@ label libraryclue:
 
     p "And what if it's too late? What if I fail? Oh, I've been dreaming about this for so long, I can't believe it!"
 
-    show rose sad at left
+    show rose sad l at left
 
     j "What about you, Rose? Your eyes are running a storm."
 

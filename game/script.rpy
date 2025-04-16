@@ -168,6 +168,8 @@ label start:
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
+    play music "music/letter painting.mp3"
+
     scene bg letter with Fade(0.5,0.0,0.5) #Why doesn't it show up? (It wasn't showing up because it was being quickly replaced by jade's home! Fixed it by adding a pause)
     pause 2.5
 
@@ -176,6 +178,10 @@ label start:
     show rose blank at left
 
     r "Strange… it looks like the name doesn’t match the resident."
+
+
+    stop music fadeout 1.0
+
     #CHOICE: Sound the doorbell / Leave the letter in the mailbox anyway (done!)
 
     menu:
@@ -229,6 +235,8 @@ label jades_house:
     show rose blank at left with dissolve
     show jade blank at center with dissolve
 
+    play music "music/anticipation.mp3"
+
     j "Hello, forgive my lateness, I had headphones on."
 
     r "Only been a few seconds. Anyway, I have a letter-"
@@ -276,6 +284,8 @@ label jades_house:
     j "That too! I can take notes. I've a pen and paper on my desk. Oh, and I'm Jade, BTW, but you probably already know, with the name at the door."
 
     r "Rose… good to meet you."
+
+    stop music fadeout 1.0
 
     #CHOICE: Ask the neihgbour / Look inside Jade's apartment for clues 
     menu:
@@ -338,6 +348,8 @@ label ask_neighbor_first:
     show rose blank at left with dissolve
     show jade blank at right with dissolve
 
+    play music "music/letter painting.mp3"
+
     j "The moment I heard “artist”, it hit me, just like that! Right against the back of the cupboard…"
 
     r "Lots of other stuff from the old tenant."
@@ -371,6 +383,8 @@ label ask_neighbor_first:
 
     j "And click. Onto the phone, and the weight of a canvas off our shoulders."
 
+    stop music fadeout 1.0
+
     jump cafe
 
 
@@ -381,6 +395,8 @@ label check_apartment_first:
     scene bg jade home inside with fade
     show rose blank at left with dissolve
     show jade blank at right with dissolve
+
+    play music "music/letter painting.mp3"
 
     j "Come on, where are you? I know you’re stocked up somewhere…"
 
@@ -421,6 +437,8 @@ label check_apartment_first:
     r "Clever."
 
     j "Ah, thank you. Now, onwards!"
+
+    stop music fadeout 1.0
 
     #Here the game should fade to black (done)
 
@@ -758,6 +776,8 @@ label ask_icecream_man:
     show jade blank l at center with dissolve
     show icecream man at right with dissolve
 
+    play music "music/ice cream kiosk.mp3"
+
     r "Excuse us?"
 
     i "Oh, it's you, we finally meet."
@@ -799,6 +819,8 @@ label ask_icecream_man:
     j "The bench!"
 
     i "Yes, in that general direction…"
+
+    stop music fadeout 1.0
 
 
     #Here the game should fade to black (done)
@@ -1012,6 +1034,8 @@ label pond:
     show rose blank at center with dissolve
     show jade sad at right with dissolve
 
+    play music "music/pond talk.mp3"
+
     j "She would have loved to live here. If she were here, geese would be flying…"
 
     r "Your dog?"
@@ -1058,6 +1082,8 @@ label pond:
     j "Nah {i}*sniffs*{/i} I’m alright. Moment’s passed. Words were said, the pages turn {i}*inhales*{/i}, our quest continues."
 
     r "Right. In that direction."
+
+    stop music fadeout 1.0
 
     show jade blank at right
 
@@ -1112,11 +1138,14 @@ label pond:
 
     j "Oh my God."
 
+    j "I almost died to get this letter back, oh my God!"
+
     scene bg train station
     show rose angry at left
     show jade blank at right, lightgreen
 
     j "Oh ground, I could kiss you if you weren't covered in feet!"
+
 
     #EMOTIONS MINIGAME - RELIEF
     #TODO - Geneva
@@ -1600,7 +1629,7 @@ label libraryclue:
 
     #OUTSIDE OF PEARL'S HOME SCENE 
 
-    scene bg pearl home outside with fade
+    scene bg pearl home with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
 
@@ -1641,7 +1670,7 @@ label libraryclue:
 
     v "I'm coming out. No! Don't go!"
 
-    scene bg pearl home outside
+    scene bg pearl home
     show rose sad at left
 
     r "Jade!"
@@ -1650,7 +1679,7 @@ label libraryclue:
 
     v "I didn't mean, oh, where are you running off to?"
 
-    scene bg pearl home outside
+    scene bg pearl home
     show rose sad l at center  
     show jade angry at left, darkgreen
 
@@ -1707,7 +1736,7 @@ label libraryclue:
 
    
    
-    scene bg pearl home outside
+    scene bg pearl home
     show cat at right
     show jade blank l at center
     show rose blank at left
@@ -1724,7 +1753,7 @@ label libraryclue:
 
     r "Just don’t force the pet, let them do the work."
 
-    scene bg pearl home outside
+    scene bg pearl home
     show jade blank l at center
     show rose blank at left
     show pearl blank at right 

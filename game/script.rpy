@@ -1617,7 +1617,7 @@ label libraryclue:
 
     r "ONWARDS!"
 
-    show jade surprised l at center, darkorange
+    show jade surprised at center, darkorange
 
     j "Rose?!"
 
@@ -1725,7 +1725,7 @@ label libraryclue:
 
     r "Why would I leave this quest after such a small outburst?"
 
-    show jade happy l at left, gold
+    show jade happy at left, gold
 
     j "Rose… I… You’re too good for me."
 

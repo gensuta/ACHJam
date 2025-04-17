@@ -97,14 +97,12 @@ transform beige:
 
 label start:
 
-
     #OPTOMETRY CLINIC SCENE
  
     scene bg optometry
 
     show rose ng at left with dissolve
     show optometrist at right with dissolve
-
 
 
     oo "Okay, we’re almost done with the optometric evaluation. Now look at me. What do you see?"
@@ -1252,6 +1250,7 @@ label pond:
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
     show rose blank at left
+    hide jade sad
     show jade blank at center   #I see her darkgreen here for some reason??
 
     j "Guess we won’t know until we hit the information highway."
@@ -1339,6 +1338,7 @@ label pond:
     
 
 label stressed_breathing:
+    scene bg void with dissolve
     call screen stressed_breathing
 
 label post_breathing:
@@ -1828,8 +1828,8 @@ label libraryclue:
 
     j "It has been quite a day…"
 
-
-    show jade blank l at center #Here I still see Jade orange for some reason??
+    hide jade suprised l
+    show jade blank l at center #Here I still see Jade orange for some reason?? (fixed! add a hide for the last sprite to fix -Geneva)
 
     p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
 

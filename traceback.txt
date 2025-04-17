@@ -1,16 +1,16 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1573, in script
-    show jade surprised l at center, darkorange
-Exception: Image 'jade surprised' does not accept attributes 'l'.
+  File "game/script.rpy", line 408, in script
+    scene cat portrait 1 with Fade(0.5,0.0,0.5)
+Exception: Image 'cat' does not accept attributes 'portrait 1'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1573, in script
-    show jade surprised l at center, darkorange
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+  File "game/script.rpy", line 408, in script
+    scene cat portrait 1 with Fade(0.5,0.0,0.5)
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1258, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
     renpy.config.show(name,
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'jade surprised' does not accept attributes 'l'.
+Exception: Image 'cat' does not accept attributes 'portrait 1'.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 ACHJam 1.0
-Tue Apr 15 15:29:18 2025
+Thu Apr 17 12:43:44 2025

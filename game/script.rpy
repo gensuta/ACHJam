@@ -360,7 +360,7 @@ label ask_neighbor_first:
 
     j "No, just holding onto them for a friend. Ah, here we are."
 
-    scene bg cat portrait 1 with Fade(0.5,0.0,0.5) 
+    scene bg portrait 1 with Fade(0.5,0.0,0.5) 
     pause 2.5
 
     scene bg jade home inside
@@ -405,7 +405,7 @@ label check_apartment_first:
 
     j "Hardly, most of it is taking refuge in my bedroom. Open the door and we’d be buried in a landslide of books and - ah ha! Got you, and... behold."
 
-    scene cat portrait 1 with Fade(0.5,0.0,0.5) 
+    scene bg portrait 1 with Fade(0.5,0.0,0.5) 
     pause 2.5
 
     scene bg jade home inside
@@ -711,7 +711,7 @@ label the_painting:
     #Here the game should fade to black (done)
     #Following both choices
 
-    scene bg cat portrait 2 with fade
+    scene bg portrait 2 with fade
     pause 2.0 #making sure it doesn't get skipped over like the letter! (Geneva)
 
     scene bg cafe with fade

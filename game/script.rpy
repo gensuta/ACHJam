@@ -30,6 +30,9 @@ default clicked_two = False
 default clicked_three = False
 default clicked_four = False #note to self, I don't think we need this? - gen
 default is_counting_up = True
+default current_diary_page = 0 # helps to show specific colors!
+default emotion_names = [] # these are two variables to help with the diary entry! 
+default emotion_colors = []
 # End of minigame variables!
 
 #custom transforms! Please ignore -Geneva
@@ -98,7 +101,7 @@ transform beige:
 label start:
 
     #OPTOMETRY CLINIC SCENE
- 
+
     scene bg optometry
 
     show rose ng at left with dissolve
@@ -166,7 +169,7 @@ label start:
 
     #JADE'S HOUSE SCENE (OUTSIDE)
 
-    play music "music/letter painting.mp3"
+    play music "music/Reading the letter.mp3"
 
     scene bg letter with Fade(0.5,0.0,0.5) #Why doesn't it show up? (It wasn't showing up because it was being quickly replaced by jade's home! Fixed it by adding a pause)
     pause 2.5
@@ -499,7 +502,7 @@ label check_apartment_first:
 label cafe:
     #Here the game should fade to black (done)
     #CAFE SCENE 
-
+    play music "music/café 2 - Flow 1.mp3"
     scene bg cafe with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
@@ -1070,8 +1073,10 @@ label pond:
     
     r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
 
-    #EMOTIONS MINIGAME - SADNESS 
-    #TODO - Geneva
+    #EMOTIONS - SADNESS 
+    $ emotion_names.append("Sadness")
+    $ emotion_colors.append("#4c68c2")
+    call screen diary
 
     show rose blank at center
 
@@ -1114,15 +1119,15 @@ label pond:
     j "{i}*gasps*{/i} Trains? Trains? An adventure to span the lands!"
 
     #EMOTIONS MINIGAME - JOY
-    #TODO - Geneva
-
+    $ emotion_names.append("Joy")
+    $ emotion_colors.append("#f5e9ae")
+    $ current_diary_page = 1
+    call screen diary
     r "We’ll see."
 
 
     #Here the game should fade to black (done)
 
-
-    #ADD TRAIN SCENE 
 
     #TRAIN STATION SCENE 
 
@@ -1134,7 +1139,10 @@ label pond:
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
     #EMOTIONS MINIGAME - FEAR
-    #TODO - Geneva
+    $ emotion_names.append("Fear")
+    $ emotion_colors.append("#9f7bda")
+    $ current_diary_page = 2
+    call screen diary
 
     j "Oh my God."
 
@@ -1148,8 +1156,11 @@ label pond:
 
 
     #EMOTIONS MINIGAME - RELIEF
-    #TODO - Geneva
-
+    $ emotion_names.append("Relief")
+    $ emotion_colors.append("#7db877")
+    $ current_diary_page = 3
+    call screen diary
+    play sound "music/Rose Panic.mp3" # playing as a sound because it's a one off stinger
     r "{i}*gasping*{/i} What is - What is happening?"
 
     scene bg train station
@@ -1159,7 +1170,10 @@ label pond:
     j "Rose? Something up?"
 
     #EMOTIONS MINIGAME - WORRY
-    #TODO - Geneva
+    $ emotion_names.append("Worry")
+    $ emotion_colors.append("#bc7bda")
+    $ current_diary_page = 4
+    call screen diary
 
     r "{i}Everything’s getting louder. Pulse is - Why am I… Why am I shaking so much?{/i}"
 
@@ -1199,7 +1213,7 @@ label pond:
 
     #Here the game should fade to black (done)
     #TRAIN STATION CLUES SCENE
-
+    play music "music/Ice cream kiosk.mp3"
     scene bg train station with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
@@ -1229,14 +1243,14 @@ label pond:
     j "Again, no worries."
 
 
-    #Here the game should fade to black 
+    #Here the game should fade to black (done)
     
 
     #TICKET OFFICE SCENE 
 
-    scene bg ticket office
-    show rose blank at left
-    show jade blank at center
+    scene bg ticket office with fade
+    show rose blank at left with dissolve
+    show jade blank at center with dissolve
 
     j "Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
@@ -1245,7 +1259,10 @@ label pond:
     j "The track is well and truly cold as steel now."
 
     #EMOTIONS MINIGAME - Disappointment
-    #TODO - Geneva
+    $ emotion_names.append("Disappointment")
+    $ emotion_colors.append("#386134")
+    $ current_diary_page = 5
+    call screen diary
 
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
@@ -1286,7 +1303,7 @@ label pond:
     scene bg library with fade
     show rose blank at left with dissolve
     show jade blank at right with dissolve
-
+    play music "music/café 2 - Flow 1.mp3"
     r "Okay, the screen is on, and now, we just have to search by the-"
 
     v "{i}*cough*{/i}"
@@ -1298,17 +1315,20 @@ label pond:
     scene bg library
     show rose blank at left
     show jade angry at right, red
-
+    stop music fadeout 1.0
     r "Everything okay?"
-
-    #EMOTIONS MINIGAME - Annoyance
-    #TODO - Geneva
 
     j "Yeah, yeah."
 
     r "You want me to tell them to be quiet?"
 
     j "No, no. I won’t sacrifice your nerves to that human migraine."
+
+    #EMOTIONS MINIGAME - Annoyance
+    $ emotion_names.append("Annoyance")
+    $ emotion_colors.append("#c98484")
+    $ current_diary_page = 6
+    call screen diary
 
     r "We can come back later…"
 
@@ -1333,15 +1353,16 @@ label pond:
     j "Breathe, just breathe… let’s do it together."
 
     #BREATHING MINIGAME 
-    #TODO - Geneva
     jump stressed_breathing
     
 
 label stressed_breathing:
+    play music "music/rose hyperventilating.mp3"
     scene bg void with dissolve
     call screen stressed_breathing
 
 label post_breathing:
+    stop music fadeout 1.5
     scene bg library with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
@@ -1381,7 +1402,7 @@ label post_breathing:
     j "Not too long, I hope."
 
     r "Okay, let me see…"
-
+    play music "music/café 2 - Flow 1.mp3"
     scene bg library
     show rose blank at left
 
@@ -1406,12 +1427,15 @@ label fantasynovel:
 
     j "I know that cover. The elvish brooding, the silver hair lost in the roaring winds of limbo..."
 
-    show jade surprised at center, orange
+    show jade surprised at center, darkorange
     
     j "“Champions of the Infinite”!"
 
     #EMOTIONS MINIGAME - surprise 
-    #TODO - Geneva
+    $ emotion_names.append("Surprise")
+    $ emotion_colors.append("#eb985c")
+    $ current_diary_page = 6
+    call screen diary
 
     r "Oh, you’ve read it, I’ll try another…"
 
@@ -1490,8 +1514,11 @@ label horrornovel:
 
     j "A friend of mine online said it had them leave the lights on for three nights straight!"
 
-    #EMOTIONS MINIGAME - Anticipation (Check if already done before)
-    #TODO - Geneva
+    #EMOTIONS MINIGAME - Anticipation 
+    $ emotion_names.append("Anticipation")
+    $ emotion_colors.append("#ecaa7a")
+    $ current_diary_page = 7
+    call screen diary
 
     r "Are you sure? I can find something else…"
 
@@ -1559,7 +1586,7 @@ label libraryclue:
 
 
     #GROCERY STORE SCENE
-
+    play music "music/grocery.mp3"
     scene bg grocery store with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
@@ -1626,7 +1653,7 @@ label libraryclue:
     j "Don’t be. Let's turn that power to propulsion. Onwards!"
 
     r "Onwards!"
-
+    stop music fadeout 1.5
     #Here the game should fade to black (done)
 
     #OUTSIDE OF PEARL'S HOME SCENE 
@@ -1667,8 +1694,6 @@ label libraryclue:
 
     j "No… No, no, no, no…"
 
-    #EMOTIONS MINIGAME - Disappointment (check if it's already been done)
-    #TODO - Geneva
 
     v "I'm coming out. No! Don't go!"
 
@@ -1704,7 +1729,10 @@ label libraryclue:
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
     #EMOTIONS MINIGAME - REMORSE
-    #TODO - Geneva
+    $ emotion_names.append("Remorse")
+    $ emotion_colors.append("#7ab9dd")
+    $ current_diary_page = 8
+    call screen diary
 
     r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
 
@@ -1717,7 +1745,10 @@ label libraryclue:
     show jade sad l at left, pink
 
     #EMOTIONS MINIGAME - SHAME
-    #TODO - Geneva
+    $ emotion_names.append("Shame")
+    $ emotion_colors.append("#f1b6de")
+    $ current_diary_page = 9
+    call screen diary
 
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
 
@@ -1730,7 +1761,10 @@ label libraryclue:
     j "Rose… I… You’re too good for me."
 
     #EMOTIONS MINIGAME - Gratefulness
-    #TODO - Geneva
+    $ emotion_names.append("Gratefulness")
+    $ emotion_colors.append("#ffce47")
+    $ current_diary_page = 10
+    call screen diary
 
     r "It’s okay, let it out… is that you purring?!"
 

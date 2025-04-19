@@ -81,6 +81,52 @@ style frame:
 ## In-game screens
 ################################################################################
 
+## diary is composed of a list. We increase/decrease the place we are in the diary via a variable
+## we only add to the list if we have seen this emotion
+# we do a dissolve and pause and have a little x icon to get out the diary, We call return when that is clicked on
+# we have the diary in the main menu so it can be accessed at anytime
+screen diary:
+    tag menu
+    add "bg diary page"
+    text "{i}Dear Diary...{i}":
+        color "#000000"
+        pos(600,80)
+        anchor (0.5, 0.5)
+        size 50
+    text "These are the colors I've seen so far...":
+        color "#000000"
+        pos(900,150)
+        anchor (0.5, 0.5)
+    frame:
+        background None
+        pos(1800,900)
+        anchor(0.5,0.5)
+        #making sure we have emotions and that our diary page does NOT go above the current emotion count!
+        if len(emotion_colors) > 0 and current_diary_page < len(emotion_colors):
+            text emotion_names[current_diary_page]:
+                color "#000000"
+                pos(110,300)
+                size 48
+            add "circle no gradient":
+                zoom 0.3
+                matrixcolor TintMatrix(emotion_colors[current_diary_page]) * SaturationMatrix(1.0)
+
+    if current_diary_page < len(emotion_colors) - 1:
+        frame:
+            pos(1500,500)
+            anchor (0.5, 0.5)
+            textbutton "Next Page" action [SetVariable("current_diary_page",current_diary_page+1),With(dissolve)]
+    if current_diary_page > 0:
+        frame:
+            pos(500,500)
+            anchor (0.5, 0.5)
+            textbutton "Previous Page" action [SetVariable("current_diary_page",current_diary_page-1), With(dissolve)]
+    frame:
+        pos(1700,1000)
+        anchor (0.5, 0.5)
+        textbutton "Return" action [Return(), With(fade)]
+
+
 
 screen stressed_breathing:
 
@@ -589,6 +635,8 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
+        if len(emotion_colors) > 0:
+            textbutton("Diary") action ShowMenu("diary")
 
         if _in_replay:
 

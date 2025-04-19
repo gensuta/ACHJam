@@ -1034,8 +1034,8 @@ label pond:
     #Here the game should fade to black (done)
 
     scene bg pond with fade
-    show rose blank at center with dissolve
-    show jade sad at right with dissolve
+    show rose blank at left with dissolve
+    show jade sad at center with dissolve
 
     play music "music/pond talk.mp3"
 
@@ -1089,7 +1089,7 @@ label pond:
     r "Right. In that direction."
 
     stop music fadeout 1.0
-
+    hide jade sad
     show jade blank at right
 
     j "And by the way, thanks for listening. More and more, you’re proving yourself to be friend material."
@@ -1097,10 +1097,13 @@ label pond:
     r "Hm?" 
 
     show rose surprised at center
+    show jade surprised at right
 
     j "What is it? Did the big dogs scratch anything? Infection? Bleeding?"
 
     r "My pulse went up. So odd. Then again, we have been running a lot…"
+
+    show jade blank at right
 
     j "Me especially, sorry about that."
 
@@ -1129,12 +1132,17 @@ label pond:
     #Here the game should fade to black (done)
 
 
+    #ADD TRAIN SCENE 
+
+    scene bg jade train with Fade(0.5,0.0,0.5)
+    pause 2.5
+
     #TRAIN STATION SCENE 
 
 
     scene bg train station with fade
     show rose angry at left with dissolve
-    show jade scared at right, violet with dissolve
+    show jade sad at right, violet with dissolve
 
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
@@ -1150,7 +1158,7 @@ label pond:
 
     scene bg train station
     show rose angry at left
-    show jade blank at right, lightgreen
+    show jade sad at right, lightgreen
 
     j "Oh ground, I could kiss you if you weren't covered in feet!"
 

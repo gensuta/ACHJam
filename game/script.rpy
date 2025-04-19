@@ -1031,8 +1031,8 @@ label pond:
     #Here the game should fade to black (done)
 
     scene bg pond with fade
-    show rose blank at center with dissolve
-    show jade sad at right with dissolve
+    show rose blank at left with dissolve
+    show jade sad at center with dissolve
 
     play music "music/pond talk.mp3"
 
@@ -1124,12 +1124,15 @@ label pond:
 
     #ADD TRAIN SCENE 
 
+    scene bg jade train with Fade(0.5,0.0,0.5)
+    pause 2.5
+
     #TRAIN STATION SCENE 
 
 
     scene bg train station with fade
     show rose angry at left with dissolve
-    show jade scared at right, violet with dissolve
+    show jade sad at right, violet with dissolve
 
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
@@ -1142,7 +1145,7 @@ label pond:
 
     scene bg train station
     show rose angry at left
-    show jade blank at right, lightgreen
+    show jade sad at right, lightgreen
 
     j "Oh ground, I could kiss you if you weren't covered in feet!"
 

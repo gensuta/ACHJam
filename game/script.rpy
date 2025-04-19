@@ -1092,10 +1092,13 @@ label pond:
     r "Hm?" 
 
     show rose surprised at center
+    show jade surprised at right
 
     j "What is it? Did the big dogs scratch anything? Infection? Bleeding?"
 
     r "My pulse went up. So odd. Then again, we have been running a lot…"
+
+    show jade blank at right
 
     j "Me especially, sorry about that."
 

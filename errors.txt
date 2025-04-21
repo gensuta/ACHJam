@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: Line is indented, but the preceding default statement statement does not expect a block. Please check this line's indentation.
-    transform shaking_text:
-    ^
+File "game/script.rpy", line 1514: expected statement.
+    shpw jad very angry at right, red
+                        ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Mar 31 18:38:00 2025
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Mon Apr 21 16:22:18 2025

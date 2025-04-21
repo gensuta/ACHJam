@@ -136,9 +136,13 @@ label start:
 
     oo "How are the glasses? Anything?"
 
+    show rose talking at left
+
     r "...nothing different."
 
     oo "Well, that’s never happened before… these glasses are the gold standard for emotional blindness."
+
+    show rose blank at left
 
     oo "In any case, keep them on at all times, I’m sure you just need to get used to them and they’ll start working soon."
 
@@ -202,6 +206,8 @@ label sound_doorbell:
 
     v "Hello? Ah, hold on, don't leave just yet!"
 
+    show rose talking at left
+
     r "I haven’t moved."
 
     v "Okay, I’m nearly at the door-"
@@ -218,7 +224,6 @@ label leave_letter:
     show rose blank at left with dissolve
 
     r "Well… It's addressed to here. They can sort it out."
-
 
     v "Miss? Excuse me, Miss?"
     jump jades_house
@@ -242,21 +247,35 @@ label jades_house:
 
     r "Only been a few seconds. Anyway, I have a letter-"
 
+    show jade talking at center
+
     j "Oh, wow, it's all engraved and pretty. It would be a crime to tear it open."
 
+    show rose talking at left
+
     r "Please, hold on a second-"
+
+    show jade blank at center
 
     j "Still, there's boxes unopened, maybe mum put my letter opener in there…"
 
     r "No, no. It's not your letter- I mean, this letter is addressed to the previous occupant, one “Pearl” at this address."
 
+    show jade talking at center
+    show rose blank at left
+   
     j "Hm? Oh… Oh my goodness, I am so sorry! Almost committed a crime. I could go to jail!"
 
     r "It's fine…"
 
     j "Fine? I can pay for that. How much, ten? Twenty?"
 
+    show rose talking at left
+
     r "It is fine. Synonymous with “alright”. No crime committed. Now, by chance, do you know their current location?"
+
+    show jade blank at center
+    show rose blank at left 
 
     j "Uhm…"
 
@@ -266,9 +285,13 @@ label jades_house:
 
     r "Very well. Undelivered it is."
 
+    show jade talking at center
+
     j "What now? You've got computers for this?"
 
     r "Only cabinets. Full of paperwork."
+
+    show jade talking at center
 
     j "Wait-wait. I can help, I can help!"
 
@@ -276,7 +299,12 @@ label jades_house:
 
     j "Ah. Uh… Ah! It's only been a month since I got here. Nooks and crannies yet to clean - especially the cupboards - maybe a clue might be lying about in the apartment."
 
+    show rose talking at left
+    
     r "Clue?"
+
+    show jade blank at center
+    show rose blank at left
 
     j "You know, old pamphlets to locales or-or childhood photos of happy places… oooooh I can smell the adventure. Let's have a look around!"
 
@@ -284,6 +312,8 @@ label jades_house:
 
     j "That too! I can take notes. I've a pen and paper on my desk. Oh, and I'm Jade, BTW, but you probably already know, with the name at the door."
 
+    show rose talking at left
+   
     r "Rose… good to meet you."
 
     stop music fadeout 1.0
@@ -309,21 +339,36 @@ label ask_neighbor_first:
 
     v "Don't you dare knock again. I just got the little blighter down for his nap."
 
+    show rose talking at left 
+
     r "Noted. And it’s me-"
+
+    show rose blank at left
 
     v "Oh, it’s you. You're a day early, this time. Did Lily have something going on?"
 
     r "No care package today, I don’t know what Lily is up to. Can we ask some questions?"
 
+    show jade talking l at center
+
     j "Forgive her rudeness, we’re just here to sort something out. Something to do with your old neighbour - I’m your new neighbour by the way, Jade, but yeah."
 
     v "Alright, alright, very pleased to meet you. Now, you were saying…"
 
+    show jade blank l at center
+    show rose talking at left
+
     r "Sorry, no care package delivery today. Your calorie count remains true. As she has said, we need a word about your old neighbour."
+
+    show rose blank at left 
 
     v "Old neighbour… ah, who was it? Darned if I can remember their name."
 
+    show rose talking at left
+
     r "Anything you can tell us…"
+
+    show rose blank at left
 
     v "She was one of those artist types I think, you know. Always in something she made herself. Once tried talking to ‘er, but she disappeared just round the corner. It was a lovely outfit out of an old duvet cover, pair of shades glimmering just like that stone…"
     
@@ -331,12 +376,18 @@ label ask_neighbor_first:
 
     r "It says “Pearl” on the letter."
 
+    show jade talking l at center
+
     j "Maybe it’s like my mum and my big bro’s letters. He’s in Korea, South Korea, and his letters still arrive at mum’s house. Right? So maybe this Opal could be a clue to reaching Pearl?"
 
     r "Any idea where Opal could be?"
 
+    show jade blank l at center
+
     v "Last I saw, she was down by the cafè. If that's all you need of me, then good luck with you. I think I hear him start to stir."
 
+    show jade blank at center
+   
     j "Artist... hmm."
 
     r "Another lead?"
@@ -357,6 +408,8 @@ label ask_neighbor_first:
 
     j "No… that’s me."
 
+    show rose talking at left
+
     r "A lot of worn down baseballs. Were you an athlete?"
 
     j "No, just holding onto them for a friend. Ah, here we are."
@@ -373,13 +426,24 @@ label ask_neighbor_first:
 
     j "Indeed, indeed, but look at the signature in the corner."
 
+    show rose talking at left
+
     r "Opal… But I thought Pearl lived here?"
+
+    show rose blank at left
+    show jade talking at right
 
     j "Maybe it was a gift, or a personal commission. But the bottom line is clear: we find Opal, we find Pearl."
 
+    show rose talking at left
+    
     r "How certain are you?"
 
+    show jade blank at right
+
     j "Roughly ninety-percent, as sure as the shape of my eyes."
+
+    show rose blank at left
 
     r "If you say so. We could take this, in case anyone has seen this work."
 
@@ -402,6 +466,8 @@ label check_apartment_first:
 
     j "Come on, where are you? I know you’re stocked up somewhere…"
 
+    show rose talking at left
+
     r "Very… organised."
 
     j "Hardly, most of it is taking refuge in my bedroom. Open the door and we’d be buried in a landslide of books and - ah ha! Got you, and... behold."
@@ -417,9 +483,15 @@ label check_apartment_first:
 
     j "Indeed, and what can you see on it?"
 
+    show rose talking at left
+
     r "... brush strokes?"
 
+    show jade talking at right
+
     j "Uhm, yes. But, beyond the brush, we may find - pause for effect - a name!"
+
+    show rose blank at left
 
     r "It says “Opal” not “Pearl”."
 
@@ -427,7 +499,11 @@ label check_apartment_first:
 
     r "What kind, though?"
 
+    show jade blank at right
+
     j "Hm. That, we need to find out. Any ideas, partner?"
+
+    show rose talking at left
 
     r "Partner?"
 
@@ -437,6 +513,8 @@ label check_apartment_first:
 
     j "Excellent. Click! And a photo of the portrait for the road. Can’t have us lugging that precious article around town with a risk of rain or breaking."
 
+    show rose blank at left
+   
     r "Clever."
 
     j "Ah, thank you. Now, onwards!"
@@ -462,11 +540,15 @@ label check_apartment_first:
 
     r "No, still working solo."
 
+    show jade talking l at center
+
     j "Oh, hello, I’m Jade - your new neighbour - and uhm, tell us, do you know anything about who painted - hold on, just got to unlock my phone - who painted this?"
 
     v "Hmmm, I think I recognise the style - wait, Opal? I hadn’t realised she actually left."
 
     j "I just told you I’m your new neighbour."
+
+    show rose talking at left
 
     r "But the letter said “Pearl”, not “Opal”."
 
@@ -475,6 +557,9 @@ label check_apartment_first:
     r "I suppose… any idea where Opal could be?"
 
     v "Last I saw, she was down by the cafè. Well, either way, best of luck to you two."
+
+    show rose blank at left
+    show jade blank at center
 
     r "Thank you."
 
@@ -487,6 +572,8 @@ label check_apartment_first:
     r "Was the painting a gift?"
 
     j "I like to think so. A parting present, of memories shared, a moment crystallised into an immortal image."
+
+    show rose talking at left
 
     r "Of a cat?"
 
@@ -522,7 +609,11 @@ label cafe:
 
     r "{i}*stomach growls*{/i}"
 
+    show jade talking at center
+
     j "We can talk about that over lunch, on me!"
+
+    show rose talking at left
 
     r "They work by table numbers. Remember the number, walk up to the counter, and place your order."
 
@@ -534,13 +625,21 @@ label cafe:
 
     r "No thank you? Not my favourite dish."
 
+    show jade blank at center
+
     j "Hmmm, alright then, what’s your favourite?"
 
+    show rose blank at left
+
     r "Homemade burger with coleslaw."
+
+    show jade happy at center
 
     j "And it’s got a special side of onion rings and curly fries. That is awesome!"
 
     r "Is it?"
+
+    show jade sad at center
 
     j "...is everything okay? Oh heck, is this about something I did?"
 
@@ -550,9 +649,13 @@ label cafe:
 
     r "Nothing, really. I’m just not a talkative person."
 
+    show jade talking at center
+
     j "...okay. Looks like a pretty big line. I ain’t standing for minutes on end just fidgeting, so..."
 
     j "... seen any good shows? Blergh, so cliche a starter…"
+
+    show rose talking at left
 
     r "I recently watched “Tower of Phantometer” cutscenes online, if that counts."
 
@@ -560,11 +663,15 @@ label cafe:
 
     r "Action-Platformer where you played as Luna. Ascending up the Tower of Phantometer to reach the stars, in the hope that one of them is the spirit of her loved one, whose identity depended upon the questions you answered at the start."
 
+    show jade blank at center
+    
     j "Yeah… that one."
 
     r "Watched playthroughs of it when I was younger. The music helped me sleep. Story was well-written. Still holds up. Still wish I could play it. Too expensive then, too rare now."
 
     j "I’ve got a copy!"
+
+    show rose blank at left
 
     r "Hmm?"
 
@@ -572,13 +679,23 @@ label cafe:
 
     r "Thank you."
 
+    show jade sad at center
+
     j "Huh, with all those details, I’d figured you’d be more… ecstatic."
+
+    show rose talking at left
 
     r "Ecstatic?"
 
+    show jade talking at center
+
     j "A chance at playing that game that eluded your grasp, isn’t that exciting?"
 
+    show rose blank at left
+
     r "I’m not sure…"
+
+    show jade blank at center
 
     j "When I’m excited about something, I can’t stop talking about it. I can’t even sit still, it’s like-too much for my body to hold, if that makes sense?"
 
@@ -614,9 +731,13 @@ label safe_food:
 
     r "It’s well put together."
 
+    show jade talking at center
+
     j "Well put together?! That wooden stake is keeping that monster in check. You got to slay it before it falls apart!"
 
     r "Not until the fries are eaten with the coleslaw."
+
+    show jade blank at center
 
     j "Okay, but you’ll be way behind once I’ve cleaned the gravy from the plate."
 
@@ -630,14 +751,20 @@ label safe_food:
 
     j "Sounds like a good grandpa."
 
+    show rose talking at left
+
     r "Joked he only did so to see if I unhinged my jaw before I ate. I’d hiss every time I saw him. People stared. But granddad always smiled. Wasn’t sure if he actually found it funny."
 
     j "You must hold those memories very dear."
 
     r "It does feel good to relive them. I feel… calmer, somehow."
+
+    show jade talking at center
     
     j "I get it. And my grandpa always bought me lunch too, even if I had the cash. He and I would buy the cheapest thing the cafe had {i}*chuckles*{/i} I’ll give you three guesses."
 
+    show rose blank at left
+   
     r "Hm…"
 
     j "It’s literally served on a platter for you."
@@ -672,6 +799,8 @@ label new_food:
 
     r "Is that not all there is to it?"
 
+    show jade talking at center
+
     j "But what about- what about the smell? The sound? Heck, have you even smelt it?"
 
     r "It smells… warm."
@@ -690,18 +819,30 @@ label new_food:
 
     j "And what of the chips? Can you feel the texture, the salty crispiness, now melting away within the gravy, a gentle cloudiness at the tongue. The warmth of the meal, it descends like a comet into your stomach, turning it into a furnace and-" 
     
+    show jade blank at center
+    
     j "Eh he he, got carried away there, didn’t I?"
 
     r "A bit."
 
     j "I just think some experiences need to be savored, right? You never know how happy you are until you truly pay attention to it."
 
-    j "Plus focusing on what I enjoy helps me block out the stuff that annoys me. Like this godawful smell, for example! What do you think it is?"
+    j "Plus focusing on what I enjoy helps me block out the stuff that annoys me."
+
+    show jade angry at center
+    
+    j "Like this godawful smell, for example! What do you think it is?"
 
     r "Hmm, maybe… vinegar?"
 
-    j "Ugh. Anyway, I used to take cooking classes with my friends... The chef was always like that. The “poet” sort of cook, but their enthusiasm was so contagious I-"
+    j "Ugh."
 
+    show jade talking at center
+    
+    j "Anyway, I used to take cooking classes with my friends... The chef was always like that. The “poet” sort of cook, but their enthusiasm was so contagious I-"
+
+    show rose talking at left
+   
     r "I’m sorry to interrupt, but does that look familiar to you?"
 
     jump the_painting
@@ -717,7 +858,7 @@ label the_painting:
 
     scene bg cafe with fade
     show rose blank at left with dissolve
-    show jade blank l at center with dissolve
+    show jade talking l at center with dissolve
 
     j "Is that…?"
 
@@ -733,6 +874,8 @@ label the_painting:
 
     j "Definitely an early attempt at the style. Sorry, I took some classes, and it’s so rare I get to talk shop on art history, especially around-"
 
+    show rose talking l at left
+    
     r "The bench!"
 
     j "What bench!?"
@@ -746,6 +889,8 @@ label the_painting:
     j "How far is it?"
 
     r "Just across the road."
+
+    show jade happy l at center
 
     j "Ready to go?"
 
@@ -761,6 +906,8 @@ label the_painting:
     j "Should we ask somebody if they remember seeing our mystery lady around here?"
    
     r "Hmm, I know that dog…"
+
+    show jade sad at center
 
     j "Uh, right,  well… the ice-cream man looks like a more promising lead to me. Being at the park all the time and all."
 
@@ -789,6 +936,8 @@ label ask_icecream_man:
 
     i "Haven’t seen you in a while, I was beginning to worry about you."
 
+    show jade talking l at center
+
     j "Hang on, hang on. Rosie, you know this person?"
 
     i "Hm? Ah, my mistake, but the way you were standing there… no… you’re definitely much younger and taller than her… must be the clothes. I’m sorry, just a bit of rambling on my part. Hope you have a good day."
@@ -801,8 +950,12 @@ label ask_icecream_man:
 
     r "{i}*nods and holds up two fingers*{/i}"
 
+    show jade happy l at center
+
     j "Very well. Good sir, we shall take two of the finest scoops of your ice cream. In exchange, mind telling us of “Opal” and her bench-sitting ways?"
 
+    show jade blank l at center
+    
     i "Opal? So that was her name. Truth be told, we never actually talked. She’d be sitting right there on the bench. But on the dot, every day before the walkers came round. I could time my work hours just by her presence alone. My human timepiece, ha."
     
     i "At least, that was how it was until a few weeks ago. Then she was gone, and her little cat, too."
@@ -813,9 +966,15 @@ label ask_icecream_man:
 
     i "Mmm, unfortunately none spring to mind. She was well covered for winter, no matter the season. Honestly I’m surprised she didn’t melt."
 
+    show jade sad l at center
+    
     j "Dang. Guess we’re back to square one, then."
 
+    show rose talking at left
+
     r "Not yet. Did Opal always leave the park the same way?"
+
+    show rose blank at left
 
     i "Off towards that direction, right to the –"
 
@@ -830,7 +989,7 @@ label ask_icecream_man:
 
     scene bg bench with fade
     show rose blank at left with dissolve
-    show jade blank l at center with dissolve
+    show jade sad l at center with dissolve
     show jasper at right with dissolve
 
     r "Uhm, excuse me, I-"
@@ -845,9 +1004,13 @@ label ask_icecream_man:
 
     js "Rose! I thought I recognised that voice. Well, no wonder Ron got all excited. Never thought I’d see you out of the routes, unless this is some premium service I don’t know a thing ‘bout."
 
+    show rose talking at left
+    
     r "Good day Jasper. Enjoying the scenery?"
 
     d "{i}*whines*{/i}"
+
+    show rose blank at left
 
     j "Actually, we’re looking for someone. You wouldn’t have happened to have seen anyone on this bench before you-"
 
@@ -868,7 +1031,7 @@ label ask_icecream_man:
     scene bg bench with dissolve
     show rose blank at left
     show jasper at right
-    show jade sad l at center 
+    show jade very sad l at center 
 
     j "Hmm… sorry, I-I need a moment."
 
@@ -909,6 +1072,8 @@ label ask_icecream_man:
 
     js "Until then. Take care, Rose, and if you see that cat-walker, Opal, give ‘em my regards."
 
+    show rose talking at left
+
     r "Cat?"
 
     js "Aye, the shiest little thing, moment Ron so much as jostled, it would be tugging at the leash to go."
@@ -925,7 +1090,7 @@ label ask_bench_man:
     #Here the game should fade to black (done)
     scene bg bench with fade
     show rose blank at left with dissolve
-    show jade blank l at center with dissolve
+    show jade sad l at center with dissolve
     show jasper at right with dissolve
 
     r "Uhm, excuse me, I-"
@@ -958,13 +1123,17 @@ label ask_bench_man:
     scene bg bench
     show rose blank at left
     show jasper at right
-    show jade sad l at center with dissolve
+    show jade very sad l at center with dissolve
 
     j "Hmm… sorry, I-I need a moment."
 
     r "Jade, can you get to the kiosk? I’ll join you in a minute."
 
+    show jade sad l at center
+
     j "Wha’? Oh yeah, yeah. How could I forget? I’ll see to the ice cream, you take the big guy."
+
+    show rose talking at left
 
     r "I’ll keep a brave face."
 
@@ -983,6 +1152,8 @@ label ask_bench_man:
 
     js "Until then. Take care, Rose, and if you see that cat-walker, give ‘em my regards."
 
+    show rose talking at left
+
     r "Cat?"
 
     js "Aye, the shiest little thing, moment Ron so much as jostled, it would be tugging at the leash to go."
@@ -996,6 +1167,8 @@ label ask_bench_man:
 
     d "{i}*whines*{/i}"
 
+    show jade sad l at center
+
     js "Ron, now, that’s not for you or me. Wait until we get back, there’s delicious beef back at - Oh, aye, here come the dog walkers…"
 
     jump pond
@@ -1008,7 +1181,7 @@ label pond:
     #Here the game should fade to black (done)
     scene bg park with fade
     show rose blank at left with dissolve
-    show jade sad at center with dissolve
+    show jade very sad at center with dissolve
     
 
     r "Hello dog, hello dog, hello dog…"
@@ -1035,7 +1208,7 @@ label pond:
 
     scene bg pond with fade
     show rose blank at left with dissolve
-    show jade sad at center with dissolve
+    show jade very sad at center with dissolve
 
     play music "music/pond talk.mp3"
 
@@ -1068,7 +1241,7 @@ label pond:
     j "I could see the sky in her eyes… her own little vision of heaven."
 
     #JADE COLORS BLUE (done)
-    show jade sad at right, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
+    show jade very sad at right, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
     show rose surprised at center
     
     r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
@@ -1079,6 +1252,8 @@ label pond:
     call screen diary
 
     show rose blank at center
+    hide jade very sad
+    show jad sad at right
 
     j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
@@ -1097,7 +1272,7 @@ label pond:
     r "Hm?" 
 
     show rose surprised at center
-    show jade surprised at right
+    show jade talking at right
 
     j "What is it? Did the big dogs scratch anything? Infection? Bleeding?"
 
@@ -1107,7 +1282,7 @@ label pond:
 
     j "Me especially, sorry about that."
 
-    show rose blank at center
+    show rose talking at center
 
     r "No worries. Our quest goes on, at a reasonable pace…"
 
@@ -1142,7 +1317,7 @@ label pond:
 
     scene bg train station with fade
     show rose angry at left with dissolve
-    show jade sad at right, violet with dissolve
+    show jade surprised at right, violet with dissolve
 
     j "Oh my God. Oh my god… I almost… Oh my God…"
 
@@ -1158,7 +1333,7 @@ label pond:
 
     scene bg train station
     show rose angry at left
-    show jade sad at right, lightgreen
+    show jade surprised at right, lightgreen
 
     j "Oh ground, I could kiss you if you weren't covered in feet!"
 
@@ -1213,6 +1388,8 @@ label pond:
 
     r "They work…"
 
+    show jade blank at center
+
     j "Like magic. Now, do you need a minute to yourself?"
 
     r "Only if you’re still here?"
@@ -1220,13 +1397,14 @@ label pond:
     j "{i}*nods*{/i}"
 
     #Here the game should fade to black (done)
+
     #TRAIN STATION CLUES SCENE
     play music "music/Ice cream kiosk.mp3"
     scene bg train station with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
 
-    j "Well, aside from a couple of antique cars, naught else for hints. The tracks run cold, least in the open. Appears we must bite the bullet, and see to the… ticket office."
+    j "Well, aside from a couple of antique cars, nothing else for hints. The tracks run cold, least in the open. Appears we must bite the bullet, and see to the… ticket office."
 
     r "Okay…"
 
@@ -1258,7 +1436,7 @@ label pond:
 
     scene bg ticket office with fade
     show rose blank at left with dissolve
-    show jade blank at center with dissolve
+    show jade sad at center with dissolve
 
     j "Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
@@ -1276,7 +1454,7 @@ label pond:
 
     show rose blank at left
     hide jade sad
-    show jade blank at center   #I see her darkgreen here for some reason??
+    show jade blank at center   
 
     j "Guess we won’t know until we hit the information highway."
 
@@ -1284,7 +1462,11 @@ label pond:
 
     j "Onwards towards a wifi hotspot!"
 
+    show rose talking at left
+
     r "Jade, hold on. Look through the glass…"
+
+    show jade talking at center
 
     j "Knick-knacks and assorted time-wasting tools? Oooooh, a newton’s cradle. And it’s still clacking!"
 
@@ -1296,10 +1478,15 @@ label pond:
 
     j "Exactly how so - oooooh. Our Opal’s been here a long time, hasn’t she?"
 
+    show jade blank at center
+    show rose blank at left
+
     r "And this town is small."
 
     j "So it’d stand to reason, she could’ve ended up on a newspaper, say, as a renowned artist respected amongst the towns?"
 
+    show rose talking at left
+    
     r "Exactly. Onward to the library!"
 
     j "Onwards!"
@@ -1328,6 +1515,8 @@ label pond:
 
     j "Yeah, yeah."
 
+    show rose talking at left
+
     r "You want me to tell them to be quiet?"
 
     j "No, no. I won’t sacrifice your nerves to that human migraine."
@@ -1340,7 +1529,11 @@ label pond:
 
     r "We can come back later…"
 
+    show jad very angry at right, red
+
     j "No times three to that. I can power through. {i}*fidgets*{/i}"
+
+    show rose talking at left
 
     r "Are you certain? You appear upset."
 
@@ -1387,9 +1580,9 @@ label post_breathing:
 
     scene bg library with fade
     show rose blank at left with dissolve
-    show jade blank at center with dissolve
+    show jade sad at center with dissolve
 
-    r "Two decades back in time, naught."
+    r "Two decades back in time, nothing."
 
     j "{i}*sigh*{/i}"
 
@@ -1410,6 +1603,7 @@ label post_breathing:
     j "Not too long, I hope."
 
     r "Okay, let me see…"
+
     play music "music/café 2 - Flow 1.mp3"
     scene bg library
     show rose blank at left
@@ -1446,6 +1640,9 @@ label fantasynovel:
     call screen diary
 
     r "Oh, you’ve read it, I’ll try another…"
+
+    hide jade surprised
+    show jade talking at center
 
     j "Don’t you dare. May I take a closer look? Just as I thought, an omnibus edition. Does it include? “Sails Across Destiny’s Seas”?"
 
@@ -1500,6 +1697,8 @@ label zoologybook:
     show rose blank at left
     
     r "{i}*looks at binturong*{/i} It is kind of cute."
+
+    show rose talking at left
     
     r "And on the next page… Canids… oh."
 
@@ -1534,14 +1733,19 @@ label horrornovel:
 
     r "What about your friend?"
 
+    show jade talking at center, lightorange
+
     j "To be fair, they’ll jump at anything spooky; they had a similar reaction to “Bear in the Machinery” and “The Poppy Bites”, which were nothing but a string of jumpscares, for me at least."
 
     j "Don’t get me wrong, I enjoy jumpscares, but only if they build it up juuust right: as you read each line, word for word, you spy the mark. You know they're behind the next page, listening, hearing the crisp fluttering of your heart and the page."
 
     j "You can’t stop yourself, as you turn it, and no matter how slowly, you’ll meet them on the other side… and then… Boo!"
 
+    show rose talking at left
+   
     r "OH! Please don’t do that again…"
-    
+
+    hide jade talking
     show rose happy at left
     
     r "{i}*ahem*{/i} We’re still in the library."
@@ -1568,7 +1772,7 @@ label libraryclue:
 
     j "Looks to have been a slow news day. That's pretty much everyday where I last lived, but with squirrels instead."
 
-    r "It’s a small town. Been two years and people still talk about how the train broke down. Many theories. Anyway, look at the picture-"
+    r "It’s a small town. Been two years and people still talk about how the train broke down... Many theories. Anyway, look at the picture-"
 
     scene bg newspaper with Fade(0.5,0.0,0.5)
     pause 2.5
@@ -1587,6 +1791,9 @@ label libraryclue:
 
     r "And that grocery store, I know where it’s located."
 
+    hide jade surprised
+    show jade blank at right
+
     j "And I’ve got the article on my phone camera. To the places where money can be exchanged for goods and services!"
 
 
@@ -1602,6 +1809,8 @@ label libraryclue:
     j "Alright, possibly second to last leg of the journey. One small step through these gates, and we are potentially golden."
 
     r "Stay focused. Look for old employees."
+
+    show jade talking at center 
 
     j "Gotcha! My eyes will be coasting along every aisle for - look, they're selling mini cheesecakes!"
 
@@ -1623,7 +1832,12 @@ label libraryclue:
 
     e "Oh no, I was just going to say: there's whole cheesecakes on offer if you're interested."
 
+    show jade surprised l at center, lightorange
+
     j "{i}*shakes*{/i} ooooh, thankyouthankyou!"
+
+    hide jade surprised l
+    show jade blank l at center
 
     e "Don't thank me, thank the blighter that mucked up storage. Several years, they're still finding ways in. Blast the nine lives of that blooming cat!"
 
@@ -1658,9 +1872,12 @@ label libraryclue:
 
     r "Ah - Sorry, I'm sorry."
 
+    show jade happy at center, yellow
+
     j "Don’t be. Let's turn that power to propulsion. Onwards!"
 
     r "Onwards!"
+
     stop music fadeout 1.5
     #Here the game should fade to black (done)
 
@@ -1706,7 +1923,7 @@ label libraryclue:
     v "I'm coming out. No! Don't go!"
 
     scene bg pearl home
-    show rose sad at left
+    show rose very sad at left
 
     r "Jade!"
     
@@ -1715,24 +1932,26 @@ label libraryclue:
     v "I didn't mean, oh, where are you running off to?"
 
     scene bg pearl home
-    show rose sad l at center  
+    show rose very sad l at center  
     show jade angry at left, darkgreen
 
     r "Jade, please wait. This isn’t the end of the world."
 
     j "Nothing! It was all for nothing. Don’t you get it? We lost. Everything - meaningless. I-I almost died… I almost got run down by a train!"
 
+    show jade very angry at left, darkgreen
+    
     j "I nearly bit it on this stupid choice! All for your stupid letter of your stupid job!"
 
     r "Please, it isn’t over. It’s just- it’s just. {i}Heartbeat at my neck. Heat rising to my head. Remember, breathe.{/i} Just stupid… that, after everything, you’d call it that."
 
     r "This is not stupid, not the letter, not my job, not our choice to see this through. I have not regretted a single thing today. Even now, I can’t find a single feeling of regret. So please, don’t call it all stupid!"
 
-    show jade sad at left, lightblue
+    show jade very sad at left, lightblue
 
     r "{i}*sighs*{/i}"
 
-    show jade sad l at left, lightblue
+    show jade very sad l at left, lightblue
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
@@ -1748,9 +1967,12 @@ label libraryclue:
 
     j "But… why?"
 
+    show rose talking l at center
+
     r "People pass away. People move on. Some things are just out of our control."
 
     show jade sad l at left, pink
+    show rose blank l at center
 
     #EMOTIONS MINIGAME - SHAME
     $ emotion_names.append("Shame")
@@ -1759,6 +1981,8 @@ label libraryclue:
     call screen diary
 
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
+
+    show rose talking l at center
 
     r "You stayed with me at the train station. You helped me through the overload, you sacrificed your headphone’s full charge. Heck, you’re the one who got us on this adventure."
 
@@ -1778,7 +2002,6 @@ label libraryclue:
 
     j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and… uhm, Rose, look at your legs."
 
-   
    
     scene bg pearl home
     show cat at right
@@ -1816,10 +2039,14 @@ label libraryclue:
 
     r "Just finished today, actually."
 
+    show jade talking l at center
+
     j "And besides, we could do with a bit of a chuckle. What kind of Hell did they raise?"
 
     ol "All sorts. She’d be darting across the room. Jumping onto my old projects, just as I’d finished stitching up the last time she wounded them in battle."
 
+    show jade blank l at center
+    
     ol "She’d be my shadow, but the next moment I turned around, she’d practically leap so high in shock, we’d see eye to eye. At times, part of me wonders if she still thought we were at the shop."
 
     r "Shop, like the grocery store?"
@@ -1848,19 +2075,26 @@ label libraryclue:
 
     ol "Oh the ribbing I got afterwards, “Trading a good job for a little bit of fur, you must be mad”, well, cut off my ears and call me Van Gogh, cause I was unstoppable: hours without slumber, days painting, all thanks to my muse. Then... She was gone."
 
+    show jade sad l at center
+    
     j "I’m sorry. We didn’t mean to open up old wounds, there."
 
     ol "Quite alright… Just… if only I hadn’t lost her painting… my cat with her dazzling coat…"
 
+    show jade talking l at center
+
     j "Wait… are you the Opal on this canvas? {i}*shows phone*{/i}"
 
     ol "Oh my, where was that?"
+
+    show rose talking at left
 
     r "In your previous residence. Now, apologies for our bluntness, but are you indeed Opal?"
 
     ol "My goodness, no, Opal was my inspiration. I’m-"
 
     show jade surprised l at center, darkorange
+    show rose surprised at left
 
     j "PEARL!?"
 
@@ -1870,12 +2104,15 @@ label libraryclue:
 
     j "It has been quite a day…"
 
-    hide jade suprised l
-    show jade blank l at center #Here I still see Jade orange for some reason?? (fixed! add a hide for the last sprite to fix -Geneva)
+    hide jade surprised l
+    show jade blank l at center 
+    show rose blank at left
 
     p "I searched high and low for that painting amidst the moving boxes. I'm surprised you managed to find me with just that."
 
     r "There was also your painting in the cafè."
+
+    show jade talking l at center
 
     j "And I nearly got hit by a train."
 
@@ -1894,6 +2131,7 @@ label libraryclue:
     p "It is only fair, then. Let me preface, however, it may well just be rubbish: a coupon for a car I don’t have, a subscription, or goodness forbid, a brochure for some cockamamy - !"
 
     show pearl rainbow troubled at right 
+    show jade sad l at center
 
     r "Something wrong?"
 
@@ -1905,6 +2143,8 @@ label libraryclue:
 
     j "Oh!"
 
+    show rose talking at left
+
     r "That was what the submissions were for…"
 
     p "All this time… I-I… everything - The hours… the first piece Opal inspired… Oh, if she were here now!"
@@ -1914,6 +2154,7 @@ label libraryclue:
     p "And what if it's too late? What if I fail? Oh, I've been dreaming about this for so long, I can't believe it!"
 
     show rose sad at left
+    show jade talking at center
 
     j "What about you, Rose? Your eyes are running a storm."
 
@@ -1945,14 +2186,18 @@ label libraryclue:
     j "Today’s adventure may be over, but there’s no chance I’m letting that be the only one with you."
 
     j "I’ve been here for only a couple months, but not once, not once, has someone really drawn me out to the sights."
-
+    
     j "I’m sorry, Rosie, but you're officially my muse."
+
+    show rose talking at left
 
     r "I-I’ve been here my whole life, but-I’ve never had someone to show the sights to."
 
     r "I have work in the morning, though."
 
     j "Then we make it lunch. Like I said, Rosie, I’m all in for this. Deal?"
+
+    show rose blank at left
 
     r "...deal."
 

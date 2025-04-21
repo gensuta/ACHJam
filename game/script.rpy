@@ -1159,10 +1159,6 @@ label ask_bench_man:
 
     js "Sorry, lass, haven’t seen anyone else here for the past month. Especially with Ron, here, barking at his own shadow."
      
-
-    scene bg bench
-    show rose blank at left
-    show jasper at right
     show jade very sad at center,flip with dissolve
 
     j "Hmm… sorry, I-I need a moment."

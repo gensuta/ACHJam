@@ -502,7 +502,7 @@ label check_apartment_first:
 label cafe:
     #Here the game should fade to black (done)
     #CAFE SCENE 
-    play music "music/café 2 - Flow 1.mp3"
+    play music "music/cafe.mp3"
     scene bg cafe with fade
     show rose blank at left with dissolve
     show jade blank at center with dissolve
@@ -752,7 +752,7 @@ label the_painting:
     #Here the game should fade to black (done!)
 
     #PARK SCENE 
-
+    stop music fadeout 1.5
     scene bg park with fade
     show rose blank at center with dissolve
     show jade blank at right with dissolve
@@ -1076,7 +1076,7 @@ label pond:
     #EMOTIONS - SADNESS 
     $ emotion_names.append("Sadness")
     $ emotion_colors.append("#4c68c2")
-    call screen diary
+    show screen pencil
 
     show rose blank at center
 
@@ -1090,6 +1090,7 @@ label pond:
 
     stop music fadeout 1.0
     hide jade sad
+    hide screen pencil
     show jade blank at right
 
     j "And by the way, thanks for listening. More and more, you’re proving yourself to be friend material."
@@ -1125,7 +1126,7 @@ label pond:
     $ emotion_names.append("Joy")
     $ emotion_colors.append("#f5e9ae")
     $ current_diary_page = 1
-    call screen diary
+    show screen pencil
     r "We’ll see."
 
 
@@ -1133,7 +1134,7 @@ label pond:
 
 
     #ADD TRAIN SCENE 
-
+    hide screen pencil
     scene bg jade train with Fade(0.5,0.0,0.5)
     pause 2.5
 
@@ -1150,7 +1151,7 @@ label pond:
     $ emotion_names.append("Fear")
     $ emotion_colors.append("#9f7bda")
     $ current_diary_page = 2
-    call screen diary
+    show screen pencil
 
     j "Oh my God."
 
@@ -1167,7 +1168,7 @@ label pond:
     $ emotion_names.append("Relief")
     $ emotion_colors.append("#7db877")
     $ current_diary_page = 3
-    call screen diary
+    show screen pencil
     play sound "music/Rose Panic.mp3" # playing as a sound because it's a one off stinger
     r "{i}*gasping*{/i} What is - What is happening?"
 
@@ -1181,12 +1182,12 @@ label pond:
     $ emotion_names.append("Worry")
     $ emotion_colors.append("#bc7bda")
     $ current_diary_page = 4
-    call screen diary
-
+    show screen pencil
+    play music "music/rose hyperventilating.mp3"
     r "{i}Everything’s getting louder. Pulse is - Why am I… Why am I shaking so much?{/i}"
 
     j "Rose?"
-
+    hide screen pencil
     r "{i}Like ants are crawling up and down my sleeves. So much sweat…{/i}"
 
     j "Rosie, are you okay?"
@@ -1209,6 +1210,7 @@ label pond:
 
     j "Way ahead of you. Brought a spare pair of these bad boys. Headphones. Fully charged up. Just put those on and -"
 
+    stop music fadeout 1.5
     show rose blank at left
 
     r "They work…"
@@ -1237,7 +1239,8 @@ label pond:
     scene bg train station
     show rose blank at left
     show jade happy at center,yellow
-
+    show screen pencil
+    $ current_diary_page = 1
     j "They are wonderful, and think nothing of it."
 
     r "Despite my… stress."
@@ -1245,7 +1248,7 @@ label pond:
     j "Believe me, I’ve been there, and I’ll gladly stay here with you."
 
     r "Hm…. Thank you again."
-
+    hide screen pencil
     show jade blank at center
 
     j "Again, no worries."
@@ -1263,19 +1266,19 @@ label pond:
     j "Now then, here stands the ticket office, aaaand, it’s closed. Drag."
 
     show jade sad at center, darkgreen
-
-    j "The track is well and truly cold as steel now."
-
     #EMOTIONS MINIGAME - Disappointment
     $ emotion_names.append("Disappointment")
     $ emotion_colors.append("#386134")
     $ current_diary_page = 5
-    call screen diary
+    show screen pencil
+
+    j "The track is well and truly cold as steel now."
 
     j "Well, at least we’ve got the painting, sure we could post it somewhere online and do these little search phenomena… but what’s the legality of that? Does everyone here go on social media?"
 
     show rose blank at left
     hide jade sad
+    hide screen pencil
     show jade blank at center   #I see her darkgreen here for some reason??
 
     j "Guess we won’t know until we hit the information highway."
@@ -1311,7 +1314,7 @@ label pond:
     scene bg library with fade
     show rose blank at left with dissolve
     show jade blank at right with dissolve
-    play music "music/café 2 - Flow 1.mp3"
+    play music "music/cafe.mp3"
     r "Okay, the screen is on, and now, we just have to search by the-"
 
     v "{i}*cough*{/i}"
@@ -1324,6 +1327,11 @@ label pond:
     show rose blank at left
     show jade angry at right, red
     stop music fadeout 1.0
+    #EMOTIONS MINIGAME - Annoyance
+    $ emotion_names.append("Annoyance")
+    $ emotion_colors.append("#c98484")
+    $ current_diary_page = 6
+    show screen pencil
     r "Everything okay?"
 
     j "Yeah, yeah."
@@ -1332,12 +1340,6 @@ label pond:
 
     j "No, no. I won’t sacrifice your nerves to that human migraine."
 
-    #EMOTIONS MINIGAME - Annoyance
-    $ emotion_names.append("Annoyance")
-    $ emotion_colors.append("#c98484")
-    $ current_diary_page = 6
-    call screen diary
-
     r "We can come back later…"
 
     j "No times three to that. I can power through. {i}*fidgets*{/i}"
@@ -1345,7 +1347,7 @@ label pond:
     r "Are you certain? You appear upset."
 
     v "Don’t pretend I’m not here. I can see you in the back rooms. I can wait."
-
+    hide screen pencil
     r "Doesn’t it hurt?"
 
     j "Like there’s a heated weight in my chest, working its way up to my shoulders, then my neck, until it’s like my brain’s replaced by a heavy rock, and I wanna throw it right at ‘em."
@@ -1410,7 +1412,7 @@ label post_breathing:
     j "Not too long, I hope."
 
     r "Okay, let me see…"
-    play music "music/café 2 - Flow 1.mp3"
+    play music "music/cafe.mp3"
     scene bg library
     show rose blank at left
 
@@ -1443,12 +1445,12 @@ label fantasynovel:
     $ emotion_names.append("Surprise")
     $ emotion_colors.append("#eb985c")
     $ current_diary_page = 6
-    call screen diary
+    show screen pencil
 
     r "Oh, you’ve read it, I’ll try another…"
 
     j "Don’t you dare. May I take a closer look? Just as I thought, an omnibus edition. Does it include? “Sails Across Destiny’s Seas”?"
-
+    hide screen pencil
     show jade happy at center, yellow
 
     j "Yeeees!"
@@ -1526,7 +1528,7 @@ label horrornovel:
     $ emotion_names.append("Anticipation")
     $ emotion_colors.append("#ecaa7a")
     $ current_diary_page = 7
-    call screen diary
+    show screen pencil
 
     r "Are you sure? I can find something else…"
 
@@ -1541,7 +1543,7 @@ label horrornovel:
     j "You can’t stop yourself, as you turn it, and no matter how slowly, you’ll meet them on the other side… and then… Boo!"
 
     r "OH! Please don’t do that again…"
-    
+    hide screen pencil
     show rose happy at left
     
     r "{i}*ahem*{/i} We’re still in the library."
@@ -1580,6 +1582,12 @@ label libraryclue:
     j "Aww, they’re covered in cheese and ham. Toasty."
 
     r "Beside the feline in cheeses and deli meats, does that look familiar to you?"
+    
+    if "Suprise" not in emotion_names:
+        $ emotion_names.append("Surprise")
+        $ emotion_colors.append("#eb985c")
+        $ current_diary_page = 7
+        show screen pencil
 
     show jade surprised at right, darkorange
 
@@ -1641,6 +1649,11 @@ label libraryclue:
 
     e "Last I checked, not too far. Down Little Lane, can't miss the thing. And with that, I'll leave you, I've got shelves to restock."
 
+    if "Anticipation" not in emotion_names:
+        $ emotion_names.append("Anticipation")
+        $ emotion_colors.append("#ecaa7a")
+        $ current_diary_page = 8
+        show screen pencil
     show jade happy l at center, lightorange
     show rose happy at left
 
@@ -1729,6 +1742,11 @@ label libraryclue:
     r "This is not stupid, not the letter, not my job, not our choice to see this through. I have not regretted a single thing today. Even now, I can’t find a single feeling of regret. So please, don’t call it all stupid!"
 
     show jade sad at left, lightblue
+    #EMOTIONS MINIGAME - REMORSE
+    $ emotion_names.append("Remorse")
+    $ emotion_colors.append("#7ab9dd")
+    $ current_diary_page = 8
+    show screen pencil
 
     r "{i}*sighs*{/i}"
 
@@ -1736,11 +1754,7 @@ label libraryclue:
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
-    #EMOTIONS MINIGAME - REMORSE
-    $ emotion_names.append("Remorse")
-    $ emotion_colors.append("#7ab9dd")
-    $ current_diary_page = 8
-    call screen diary
+  
 
     r "Jade, please, it’s alright. I know it sucks. But that’s just how it goes."
 
@@ -1756,8 +1770,7 @@ label libraryclue:
     $ emotion_names.append("Shame")
     $ emotion_colors.append("#f1b6de")
     $ current_diary_page = 9
-    call screen diary
-
+    show screen pencil
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
 
     r "You stayed with me at the train station. You helped me through the overload, you sacrificed your headphone’s full charge. Heck, you’re the one who got us on this adventure."
@@ -1765,20 +1778,20 @@ label libraryclue:
     r "Why would I leave this quest after such a small outburst?"
 
     show jade happy at left, gold
-
-    j "Rose… I… You’re too good for me."
-
     #EMOTIONS MINIGAME - Gratefulness
     $ emotion_names.append("Gratefulness")
     $ emotion_colors.append("#ffce47")
     $ current_diary_page = 10
-    call screen diary
+    show screen pencil
 
+    j "Rose… I… You’re too good for me."
+
+ 
     r "It’s okay, let it out… is that you purring?!"
 
     j "What? {i}*laughs*{/i} I’m a dog person, not a cat person, and… uhm, Rose, look at your legs."
 
-   
+    hide screen pencil
    
     scene bg pearl home
     show cat at right
@@ -1894,7 +1907,7 @@ label libraryclue:
     p "It is only fair, then. Let me preface, however, it may well just be rubbish: a coupon for a car I don’t have, a subscription, or goodness forbid, a brochure for some cockamamy - !"
 
     show pearl rainbow troubled at right 
-
+    play music "music/pond talk.mp3"
     r "Something wrong?"
 
     p "Acceptance…"
@@ -1926,10 +1939,10 @@ label libraryclue:
     c "{i}*meow*{/i}"
 
     p "And you, Amber, all the work you'll be subject to in the coming days. And you two, thank you, bless you. Thank you and bless you for reigniting that spark!"
-
+    stop music fadeout 1.0
 
     #Here the game should fade to black  (done)
-
+    play music "music/mail delivering.mp3"
     scene bg jade home outside with fade
     show rose blank at left with dissolve
     show jade happy at center, yellow with dissolve

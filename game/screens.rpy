@@ -124,9 +124,13 @@ screen diary:
     frame:
         pos(1700,1000)
         anchor (0.5, 0.5)
-        textbutton "Return" action [Return(), With(fade)]
+        textbutton "Return" action [Return(), With(fade), Hide("diary"),Hide("pencil")]
 
-
+screen pencil:
+    imagebutton:
+        idle "pencil1"
+        hover "pencil2"
+        action [Show("diary"), With(dissolve), Hide("pencil")]
 
 screen stressed_breathing:
 
@@ -185,15 +189,12 @@ screen stressed_breathing:
                 anchor (0.5, 0.5)
 
     grid 3 3:
+        xpos 1150
         xalign 0.5
         yalign 0.2
-        spacing 2
+        spacing 10
         frame:
             background None
-            xpadding 10
-            ypadding 10
-            xalign 0.5
-            yalign 0.5
 
             if clicked_one == False:
                 if isDistracted == False:
@@ -205,20 +206,13 @@ screen stressed_breathing:
                 textbutton "{color=#FFDE59}1{/color}" action NullAction()
         frame:
             background None
-            xpadding 10
-            ypadding 10
-            xalign 0.5
-            yalign 0.5
+
             if is_counting_up:
                 textbutton "And SHE said..." action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
             else:
                 textbutton "*mumble mumble*" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
         frame:
             background None
-            xpadding 20
-            ypadding 20
-            xalign 0.5
-            yalign 0.5
 
             if clicked_two == False:
                 #showing the image might break it but we shall see!
@@ -232,21 +226,13 @@ screen stressed_breathing:
             
         frame:
             background None
-            xpadding 5
-            ypadding 5
-            xalign 0.5
-            yalign 0.5
 
             if is_counting_up:
-                textbutton "-and there's this cute guy that's kind of short-" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
+                textbutton "-and there's this cute guy that's kind-" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
             else:
                 textbutton "*birds chirping*" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
-            xpadding 10
-            ypadding 15
-            xalign 0.5
-            yalign 0.5
 
             if clicked_three == False:
                 if currentCount == 2 and isDistracted == False:
@@ -259,10 +245,6 @@ screen stressed_breathing:
 
         frame:
             background None
-            xpadding 8
-            ypadding 10
-            xalign 0.5
-            yalign 0.5
 
             if is_counting_up:
                 textbutton "Ah! I forgot my keys!" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
@@ -271,10 +253,6 @@ screen stressed_breathing:
 
         frame:
             background None
-            xpadding 20
-            ypadding 20
-            xalign 0.5
-            yalign 0.5
 
             if is_counting_up:
                 textbutton "*baby crying*" action [SetVariable("isDistracted", not isDistracted)]  at shaking_text
@@ -282,10 +260,6 @@ screen stressed_breathing:
                 textbutton "Shhh it's okay... It's okay." action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
-            xpadding 10
-            ypadding 10
-            xalign 0.5
-            yalign 0.5
 
             if is_counting_up:
                 textbutton "HAHAHA" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
@@ -293,15 +267,11 @@ screen stressed_breathing:
                 textbutton "Huh?" action [SetVariable("isDistracted", not isDistracted)] at shaking_text
         frame:
             background None
-            xpadding 10
-            ypadding 12
-            xalign 0.5
-            yalign 0.5
 
             if clicked_four == False:
                 if currentCount == 3 and isDistracted == False: #sorry the below is messy! - Geneva
                     if is_counting_up == False:
-                        textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0),Hide("stressed_breathing") ,Show("calm_breathing",transition=dissolve), SetVariable("is_counting_up", True)] at shaking_text
+                        textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0),Hide("stressed_breathing") ,Show("calm_breathing",transition=dissolve), SetVariable("is_counting_up", True),Stop("music")] at shaking_text
                     else:
                         textbutton "4" action [SetVariable("clicked_one", False), SetVariable("clicked_two", False), SetVariable("clicked_three", False), SetVariable("currentCount",0), SetVariable("is_counting_up",False)] at shaking_text
                 else:

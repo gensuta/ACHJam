@@ -51,6 +51,8 @@ transform shaking_text:
             linear 1.0 alpha .9
             linear 1.0 alpha .2
             repeat
+transform flip: 
+    xzoom -1.0
 #End of custom transforms
 
 #colors for transform below- geneva
@@ -101,7 +103,7 @@ transform beige:
 label start:
 
     #OPTOMETRY CLINIC SCENE
-
+    stop music fadeout 1.0
     scene bg optometry
 
     show rose ng at left with dissolve
@@ -1031,7 +1033,7 @@ label ask_icecream_man:
     scene bg bench with dissolve
     show rose blank at left
     show jasper at right
-    show jade very sad l at center 
+    show jade very sad at center, flip
 
     j "Hmm… sorry, I-I need a moment."
 
@@ -1123,7 +1125,7 @@ label ask_bench_man:
     scene bg bench
     show rose blank at left
     show jasper at right
-    show jade very sad l at center with dissolve
+    show jade very sad at center,flip with dissolve
 
     j "Hmm… sorry, I-I need a moment."
 
@@ -1253,7 +1255,7 @@ label pond:
 
     show rose blank at center
     hide jade very sad
-    show jad sad at right
+    show jade sad at right
 
     j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
@@ -1531,7 +1533,7 @@ label pond:
 
     r "We can come back later…"
 
-    show jad very angry at right, red
+    show jade very angry at right, red
 
     j "No times three to that. I can power through. {i}*fidgets*{/i}"
 
@@ -1969,7 +1971,7 @@ label libraryclue:
 
     r "{i}*sighs*{/i}"
 
-    show jade very sad l at left, lightblue
+    show jade very sad at left, lightblue,flip
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 

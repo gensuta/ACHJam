@@ -2256,7 +2256,7 @@ label libraryclue:
 
     j "And I’m paying. Well, I’ll be seeing you tomorrow then, on the dot, and that’s a promise, cause that’s what friends do."
 
-    show rose happy at left, yellow
+    show rose happy at left, yellow 
 
     r "...that's what friends do..."
 

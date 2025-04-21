@@ -1,16 +1,16 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 408, in script
-    scene cat portrait 1 with Fade(0.5,0.0,0.5)
-Exception: Image 'cat' does not accept attributes 'portrait 1'.
+  File "game/script.rpy", line 1062, in script
+    
+Exception: Image 'jade very sad' does not accept attributes 'l'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 408, in script
-    scene cat portrait 1 with Fade(0.5,0.0,0.5)
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1258, in execute
+  File "game/script.rpy", line 1062, in script
+    
+  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
     renpy.config.show(name,
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'cat' does not accept attributes 'portrait 1'.
+Exception: Image 'jade very sad' does not accept attributes 'l'.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 ACHJam 1.0
-Thu Apr 17 12:43:44 2025
+Mon Apr 21 17:02:41 2025

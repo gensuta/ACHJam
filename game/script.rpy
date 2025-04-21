@@ -488,18 +488,17 @@ label check_apartment_first:
     r "... brush strokes?"
 
     show jade talking at right
+    show rose blank at left
 
     j "Uhm, yes. But, beyond the brush, we may find - pause for effect - a name!"
 
-    show rose blank at left
-
     r "It says “Opal” not “Pearl”."
+
+    show jade blank at right
 
     j "True, but it was found {i}inside{/i} of Pearl’s old home. Which means, a connection."
 
     r "What kind, though?"
-
-    show jade blank at right
 
     j "Hm. That, we need to find out. Any ideas, partner?"
 
@@ -508,12 +507,12 @@ label check_apartment_first:
     r "Partner?"
 
     j "Yeah, partners, solving a mystery!"
+
+    show rose blank at left
     
     r "We could try the neighbour next door?"
 
     j "Excellent. Click! And a photo of the portrait for the road. Can’t have us lugging that precious article around town with a risk of rain or breaking."
-
-    show rose blank at left
    
     r "Clever."
 
@@ -530,7 +529,11 @@ label check_apartment_first:
 
     r "Best you let me sort this one out. They prefer a certain way of alerting them."
 
+    show rose talking at left
+
     r "{i}*whistles like a bird*{/i}"
+
+    show rose blank at left
 
     v "Ah, you’re early this week. Any news of Lily’s care package?"
 
@@ -548,12 +551,18 @@ label check_apartment_first:
 
     j "I just told you I’m your new neighbour."
 
+    show jade blank l at center
     show rose talking at left
 
     r "But the letter said “Pearl”, not “Opal”."
 
+    show jade talking l at center
+    show rose blank at left
+
     j "Maybe it’s like my mum and my big bro’s letters. He’s in South Korea, and his letters still arrive at mum’s house. Right? So Opal could still be a clue in reaching Pearl?"
 
+    show jade blank l at center
+    
     r "I suppose… any idea where Opal could be?"
 
     v "Last I saw, she was down by the cafè. Well, either way, best of luck to you two."
@@ -580,6 +589,8 @@ label check_apartment_first:
     j "For that was the shape of Pearl’s soul to Opal."
 
     r "You’re just making this up, aren’t you?"
+
+    show rose blank at left
 
     j "Well, we need some dramatics in this quest."
 
@@ -614,10 +625,13 @@ label cafe:
     j "We can talk about that over lunch, on me!"
 
     show rose talking at left
+    show jade blank at center
 
     r "They work by table numbers. Remember the number, walk up to the counter, and place your order."
 
     j "I appreciate the clarity."
+
+    show rose blank at left
 
     r "They have pictures on the menus too."
 
@@ -625,11 +639,7 @@ label cafe:
 
     r "No thank you? Not my favourite dish."
 
-    show jade blank at center
-
     j "Hmmm, alright then, what’s your favourite?"
-
-    show rose blank at left
 
     r "Homemade burger with coleslaw."
 
@@ -661,19 +671,22 @@ label cafe:
 
     j "Phantometer? Oh, yeah, the videogame? With the cute critter in the armour?"
 
-    r "Action-Platformer where you played as Luna. Ascending up the Tower of Phantometer to reach the stars, in the hope that one of them is the spirit of her loved one, whose identity depended upon the questions you answered at the start."
-
     show jade blank at center
+
+    r "Action-Platformer where you played as Luna. Ascending up the Tower of Phantometer to reach the stars, in the hope that one of them is the spirit of her loved one, whose identity depended upon the questions you answered at the start."
     
     j "Yeah… that one."
 
     r "Watched playthroughs of it when I was younger. The music helped me sleep. Story was well-written. Still holds up. Still wish I could play it. Too expensive then, too rare now."
 
+    show rose blank at left
+    show jade happy at center
+    
     j "I’ve got a copy!"
 
-    show rose blank at left
-
     r "Hmm?"
+
+    show jade blank at center
 
     j "Yeah, original manual and everything. If ever you have a day off..."
 
@@ -745,16 +758,22 @@ label safe_food:
 
     r "Beef defeated."
 
+    show jade talking at center
+
     j "Holy! That was fast. Are you sure you had time to chew?"
 
     r "You sound like my granddad. He said he’d always buy me a burger."
+
+    show jade blank at center
 
     j "Sounds like a good grandpa."
 
     show rose talking at left
 
     r "Joked he only did so to see if I unhinged my jaw before I ate. I’d hiss every time I saw him. People stared. But granddad always smiled. Wasn’t sure if he actually found it funny."
-
+  
+    show rose blank at left
+   
     j "You must hold those memories very dear."
 
     r "It does feel good to relive them. I feel… calmer, somehow."
@@ -762,10 +781,10 @@ label safe_food:
     show jade talking at center
     
     j "I get it. And my grandpa always bought me lunch too, even if I had the cash. He and I would buy the cheapest thing the cafe had {i}*chuckles*{/i} I’ll give you three guesses."
-
-    show rose blank at left
    
     r "Hm…"
+
+    show jade happy at center
 
     j "It’s literally served on a platter for you."
 
@@ -795,11 +814,11 @@ label new_food:
 
     r "It’s nice."
 
+    show jade talking at center
+
     j "That’s all?"
 
     r "Is that not all there is to it?"
-
-    show jade talking at center
 
     j "But what about- what about the smell? The sound? Heck, have you even smelt it?"
 
@@ -833,11 +852,14 @@ label new_food:
     
     j "Like this godawful smell, for example! What do you think it is?"
 
+    show rose talking at left
+
     r "Hmm, maybe… vinegar?"
 
     j "Ugh."
 
     show jade talking at center
+    show rose blank at left
     
     j "Anyway, I used to take cooking classes with my friends... The chef was always like that. The “poet” sort of cook, but their enthusiasm was so contagious I-"
 
@@ -870,13 +892,15 @@ label the_painting:
 
     j "Certainly evokes post-impressionism, especially the focus on light."
 
-    r "The way the sunlight goes through it."
+    r "The way the sunlight goes through it..."
 
     j "Definitely an early attempt at the style. Sorry, I took some classes, and it’s so rare I get to talk shop on art history, especially around-"
 
-    show rose talking l at left
+    show rose talking at left
     
     r "The bench!"
+
+    show jade talking at center
 
     j "What bench!?"
 
@@ -884,7 +908,11 @@ label the_painting:
 
     j "The park in town?"
 
+    show rose blank at left
+
     r "The park in town."
+
+    show jade blank at center
 
     j "How far is it?"
 
@@ -907,7 +935,7 @@ label the_painting:
    
     r "Hmm, I know that dog…"
 
-    show jade sad at center
+    show jade sad at right
 
     j "Uh, right,  well… the ice-cream man looks like a more promising lead to me. Being at the park all the time and all."
 
@@ -932,7 +960,11 @@ label ask_icecream_man:
 
     i "Oh, it's you, we finally meet."
 
+    show rose talking at left
+
     r "P-pardon?"
+
+    show rose blank at left
 
     i "Haven’t seen you in a while, I was beginning to worry about you."
 
@@ -960,9 +992,13 @@ label ask_icecream_man:
     
     i "At least, that was how it was until a few weeks ago. Then she was gone, and her little cat, too."
 
+    show rose talking at left
+
     r "Cat?"
 
-    j "Just like in the picture. Any other notable features? Hair colour, hair style, facial features, maybe a cool iconic item?"
+    show rose blank at left
+
+    j "Just like in the picture! Any other notable features? Hair colour, hair style, facial features, maybe a cool iconic item?"
 
     i "Mmm, unfortunately none spring to mind. She was well covered for winter, no matter the season. Honestly I’m surprised she didn’t melt."
 
@@ -1028,9 +1064,6 @@ label ask_icecream_man:
 
     js "Sorry, lass, haven’t seen anyone else here for the past month. Especially with Ron, here, barking at his own shadow."
 
-    scene bg bench with dissolve
-    show rose blank at left
-    show jasper at right
     show jade very sad l at center 
 
     j "Hmm… sorry, I-I need a moment."
@@ -1068,7 +1101,11 @@ label ask_icecream_man:
 
     js "Well, whatever, it’s down to you and that lass, not I, or anyone else. All I can do is provide a bit of wisdom. First step, catching up with her."
 
+    show rose talking at left
+    
     r "Oh, right. See you next round of post, with Lily’s care package."
+
+    show rose blank at left
 
     js "Until then. Take care, Rose, and if you see that cat-walker, Opal, give ‘em my regards."
 
@@ -1241,8 +1278,8 @@ label pond:
     j "I could see the sky in her eyes… her own little vision of heaven."
 
     #JADE COLORS BLUE (done)
-    show jade very sad at right, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
-    show rose surprised at center
+    show jade very sad at center, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
+    show rose surprised at left
     
     r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
 
@@ -1251,9 +1288,9 @@ label pond:
     $ emotion_colors.append("#4c68c2")
     call screen diary
 
-    show rose blank at center
+    show rose blank at left
     hide jade very sad
-    show jad sad at right
+    show jade sad at center
 
     j "Oh, I noticed your glasses, but I thought it might be a sensitive topic {i}*sniffs*{/i}."
 
@@ -1265,24 +1302,24 @@ label pond:
 
     stop music fadeout 1.0
     hide jade sad
-    show jade blank at right
+    show jade blank at center
 
     j "And by the way, thanks for listening. More and more, you’re proving yourself to be friend material."
 
     r "Hm?" 
 
-    show rose surprised at center
-    show jade talking at right
+    show rose surprised at left
+    show jade talking at center
 
     j "What is it? Did the big dogs scratch anything? Infection? Bleeding?"
 
     r "My pulse went up. So odd. Then again, we have been running a lot…"
 
-    show jade blank at right
+    show jade blank at center
 
     j "Me especially, sorry about that."
 
-    show rose talking at center
+    show rose talking at left
 
     r "No worries. Our quest goes on, at a reasonable pace…"
 
@@ -1292,7 +1329,7 @@ label pond:
 
     #JADE COLORS YELLOW
 
-    show jade happy at right,yellow
+    show jade happy at center,yellow
 
     j "{i}*gasps*{/i} Trains? Trains? An adventure to span the lands!"
 

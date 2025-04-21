@@ -2,77 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1069: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 1071: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 1076: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
-
-File "game/script.rpy", line 1302: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 1304: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 1306: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
-
-File "game/script.rpy", line 1318: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 1320: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 1323: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
-
-File "game/script.rpy", line 1573: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 1575: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 1581: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
-
-File "game/script.rpy", line 1929: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 1931: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 1938: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
-
-File "game/script.rpy", line 2073: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 2078: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 2080: expected statement.
-    >>>>>>> 40efe85b5c96d14f2c100c35794fe092e82935a4
-                                                    ^
+File "game/screens.rpy", line 115: 'outline' is not a keyword argument or valid child of the text statement.
+    outline "#000000"
+           ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Apr 21 18:43:17 2025
+Mon Apr 21 14:18:01 2025

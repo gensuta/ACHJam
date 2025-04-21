@@ -1900,8 +1900,13 @@ label libraryclue:
     j "Oh, goodness. Sorry, didn't mean to cause an uproar."
 
     e "Oh no, I was just going to say: there's whole cheesecakes on offer if you're interested."
+  
+    $ emotion_names.append("Anticipation")
+    $ emotion_colors.append("#ecaa7a")
     $ current_diary_page = emotion_names.index("Anticipation")
+    $ emotion_desc.append("Anticipation means looking forward to a future event or state,\nsometimes involving pleasure or anxiety.")
     show screen pencil
+    
     show jade happy l at center, lightorange
 
     j "{i}*shakes*{/i} ooooh, thankyouthankyou!"

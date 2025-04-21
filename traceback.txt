@@ -2,25 +2,25 @@
 
 While running game code:
   File "game/script.rpy", line 1903, in script
-    $ current_diary_page = emotion_names.index("Anitcipation")
+    $ current_diary_page = emotion_names.index("Anticipation")
   File "game/script.rpy", line 1903, in <module>
-    $ current_diary_page = emotion_names.index("Anitcipation")
-ValueError: 'Anitcipation' is not in list
+    $ current_diary_page = emotion_names.index("Anticipation")
+ValueError: 'Anticipation' is not in list
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 1903, in script
-    $ current_diary_page = emotion_names.index("Anitcipation")
+    $ current_diary_page = emotion_names.index("Anticipation")
   File "D:\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "game/script.rpy", line 1903, in <module>
-    $ current_diary_page = emotion_names.index("Anitcipation")
-ValueError: 'Anitcipation' is not in list
+    $ current_diary_page = emotion_names.index("Anticipation")
+ValueError: 'Anticipation' is not in list
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
 A Touch of Color 1.03
-Mon Apr 21 22:09:06 2025
+Mon Apr 21 22:23:26 2025

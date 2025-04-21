@@ -1,30 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1062, in script
-    
-Exception: Image 'jade very sad' does not accept attributes 'l'.
+  File "game/script.rpy", line 1903, in script
+    $ current_diary_page = emotion_names.index("Anitcipation")
+  File "game/script.rpy", line 1903, in <module>
+    $ current_diary_page = emotion_names.index("Anitcipation")
+ValueError: 'Anitcipation' is not in list
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1062, in script
-    
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
-    args.extraneous()
-  File "C:\Users\PC\Documents\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'jade very sad' does not accept attributes 'l'.
+  File "game/script.rpy", line 1903, in script
+    $ current_diary_page = emotion_names.index("Anitcipation")
+  File "D:\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 1903, in <module>
+    $ current_diary_page = emotion_names.index("Anitcipation")
+ValueError: 'Anitcipation' is not in list
 
-Windows-10-10.0.26100 AMD64
+Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
-ACHJam 1.0
-Mon Apr 21 17:02:41 2025
+A Touch of Color 1.03
+Mon Apr 21 22:09:06 2025

@@ -1686,15 +1686,16 @@ label fantasynovel:
     j "I know that cover. The elvish brooding, the silver hair lost in the roaring winds of limbo..."
 
     show jade surprised at center, darkorange
-    
-    j "“Champions of the Infinite”!"
-
     #EMOTIONS MINIGAME - surprise 
     $ emotion_names.append("Surprise")
     $ emotion_colors.append("#eb985c")
-    $ current_diary_page = 7
+    $ current_diary_page = emotion_names.index("Surprise")
     $ emotion_desc.append("Surprise is an emotion typically resulting from the violation of an expectation\nor the detection of novelty in the environment.\n\nThe physiological response to surprise includes raising or arching the eyebrows, opening the eyes wide,\nopening the mouth wide in an oval shape, and gasping.\nSurprise can be pleasant/positive, unpleasant/negative, or neutral.")
     show screen pencil
+
+    j "“Champions of the Infinite”!"
+
+   
 
     r "Oh, you’ve read it, I’ll try another…"
 
@@ -1849,7 +1850,7 @@ label libraryclue:
         $ emotion_names.append("Surprise")
         $ emotion_colors.append("#eb985c")
         $ emotion_desc.append("Surprise is an emotion typically resulting from the violation of an expectation\nor the detection of novelty in the environment.\n\nThe physiological response to surprise includes raising or arching the eyebrows, opening the eyes wide,\nopening the mouth wide in an oval shape, and gasping.\nSurprise can be pleasant/positive, unpleasant/negative, or neutral.")
-        $ current_diary_page = 7
+        $ current_diary_page = emotion_names.index("Surprise")
         show screen pencil
 
     show jade surprised at right, darkorange
@@ -1859,6 +1860,7 @@ label libraryclue:
     r "And that grocery store, I know where it’s located."
 
     hide jade surprised
+    hide screen pencil
     show jade blank at right
 
     j "And I’ve got the article on my phone camera. To the places where money can be exchanged for goods and services!"
@@ -1926,7 +1928,7 @@ label libraryclue:
         $ emotion_names.append("Anticipation")
         $ emotion_colors.append("#ecaa7a")
         $ emotion_desc.append("Anticipation means looking forward to a future event or state,\nsometimes involving pleasure or anxiety.")
-        $ current_diary_page = 8
+        $ current_diary_page = emotion_names.index("Anticipation")
         show screen pencil
     show jade happy at center, lightorange
     show rose happy at left
@@ -1950,7 +1952,7 @@ label libraryclue:
     j "Don’t be. Let's turn that power to propulsion. Onwards!"
 
     r "Onwards!"
-
+    hide screen pencil
     stop music fadeout 1.5
     #Here the game should fade to black (done)
 
@@ -2026,13 +2028,14 @@ label libraryclue:
     #EMOTIONS MINIGAME - REMORSE
     $ emotion_names.append("Remorse/Guilt")
     $ emotion_colors.append("#7ab9dd")
-    $ current_diary_page = 8
+    $ current_diary_page = emotion_names.index("Remorse/Guilt")
     $ emotion_desc.append("Remorse is a strong sense of guilt and regret for a past action, characterized by\nthe knowledge of having done (or thought) something wrong.\n\nPeople may express remorse through apologies, trying to repair the damage they have caused,\nor self-imposed punishments.")
     show screen pencil
 
     r "{i}*sighs*{/i}"
 
-    show jade very sad at left, lightblue,flip
+    hide jade very sad
+    show jade very sad l at left, lightblue
 
     j "Oh my goodness- what have I-? Rose, I am so sorry. I’m sorry, I’m sorry for being such a thoughtless- I’m sorry, I’m sorry, I’m sorry!"
 
@@ -2048,13 +2051,14 @@ label libraryclue:
 
     r "People pass away. People move on. Some things are just out of our control."
 
+    hide jade sad l
     show jade sad l at left, pink
     show rose blank l at center
 
     #EMOTIONS MINIGAME - SHAME
     $ emotion_names.append("Shame")
     $ emotion_colors.append("#f1b6de")
-    $ current_diary_page = 9
+    $ current_diary_page = emotion_names.index("Shame")
     $ emotion_desc.append("Shame is a highly unpleasant emotion arising from the sense of there being something\ndishonorable, immodest, or indecorous in one’s own behavior or circumstances.\nIt is typically characterized by withdrawal from social relationships, for example by hiding.\n\nShame may motivate not only avoidant behavior but also defensive, retaliative anger.\nIt can bring about feelings of defeat, inferiority, unworthiness, or self-loathing.")
     show screen pencil
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
@@ -2070,7 +2074,7 @@ label libraryclue:
     #EMOTIONS MINIGAME - Gratefulness
     $ emotion_names.append("Gratefulness/Gratitude")
     $ emotion_colors.append("#ffce47")
-    $ current_diary_page = 10
+    $ current_diary_page = emotion_names.index("Gratefulness/Gratitude")
     $ emotion_desc.append("Gratitude is a sense of thankfulness and happiness in response to receiving a gift,\neither a tangible benefit (e.g. a present) given by someone or a fortunate happenstance\n(e.g. a beautiful day).\n\nGratitude not only contributes to positive emotions, but it also leads to a reduction in\nnegative emotions.\nPeople who are more grateful report higher levels of well-being:\nthey are happier, less depressed, less stressed and more satisfied with\ntheir lives and social relationships.")
     show screen pencil
 

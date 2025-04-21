@@ -105,11 +105,16 @@ screen diary:
         if len(emotion_colors) > 0 and current_diary_page < len(emotion_colors):
             text emotion_names[current_diary_page]:
                 color "#000000"
-                pos(110,300)
+                pos(50,300)
                 size 48
             add "circle no gradient":
                 zoom 0.3
                 matrixcolor TintMatrix(emotion_colors[current_diary_page]) * SaturationMatrix(1.0)
+        if current_diary_page < len(emotion_desc):
+            text emotion_desc[current_diary_page]:
+                color "#000000"
+                pos(-600,395)
+                size 28
 
     if current_diary_page < len(emotion_colors) - 1:
         frame:

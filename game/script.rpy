@@ -33,6 +33,7 @@ default is_counting_up = True
 default current_diary_page = 0 # helps to show specific colors!
 default emotion_names = [] # these are two variables to help with the diary entry! 
 default emotion_colors = []
+default emotion_desc = []
 # End of minigame variables!
 
 #custom transforms! Please ignore -Geneva
@@ -1282,13 +1283,13 @@ label pond:
     #JADE COLORS BLUE (done)
     show jade very sad at center, blue # will be in the doc, but adding this in case i forget somehow. choose the color put it after the location. so like how I did right, blue - Geneva
     show rose surprised at left
-    
-    r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
-
     #EMOTIONS - SADNESS 
     $ emotion_names.append("Sadness")
     $ emotion_colors.append("#4c68c2")
+    $ emotion_desc.append("Sadness is an emotional state of unhappiness, usually aroused by the loss of something that\nis highly valued (e.g. a relationship).\n\nAn individual experiencing sadness may become quiet and withdraw themselves from others,\nin order to take the time to recover from the feeling.\nCrying can also be an indication of sadness.")
     show screen pencil
+    r "Oh,  I… I can see you-I mean, your color. I-I’ve never seen a color before, it’s so…"
+
 
     show rose blank at left
     hide jade very sad
@@ -1299,7 +1300,7 @@ label pond:
     r "Do you need a tissue?"
 
     j "Nah {i}*sniffs*{/i} I’m alright. Moment’s passed. Words were said, the pages turn {i}*inhales*{/i}, our quest continues."
-
+    hide screen pencil
     r "Right. In that direction."
 
     stop music fadeout 1.0
@@ -1339,6 +1340,7 @@ label pond:
     $ emotion_names.append("Joy")
     $ emotion_colors.append("#f5e9ae")
     $ current_diary_page = 1
+    $ emotion_desc.append("Joy is a feeling of extreme gladness or delight, arising from a sense of well-being\n or satisfaction. The feeling of joy may take two forms: passive and active.\nThe distinction between passive and active joy may be related to the intensity of the emotion,\nwith active joy representing the more intense form.\n\nBoth forms of joy are associated with an increase in energy and feelings of confidence\nand self-esteem.")
     show screen pencil
     r "We’ll see."
 
@@ -1364,6 +1366,7 @@ label pond:
     $ emotion_names.append("Fear")
     $ emotion_colors.append("#9f7bda")
     $ current_diary_page = 2
+    $ emotion_desc.append("Fear is an intense emotion aroused by the detection of imminent threat.\nIt triggers a set of physiological changes: rapid heartbeat, accelerated breathing, sweating,\ntensing of the muscles. People might experience dizziness, lightheadedness, choking sensations,\nsweating, shortness of breath, vomiting or nausea, numbness or shaking.\n\nFear is a short-term response to a present, clearly identifiable threat,\nwhereas anxiety is a future-oriented, long-term response.")
     show screen pencil
 
     j "Oh my God."
@@ -1381,6 +1384,7 @@ label pond:
     $ emotion_names.append("Relief")
     $ emotion_colors.append("#7db877")
     $ current_diary_page = 3
+    $ emotion_desc.append("Relief is a positive emotion that occurs when something unpleasant,\n painful or distressing has not happened or has come to an end.\n\nThis emotion is often accompanied by sighing, to express a transition from\na negative to a positive state.")
     show screen pencil
     play sound "music/Rose Panic.mp3" # playing as a sound because it's a one off stinger
     r "{i}*gasping*{/i} What is - What is happening?"
@@ -1395,6 +1399,7 @@ label pond:
     $ emotion_names.append("Worry")
     $ emotion_colors.append("#bc7bda")
     $ current_diary_page = 4
+    $ emotion_desc.append("Worry is a state of mental distress or agitation due to concern about an impending\nor anticipated event, threat, or danger.\n\nBeing worried about someone means feeling concerned or anxious about that person,\nor thinking about unpleasant things that might happen to them")
     show screen pencil
     play music "music/rose hyperventilating.mp3"
     r "{i}Everything’s getting louder. Pulse is - Why am I… Why am I shaking so much?{/i}"
@@ -1486,6 +1491,7 @@ label pond:
     $ emotion_names.append("Disappointment")
     $ emotion_colors.append("#386134")
     $ current_diary_page = 5
+    $ emotion_desc.append("Disappointment is the unhappiness or discouragement that results when your\nhopes or expectations have not been satisfied,or when someone or something is not as\ngood as you had hoped.\n\nDisappointment recovery time depends on the intensity of the disappointment,\nas well as the person experiencing the disappointment.\nFor some it can take a few minutes while for others\nthe same disappointment can take a few days.")
     show screen pencil
 
     j "The track is well and truly cold as steel now."
@@ -1559,6 +1565,7 @@ label pond:
     $ emotion_names.append("Annoyance")
     $ emotion_colors.append("#c98484")
     $ current_diary_page = 6
+    $ emotion_desc.append("Annoyance is an unpleasant mental state that is characterized by irritation and distraction.\nAny kind of stimuli can cause annoyance, such as getting poked in the side or listening to a song repeatedly.\nMany stimuli that one is at first neutral to,or even finds pleasant,\ncan turn into annoyances from repeated continued exposure.\n\nAnnoyance can lead to anger, a response to a perceived provocation, hurt, or threat.\nA person feeling anger will often experience physical effects, such as\nincreased heart rate, elevated blood pressure, sweating, flushed face.")
     show screen pencil
     r "Everything okay?"
 
@@ -1634,7 +1641,11 @@ label post_breathing:
     scene bg library
     show rose blank at left
     show jade sad at center, beige
-
+    $ emotion_names.append("Boredom")
+    $ emotion_colors.append("#e4c9a8")
+    $ current_diary_page = 7
+    $ emotion_desc.append("Boredom is a state of weariness resulting from a lack of engagement\nwith stimuli in the environment.\n\nBoredom can happen when a person is prevented from engaging in wanted activity,\nforced to engage in unwanted activity, or simply unable for some other reason to\nmaintain engagement in an activity.")
+    show screen pencil
     r "Something wrong?"
 
     j "I’m no good with the waiting game."
@@ -1649,7 +1660,8 @@ label post_breathing:
 
     r "Okay, let me see…"
     play music "music/cafe.mp3"
-    scene bg library
+    hide screen pencil
+    scene bg library with dissolve
     show rose blank at left
 
 
@@ -1681,6 +1693,7 @@ label fantasynovel:
     $ emotion_names.append("Surprise")
     $ emotion_colors.append("#eb985c")
     $ current_diary_page = 7
+    $ emotion_desc.append("Surprise is an emotion typically resulting from the violation of an expectation\nor the detection of novelty in the environment.\n\nThe physiological response to surprise includes raising or arching the eyebrows, opening the eyes wide,\nopening the mouth wide in an oval shape, and gasping.\nSurprise can be pleasant/positive, unpleasant/negative, or neutral.")
     show screen pencil
 
     r "Oh, you’ve read it, I’ll try another…"
@@ -1769,6 +1782,7 @@ label horrornovel:
     $ emotion_names.append("Anticipation")
     $ emotion_colors.append("#ecaa7a")
     $ current_diary_page = 7
+    $ emotion_desc.append("Anticipation means looking forward to a future event or state,\nsometimes involving pleasure or anxiety.")
     show screen pencil
 
     r "Are you sure? I can find something else…"
@@ -1834,6 +1848,7 @@ label libraryclue:
     if "Suprise" not in emotion_names:
         $ emotion_names.append("Surprise")
         $ emotion_colors.append("#eb985c")
+        $ emotion_desc.append("Surprise is an emotion typically resulting from the violation of an expectation\nor the detection of novelty in the environment.\n\nThe physiological response to surprise includes raising or arching the eyebrows, opening the eyes wide,\nopening the mouth wide in an oval shape, and gasping.\nSurprise can be pleasant/positive, unpleasant/negative, or neutral.")
         $ current_diary_page = 7
         show screen pencil
 
@@ -1910,6 +1925,7 @@ label libraryclue:
     if "Anticipation" not in emotion_names:
         $ emotion_names.append("Anticipation")
         $ emotion_colors.append("#ecaa7a")
+        $ emotion_desc.append("Anticipation means looking forward to a future event or state,\nsometimes involving pleasure or anxiety.")
         $ current_diary_page = 8
         show screen pencil
     show jade happy at center, lightorange
@@ -2008,9 +2024,10 @@ label libraryclue:
 
     show jade very sad at left, lightblue
     #EMOTIONS MINIGAME - REMORSE
-    $ emotion_names.append("Remorse")
+    $ emotion_names.append("Remorse/Guilt")
     $ emotion_colors.append("#7ab9dd")
     $ current_diary_page = 8
+    $ emotion_desc.append("Remorse is a strong sense of guilt and regret for a past action, characterized by\nthe knowledge of having done (or thought) something wrong.\n\nPeople may express remorse through apologies, trying to repair the damage they have caused,\nor self-imposed punishments.")
     show screen pencil
 
     r "{i}*sighs*{/i}"
@@ -2038,6 +2055,7 @@ label libraryclue:
     $ emotion_names.append("Shame")
     $ emotion_colors.append("#f1b6de")
     $ current_diary_page = 9
+    $ emotion_desc.append("Shame is a highly unpleasant emotion arising from the sense of there being something\ndishonorable, immodest, or indecorous in one’s own behavior or circumstances.\nIt is typically characterized by withdrawal from social relationships, for example by hiding.\n\nShame may motivate not only avoidant behavior but also defensive, retaliative anger.\nIt can bring about feelings of defeat, inferiority, unworthiness, or self-loathing.")
     show screen pencil
     j "No, not that, {i}*sniffs*{/i} I’m someone you just met."
 
@@ -2050,9 +2068,10 @@ label libraryclue:
     show jade happy l at left, gold
     
     #EMOTIONS MINIGAME - Gratefulness
-    $ emotion_names.append("Gratefulness")
+    $ emotion_names.append("Gratefulness/Gratitude")
     $ emotion_colors.append("#ffce47")
     $ current_diary_page = 10
+    $ emotion_desc.append("Gratitude is a sense of thankfulness and happiness in response to receiving a gift,\neither a tangible benefit (e.g. a present) given by someone or a fortunate happenstance\n(e.g. a beautiful day).\n\nGratitude not only contributes to positive emotions, but it also leads to a reduction in\nnegative emotions.\nPeople who are more grateful report higher levels of well-being:\nthey are happier, less depressed, less stressed and more satisfied with\ntheir lives and social relationships.")
     show screen pencil
 
     j "Rose… I… You’re too good for me."

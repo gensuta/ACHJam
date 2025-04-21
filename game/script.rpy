@@ -1540,6 +1540,8 @@ label pond:
 
     v "{i}*cough*{/i}"
 
+    show jade angry at right
+
     r "By a few years, maybe a decade given her possible age-"
 
     v "Excuse me, whoever’s supposed to be at the desk, can you pleeeaaase get over here! {i}*burp*{/i}. I pay my taxes, I deserve some service here."
@@ -1548,6 +1550,7 @@ label pond:
     show rose blank at left
     show jade angry at right, red
     stop music fadeout 1.0
+
     r "Everything okay?"
 
     j "Yeah, yeah."
@@ -1566,7 +1569,7 @@ label pond:
 
     r "We can come back later…"
 
-    show jad very angry at right, red
+    show jade very angry at right, red
 
     j "No times three to that. I can power through. {i}*fidgets*{/i}"
 
@@ -1577,6 +1580,8 @@ label pond:
     v "Don’t pretend I’m not here. I can see you in the back rooms. I can wait."
 
     r "Doesn’t it hurt?"
+
+    show rose blank at left
 
     j "Like there’s a heated weight in my chest, working its way up to my shoulders, then my neck, until it’s like my brain’s replaced by a heavy rock, and I wanna throw it right at ‘em."
 
@@ -1783,6 +1788,7 @@ label horrornovel:
     r "OH! Please don’t do that again…"
 
     hide jade talking
+    show jade blank at center
     show rose happy at left
     
     r "{i}*ahem*{/i} We’re still in the library."
@@ -1869,7 +1875,7 @@ label libraryclue:
 
     e "Oh no, I was just going to say: there's whole cheesecakes on offer if you're interested."
 
-    show jade surprised l at center, lightorange
+    show jade happy l at center, lightorange
 
     j "{i}*shakes*{/i} ooooh, thankyouthankyou!"
 
@@ -1892,7 +1898,7 @@ label libraryclue:
 
     e "Last I checked, not too far. Down Little Lane, can't miss the thing. And with that, I'll leave you, I've got shelves to restock."
 
-    show jade happy l at center, lightorange
+    show jade happy at center, lightorange
     show rose happy at left
 
     j "Rose!"
@@ -1948,6 +1954,8 @@ label libraryclue:
 
     v "O-Opal… I'm sorry but…"
 
+    show jade sad l at center
+
     j "...! No…"
 
     show jade sad l at center, darkgreen
@@ -1960,7 +1968,7 @@ label libraryclue:
     v "I'm coming out. No! Don't go!"
 
     scene bg pearl home
-    show rose very sad at left
+    show rose sad at left
 
     r "Jade!"
     
@@ -1969,7 +1977,7 @@ label libraryclue:
     v "I didn't mean, oh, where are you running off to?"
 
     scene bg pearl home
-    show rose very sad l at center  
+    show rose sad l at center  
     show jade angry at left, darkgreen
 
     r "Jade, please wait. This isn’t the end of the world."
@@ -2025,7 +2033,7 @@ label libraryclue:
 
     r "Why would I leave this quest after such a small outburst?"
 
-    show jade happy at left, gold
+    show jade happy l at left, gold
 
     j "Rose… I… You’re too good for me."
 
@@ -2100,11 +2108,19 @@ label libraryclue:
 
     ol "From the shelves, sacks of flour flew, sugar pelted like sand falls with waterfalls of milk and juice."
 
+    show rose talking at left
+    
     r "Woah..."
+
+    show rose blank at left
     
     ol "As everything calmed down, and everyone had quieted down after the chase, we all looked at the culprit. We were ready to swing them out the window, glass be darned. I myself volunteered to do the deed. At least, until I saw it."
 
+    show rose talking at left
+    
     r "What?"
+
+    show rose blank at left
 
     ol "That spark in her eyes, like staring into the northern lights. So much soul, in so frail a little creature."
 
